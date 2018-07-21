@@ -15,6 +15,7 @@ import youtube_dl
 aditmadzs = LineClient(authToken='EvoBbWqUN1lxhN6Bs4t3.m7QAK9mmg/fv3Yt11op1GW.5fLIhx9QFPz1MihDNI/+x7KGz0HqDcswb73TWXrxUmA=')
 aditmadzs.log("Auth Token : " + str(aditmadzs.authToken))
 channel = LineChannel(aditmadzs)
+aditmadzsMid = aditmadzs.profile.mid
 aditmadzs.log("Channel Access Token : " + str(channel.channelAccessToken))
 
 poll = LinePoll(aditmadzs)
@@ -103,11 +104,11 @@ wait = {
     "selfbot":True,
     "unsend":True,
     "mention":"Hayoo ngapain lau read doang -_-",
-    "Respontag":"Tag gua pasti kesel ye khaaan...🙌😂",
+    "Respontag":"Tag gua pasti kesel ye khaaan...????",
     "welcome":"Selamat Datang",
-    "leave":"lah cabut doi, baper x yak 😂",
-    "comment":"Like like & like by Aditmadzs\n\n🔰Creator : http://line.me/ti/p/~adit_cmct",
-    "message":"Thanks For Add Me (^_^)\nAuto Add Chat\n\n🔰Creator : http://line.me/ti/p/~adit_cmct",
+    "leave":"lah cabut doi, baper x yak ??",
+    "comment":"Like like & like by Aditmadzs\n\n??Creator : http://line.me/ti/p/~adit_cmct",
+    "message":"Thanks For Add Me (^_^)\nAuto Add Chat\n\n??Creator : http://line.me/ti/p/~adit_cmct",
     }
 
 read = {
@@ -211,7 +212,7 @@ def runtime(secs):
 def mentionMembers(to, mid):
     try:
         arrData = ""
-        textx = "Total Mention User「{}」\n\n  [ Mention ]\n1. ".format(str(len(mid)))
+        textx = "Total Mention User?{}?\n\n  [ Mention ]\n1. ".format(str(len(mid)))
         arr = []
         no = 1
         num = 2
@@ -228,9 +229,9 @@ def mentionMembers(to, mid):
                 num=(num+1)
             else:
                 try:
-                    no = "\n╰━━[ {} ]".format(str(aditmadzs.getGroup(to).name))
+                    no = "\n???[ {} ]".format(str(aditmadzs.getGroup(to).name))
                 except:
-                    no = "\n╰━━[ Success ]"
+                    no = "\n???[ Success ]"
         aditmadzs.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
     except Exception as error:
         aditmadzs.sendMessage(to, "[ INFO ] Error :\n" + str(error))
@@ -238,7 +239,7 @@ def mentionMembers(to, mid):
 def siderMembers(to, mid):
     try:
         arrData = ""
-        textx = "Total Sider User「{}」\nHaii ".format(str(len(mid)))
+        textx = "Total Sider User?{}?\nHaii ".format(str(len(mid)))
         arr = []
         no = 1
         num = 2
@@ -255,9 +256,9 @@ def siderMembers(to, mid):
                 num=(num+1)
             else:
                 try:
-                    no = "\n╰━━[ {} ]".format(str(aditmadzs.getGroup(to).name))
+                    no = "\n???[ {} ]".format(str(aditmadzs.getGroup(to).name))
                 except:
-                    no = "\n╰━━[ Success ]"
+                    no = "\n???[ Success ]"
         aditmadzs.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
     except Exception as error:
         aditmadzs.sendMessage(to, "[ INFO ] Error :\n" + str(error))
@@ -265,7 +266,7 @@ def siderMembers(to, mid):
 def welcomeMembers(to, mid):
     try:
         arrData = ""
-        textx = "Total Member Masuk「{}」\nHaii  ".format(str(len(mid)))
+        textx = "Total Member Masuk?{}?\nHaii  ".format(str(len(mid)))
         arr = []
         no = 1
         num = 2
@@ -276,16 +277,16 @@ def welcomeMembers(to, mid):
             elen = str(len(textx) + len(mention) - 1)
             arrData = {'S':slen, 'E':elen, 'M':i}
             arr.append(arrData)
-            textx += mention+wait["welcome"]+"\nGrup İsmi : "+str(ginfo.name)
+            textx += mention+wait["welcome"]+"\nGrup Ismi : "+str(ginfo.name)
             if no < len(mid):
                 no += 1
                 textx += "%i " % (num)
                 num=(num+1)
             else:
                 try:
-                    no = "\n╰━━[ {} ]".format(str(aditmadzs.getGroup(to).name))
+                    no = "\n???[ {} ]".format(str(aditmadzs.getGroup(to).name))
                 except:
-                    no = "\n╰━━[ Success ]"
+                    no = "\n???[ Success ]"
         aditmadzs.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
     except Exception as error:
         aditmadzs.sendMessage(to, "[ INFO ] Error :\n" + str(error))
@@ -293,7 +294,7 @@ def welcomeMembers(to, mid):
 def leaveMembers(to, mid):
     try:
         arrData = ""
-        textx = "Total Member Keluar「{}」\nByee  ".format(str(len(mid)))
+        textx = "Total Member Keluar?{}?\nByee  ".format(str(len(mid)))
         arr = []
         no = 1
         num = 2
@@ -304,16 +305,16 @@ def leaveMembers(to, mid):
             elen = str(len(textx) + len(mention) - 1)
             arrData = {'S':slen, 'E':elen, 'M':i}
             arr.append(arrData)
-            textx += mention+wait["leave"]+"\nGrup İsmi : "+str(ginfo.name)
+            textx += mention+wait["leave"]+"\nGrup Ismi : "+str(ginfo.name)
             if no < len(mid):
                 no += 1
                 textx += "%i " % (num)
                 num=(num+1)
             else:
                 try:
-                    no = "\n╰━━[ {} ]".format(str(aditmadzs.getGroup(to).name))
+                    no = "\n???[ {} ]".format(str(aditmadzs.getGroup(to).name))
                 except:
-                    no = "\n╰━━[ Success ]"
+                    no = "\n???[ Success ]"
         aditmadzs.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
     except Exception as error:
         aditmadzs.sendMessage(to, "[ INFO ] Error :\n" + str(error))
@@ -339,7 +340,7 @@ def sendMention(to, mid, firstmessage):
         timeNow = datetime.now(tz=tz)
         eltime = time.time() - mulai
         bot = runtime(eltime)
-        text += mention+"◐ Jam : "+datetime.strftime(timeNow,'%H:%M:%S')+" Wib\n🔰 Group : "+str(len(gid))+"\n🔰 Teman : "+str(len(teman))+"\n🔰 Expired : In "+hari+"\n🔰 Version :  Premium\n🔰 Tanggal : "+datetime.strftime(timeNow,'%Y-%m-%d')+"\n🔰 Runtime : \n • "+bot
+        text += mention+"? Jam : "+datetime.strftime(timeNow,'%H:%M:%S')+" Wib\n?? Group : "+str(len(gid))+"\n?? Teman : "+str(len(teman))+"\n?? Expired : In "+hari+"\n?? Version :  Premium\n?? Tanggal : "+datetime.strftime(timeNow,'%Y-%m-%d')+"\n?? Runtime : \n • "+bot
         aditmadzs.sendMessage(to, text, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
     except Exception as error:
         aditmadzs.sendMessage(to, "[ INFO ] Error :\n" + str(error))
@@ -357,112 +358,112 @@ def help():
     key = key.title()
     key2 = Setmain["namecreator"]
     key2 = key2.title()
-    helpMessage = "╭━━━━━━━━━━━━━━━━━━━" + "\n" + \
-                  "┃ " + key2 +"" + "\n" + \
-                  "┃            " + "\n" + \
-                  "┃          〔 Help Message 〕" + "\n" + \
-                  "┃              〔 Menu 〕" + "\n" + \
-                  "┃ " + key + "Help\n" + \
-                  "┃ " + key + "Help bot\n" + \
-                  "┃ " + key + "Translate\n" + \
-                  "┃ " + key + "Autotrans「en-on/en-off」\n" + \
-                  "┃ " + key + "Autotrans「id-on/id-off」\n" + \
-                  "┃ " + key + "Autotrans「th-on/th-off」\n" + \
-                  "┃ " + key + "Autotrans「tw-on/tw-off」\n" + \
-                  "┃ " + key + "Autotrans「ar-on/ar-off」\n" + \
-                  "┃ " + key + "Info meme\n" + \
-                  "┃ " + key + "Self「on/off」\n" + \
-                  "┃ " + key + "Me\n" + \
-                  "┃ " + key + "Mycopy「@」\n" + \
-                  "┃ " + key + "Mybackup\n" + \
-                  "┃ " + key + "Stealname「@」\n" + \
-                  "┃ " + key + "Stealbio「@」\n" + \
-                  "┃ " + key + "Stealpicture「@」\n" + \
-                  "┃ " + key + "Stealcover「@」\n" + \
-                  "┃ " + key + "Stealvideoprofile「@」\n" + \
-                  "┃ " + key + "Mymid\n" + \
-                  "┃ " + key + "Mid「@」\n" + \
-                  "┃ " + key + "Info 「@」\n" + \
-                  "┃ " + key + "Status\n" + \
-                  "┃ " + key + "About\n" + \
-                  "┃ " + key + "Restart\n" + \
-                  "┃ " + key + "Runtime\n" + \
-                  "┃ " + key + "Creator\n" + \
-                  "┃ " + key + "Respon\n" + \
-                  "┃ " + key + "Speed/Sp\n" + \
-                  "┃ " + key + "Sprespon\n" + \
-                  "┃ " + key + "Tagall\n" + \
-                  "┃ " + key + "Bye\n" + \
-                  "┃ " + key + "Ginfo\n" + \
-                  "┃ " + key + "Open\n" + \
-                  "┃ " + key + "Close\n" + \
-                  "┃ " + key + "Url grup\n" + \
-                  "┃ " + key + "Reject\n" + \
-                  "┃ " + key + "Gruplist\n" + \
-                  "┃ " + key + "Infogrup「angka」\n" + \
-                  "┃ " + key + "Infomem「angka」\n" + \
-                  "┃ " + key + "Remove chat\n" + \
-                  "┃ " + key + "Lurking「on/off」\n" + \
-                  "┃ " + key + "Lurkers\n" + \
-                  "┃ " + key + "Sider「on/off」\n" + \
-                  "┃ " + key + "Updatefoto\n" + \
-                  "┃ " + key + "Updategrup\n" + \
-                  "┃ " + key + "Broadcast:「Text」\n" + \
-                  "┃ " + key + "Setkey「New Key」\n" + \
-                  "┃ " + key + "Mykey\n" + \
-                  "┃ " + key + "Resetkey\n" + \
-                  "┃          〔 Hiburan 〕" + "\n" + \
-                  "┃ " + key + "Musik:「Judul Lagu」\n" + \
-                  "┃ " + key + "Musik2:「Judul Lagu」\n" + \
-                  "┃ " + key + "Playlist「Nama Penyanyi」\n" + \
-                  "┃ " + key + "Ytmp3:「Judul Lagu」\n" + \
-                  "┃ " + key + "Ytmp4:「Judul Video\n" + \
-                  "┃ " + key + "Fs:「Nama」\n" + \
-                  "┃ " + key + "cl-telp:「No HP」\n" + \
-                  "┃ " + key + "cl-sms:「No HP」\n" + \
-                  "┃ " + key + "Smsgratis:「Nohp:Pesannya」\n" + \
-                  "┃ " + key + "Meme@Nama@Teks1@Teks2\n" + \
-                  "┃ " + key + "Quotes\n" + \
-                  "┃ " + key + "1cak\n" + \
-                  "┃ " + key + "Profilesmule:「ID Smule」\n" + \
-                  "┃ " + key + "Randomnumber:「Nmor-Nmor」\n" + \
-                  "┃ " + key + "Acaratv:「Nama Channel」\n" + \
-                  "┃ " + key + "Gimage:「Keyword」\n" + \
-                  "┃ " + key + "Img food:「Nama Makanan」\n" + \
-                  "┃ " + key + "Al-quran:「Surah」\n" + \
-                  "┃ " + key + "Sholat:「Nama Kota」\n" + \
-                  "┃ " + key + "Cuaca:「Nama Kota」\n" + \
-                  "┃ " + key + "Lokasi:「Nama Kota」\n" + \
-                  "┃ " + key + "Profileig:「Nama IG」\n" + \
-                  "┃ " + key + "Cekig:「Nama IG」\n" + \
-                  "┃ " + key + "Cekdate:「tgl-bln-thn」\n" + \
-                  "┃ " + key + "Spamtag:「jumlahnya」\n" + \
-                  "┃ " + key + "Spamtag「@」\n" + \
-                  "┃ " + key + "Spamcall:「jumlahnya」\n" + \
-                  "┃ " + key + "Spamcall\n" + \
-                  "┃ " + key + "ID line:「Id Line nya」\n" + \
-                  "┃          〔 Settings 〕" + "\n" + \
-                  "┃ " + key + "Unsend「on/off」\n" + \
-                  "┃ " + key + "Jointicket「on/off」\n" + \
-                  "┃ " + key + "Sticker「on/off」\n" + \
-                  "┃ " + key + "Respon「on/off」\n" + \
-                  "┃ " + key + "Respongift「on/off」\n" + \
-                  "┃ " + key + "Contact「on/off」\n" + \
-                  "┃ " + key + "Autojoin「on/off」\n" + \
-                  "┃ " + key + "Autoadd「on/off」\n" + \
-                  "┃ " + key + "Welcome「on/off」\n" + \
-                  "┃ " + key + "Simi「on/off」\n" + \
-                  "┃ " + key + "Autoleave「on/off」\n" + \
-                  "┃          〔 Admin 〕" + "\n" + \
-                  "┃ " + key + "Changenamecreator:「Nama」\n" + \
-                  "┃ " + key + "Resetnamecreator\n" + \
-                  "┃ " + key + "Admin:on\n" + \
-                  "┃ " + key + "Admin:repeat\n" + \
-                  "┃ " + key + "Adminadd「@」\n" + \
-                  "┃ " + key + "Admindell「@」\n" + \
-                  "┃ " + key + "Refresh\n" + \
-                  "┃ " + key + "Listadmin\n" + \
-                  "╰━━━〔 By"+ key2 + "  〕"
+    helpMessage = "????????????????????" + "\n" + \
+                  "? " + key2 +"" + "\n" + \
+                  "?            " + "\n" + \
+                  "?          ? Help Message ?" + "\n" + \
+                  "?              ? Menu ?" + "\n" + \
+                  "? " + key + "Help\n" + \
+                  "? " + key + "Help bot\n" + \
+                  "? " + key + "Translate\n" + \
+                  "? " + key + "Autotrans?en-on/en-off?\n" + \
+                  "? " + key + "Autotrans?id-on/id-off?\n" + \
+                  "? " + key + "Autotrans?th-on/th-off?\n" + \
+                  "? " + key + "Autotrans?tw-on/tw-off?\n" + \
+                  "? " + key + "Autotrans?ar-on/ar-off?\n" + \
+                  "? " + key + "Info meme\n" + \
+                  "? " + key + "Self?on/off?\n" + \
+                  "? " + key + "Me\n" + \
+                  "? " + key + "Mycopy?@?\n" + \
+                  "? " + key + "Mybackup\n" + \
+                  "? " + key + "Stealname?@?\n" + \
+                  "? " + key + "Stealbio?@?\n" + \
+                  "? " + key + "Stealpicture?@?\n" + \
+                  "? " + key + "Stealcover?@?\n" + \
+                  "? " + key + "Stealvideoprofile?@?\n" + \
+                  "? " + key + "Mymid\n" + \
+                  "? " + key + "Mid?@?\n" + \
+                  "? " + key + "Info ?@?\n" + \
+                  "? " + key + "Status\n" + \
+                  "? " + key + "About\n" + \
+                  "? " + key + "Restart\n" + \
+                  "? " + key + "Runtime\n" + \
+                  "? " + key + "Creator\n" + \
+                  "? " + key + "Respon\n" + \
+                  "? " + key + "Speed/Sp\n" + \
+                  "? " + key + "Sprespon\n" + \
+                  "? " + key + "Tagall\n" + \
+                  "? " + key + "Bye\n" + \
+                  "? " + key + "Ginfo\n" + \
+                  "? " + key + "Open\n" + \
+                  "? " + key + "Close\n" + \
+                  "? " + key + "Url grup\n" + \
+                  "? " + key + "Reject\n" + \
+                  "? " + key + "Gruplist\n" + \
+                  "? " + key + "Infogrup?angka?\n" + \
+                  "? " + key + "Infomem?angka?\n" + \
+                  "? " + key + "Remove chat\n" + \
+                  "? " + key + "Lurking?on/off?\n" + \
+                  "? " + key + "Lurkers\n" + \
+                  "? " + key + "Sider?on/off?\n" + \
+                  "? " + key + "Updatefoto\n" + \
+                  "? " + key + "Updategrup\n" + \
+                  "? " + key + "Broadcast:?Text?\n" + \
+                  "? " + key + "Setkey?New Key?\n" + \
+                  "? " + key + "Mykey\n" + \
+                  "? " + key + "Resetkey\n" + \
+                  "?          ? Hiburan ?" + "\n" + \
+                  "? " + key + "Musik:?Judul Lagu?\n" + \
+                  "? " + key + "Musik2:?Judul Lagu?\n" + \
+                  "? " + key + "Playlist?Nama Penyanyi?\n" + \
+                  "? " + key + "Ytmp3:?Judul Lagu?\n" + \
+                  "? " + key + "Ytmp4:?Judul Video\n" + \
+                  "? " + key + "Fs:?Nama?\n" + \
+                  "? " + key + "cl-telp:?No HP?\n" + \
+                  "? " + key + "cl-sms:?No HP?\n" + \
+                  "? " + key + "Smsgratis:?Nohp:Pesannya?\n" + \
+                  "? " + key + "Meme@Nama@Teks1@Teks2\n" + \
+                  "? " + key + "Quotes\n" + \
+                  "? " + key + "1cak\n" + \
+                  "? " + key + "Profilesmule:?ID Smule?\n" + \
+                  "? " + key + "Randomnumber:?Nmor-Nmor?\n" + \
+                  "? " + key + "Acaratv:?Nama Channel?\n" + \
+                  "? " + key + "Gimage:?Keyword?\n" + \
+                  "? " + key + "Img food:?Nama Makanan?\n" + \
+                  "? " + key + "Al-quran:?Surah?\n" + \
+                  "? " + key + "Sholat:?Nama Kota?\n" + \
+                  "? " + key + "Cuaca:?Nama Kota?\n" + \
+                  "? " + key + "Lokasi:?Nama Kota?\n" + \
+                  "? " + key + "Profileig:?Nama IG?\n" + \
+                  "? " + key + "Cekig:?Nama IG?\n" + \
+                  "? " + key + "Cekdate:?tgl-bln-thn?\n" + \
+                  "? " + key + "Spamtag:?jumlahnya?\n" + \
+                  "? " + key + "Spamtag?@?\n" + \
+                  "? " + key + "Spamcall:?jumlahnya?\n" + \
+                  "? " + key + "Spamcall\n" + \
+                  "? " + key + "ID line:?Id Line nya?\n" + \
+                  "?          ? Settings ?" + "\n" + \
+                  "? " + key + "Unsend?on/off?\n" + \
+                  "? " + key + "Jointicket?on/off?\n" + \
+                  "? " + key + "Sticker?on/off?\n" + \
+                  "? " + key + "Respon?on/off?\n" + \
+                  "? " + key + "Respongift?on/off?\n" + \
+                  "? " + key + "Contact?on/off?\n" + \
+                  "? " + key + "Autojoin?on/off?\n" + \
+                  "? " + key + "Autoadd?on/off?\n" + \
+                  "? " + key + "Welcome?on/off?\n" + \
+                  "? " + key + "Simi?on/off?\n" + \
+                  "? " + key + "Autoleave?on/off?\n" + \
+                  "?          ? Admin ?" + "\n" + \
+                  "? " + key + "Changenamecreator:?Nama?\n" + \
+                  "? " + key + "Resetnamecreator\n" + \
+                  "? " + key + "Admin:on\n" + \
+                  "? " + key + "Admin:repeat\n" + \
+                  "? " + key + "Adminadd?@?\n" + \
+                  "? " + key + "Admindell?@?\n" + \
+                  "? " + key + "Refresh\n" + \
+                  "? " + key + "Listadmin\n" + \
+                  "????? By"+ key2 + "  ?"
     return helpMessage
 
 
@@ -472,177 +473,177 @@ def helarot():
     key = key.title()
     key2 = Setmain["namecreator"]
     key2 = key2.title()
-    helpMessage1 = "╭━━━━━━━━━━━━━━━━━━━" + "\n" + \
-                  "┃ " + key2 +" " + "\n" + \
-                  "┃ " + "\n" + \
-                  "┃       〔 Help Bot 〕" + "\n" + \
-                  "┃         〔 Menu 〕" + "\n" + \
-                  "┃ " + key + "Cek sider\n" + \
-                  "┃ " + key + "Cek spam\n" + \
-                  "┃ " + key + "Cek pesan\n" + \
-                  "┃ " + key + "Cek respon\n" + \
-                  "┃ " + key + "Cek welcome\n" + \
-                  "┃ " + key + "Cek leave\n" + \
-                  "┃ " + key + "Set sider:「Text」\n" + \
-                  "┃ " + key + "Set spam:「Text」\n" + \
-                  "┃ " + key + "Set pesan:「Text」\n" + \
-                  "┃ " + key + "Set respon:「Text」\n" + \
-                  "┃ " + key + "Set welcome:「Text」\n" + \
-                  "┃ " + key + "Set leave:「Text」\n" + \
-                  "┃ " + key + "Myname:「Nama」\n" + \
-                  "┃ " + key + "Gift:「Mid korban」「Jumlah」\n" + \
-                  "┃ " + key + "Spam:「Mid korban」「Jumlah」\n" + \
-                  "╰━〔 By"+ key2 +"  〕"
+    helpMessage1 = "????????????????????" + "\n" + \
+                  "? " + key2 +" " + "\n" + \
+                  "? " + "\n" + \
+                  "?       ? Help Bot ?" + "\n" + \
+                  "?         ? Menu ?" + "\n" + \
+                  "? " + key + "Cek sider\n" + \
+                  "? " + key + "Cek spam\n" + \
+                  "? " + key + "Cek pesan\n" + \
+                  "? " + key + "Cek respon\n" + \
+                  "? " + key + "Cek welcome\n" + \
+                  "? " + key + "Cek leave\n" + \
+                  "? " + key + "Set sider:?Text?\n" + \
+                  "? " + key + "Set spam:?Text?\n" + \
+                  "? " + key + "Set pesan:?Text?\n" + \
+                  "? " + key + "Set respon:?Text?\n" + \
+                  "? " + key + "Set welcome:?Text?\n" + \
+                  "? " + key + "Set leave:?Text?\n" + \
+                  "? " + key + "Myname:?Nama?\n" + \
+                  "? " + key + "Gift:?Mid korban??Jumlah?\n" + \
+                  "? " + key + "Spam:?Mid korban??Jumlah?\n" + \
+                  "??? By"+ key2 +"  ?"
     return helpMessage1
 
 def infomeme():
     helpMessage2 = """
-╭━━━━━━━━━━━━━━━━━━━━━━━
-┃          Meme List 
-┃━━━━━━━━━━━━━━━━━━━━━━━
-┃🐚┃ Buzz
-┃🐚┃ Spongebob
-┃🐚┃ Patrick
-┃🐚┃ Doge
-┃🐚┃ Joker
-┃🐚┃ Xzibit
-┃🐚┃ You_tried
-┃🐚┃ cb
-┃🐚┃ blb
-┃🐚┃ wonka
-┃🐚┃ keanu
-┃🐚┃ cryingfloor
-┃🐚┃ disastergirl
-┃🐚┃ facepalm
-┃🐚┃ fwp
-┃🐚┃ grumpycat
-┃🐚┃ captain
-┃🐚┃ mmm
-┃🐚┃ rollsafe
-┃🐚┃ sad-obama
-┃🐚┃ sad-clinton
-┃🐚┃ aag
-┃🐚┃ sarcasticbear
-┃🐚┃ sk
-┃🐚┃ sparta
-┃🐚┃ aag
+????????????????????????
+?          Meme List 
+????????????????????????
+???? Buzz
+???? Spongebob
+???? Patrick
+???? Doge
+???? Joker
+???? Xzibit
+???? You_tried
+???? cb
+???? blb
+???? wonka
+???? keanu
+???? cryingfloor
+???? disastergirl
+???? facepalm
+???? fwp
+???? grumpycat
+???? captain
+???? mmm
+???? rollsafe
+???? sad-obama
+???? sad-clinton
+???? aag
+???? sarcasticbear
+???? sk
+???? sparta
+???? aag
 
 """
     return helpMessage2
 def listharga():
     helpMessage3 = """
-✍️ Creator : http://line.me/ti/p/~adit_cmct
+?? Creator : http://line.me/ti/p/~adit_cmct
 """
 
 def translate():
-    helpTranslate =     "╭━━〔 T R A N S L A T E 〕" + "\n" + \
-                       "┃🔰┃ af : afrikaans" + "\n" + \
-                       "┃🔰┃ sq : albanian" + "\n" + \
-                       "┃🔰┃ am : amharic" + "\n" + \
-                       "┃🔰┃ ar : arabic" + "\n" + \
-                       "┃🔰┃ hy : armenian" + "\n" + \
-                       "┃🔰┃ az : azerbaijani" + "\n" + \
-                       "┃🔰┃ eu : basque" + "\n" + \
-                       "┃🔰┃ be : belarusian" + "\n" + \
-                       "┃🔰┃ bn : bengali" + "\n" + \
-                       "┃🔰┃ bs : bosnian" + "\n" + \
-                       "┃🔰┃ bg : bulgarian" + "\n" + \
-                       "┃🔰┃ ca : catalan" + "\n" + \
-                       "┃🔰┃ ceb : cebuano" + "\n" + \
-                       "┃🔰┃ ny : chichewa" + "\n" + \
-                       "┃🔰┃ zh-cn : chinese (simplified)" + "\n" + \
-                       "┃🔰┃ zh-tw : chinese (traditional)" + "\n" + \
-                       "┃🔰┃ co : corsican" + "\n" + \
-                       "┃🔰┃ hr : croatian" + "\n" + \
-                       "┃🔰┃ cs : czech" + "\n" + \
-                       "┃🔰┃ da : danish" + "\n" + \
-                       "┃🔰┃ nl : dutch" + "\n" + \
-                       "┃🔰┃ en : english" + "\n" + \
-                       "┃🔰┃ eo : esperanto" + "\n" + \
-                       "┃🔰┃ et : estonian" + "\n" + \
-                       "┃🔰┃ tl : filipino" + "\n" + \
-                       "┃🔰┃ fi : finnish" + "\n" + \
-                       "┃🔰┃ fr : french" + "\n" + \
-                       "┃🔰┃ fy : frisian" + "\n" + \
-                       "┃🔰┃ gl : galician" + "\n" + \
-                       "┃🔰┃ ka : georgian" + "\n" + \
-                       "┃🔰┃ de : german" + "\n" + \
-                       "┃🔰┃ el : greek" + "\n" + \
-                       "┃🔰┃ gu : gujarati" + "\n" + \
-                       "┃🔰┃ ht : haitian creole" + "\n" + \
-                       "┃🔰┃ ha : hausa" + "\n" + \
-                       "┃🔰┃ haw : hawaiian" + "\n" + \
-                       "┃🔰┃ iw : hebrew" + "\n" + \
-                       "┃🔰┃ hi : hindi" + "\n" + \
-                       "┃🔰┃ hmn : hmong" + "\n" + \
-                       "┃🔰┃ hu : hungarian" + "\n" + \
-                       "┃🔰┃ is : icelandic" + "\n" + \
-                       "┃🔰┃ ig : igbo" + "\n" + \
-                       "┃🔰┃ id : indonesian" + "\n" + \
-                       "┃🔰┃ ga : irish" + "\n" + \
-                       "┃🔰┃ it : italian" + "\n" + \
-                       "┃🔰┃ ja : japanese" + "\n" + \
-                       "┃🔰┃ jw : javanese" + "\n" + \
-                       "┃🔰┃ kn : kannada" + "\n" + \
-                       "┃🔰┃ kk : kazakh" + "\n" + \
-                       "┃🔰┃ km : khmer" + "\n" + \
-                       "┃🔰┃ ko : korean" + "\n" + \
-                       "┃🔰┃ ku : kurdish (kurmanji)" + "\n" + \
-                       "┃🔰┃ ky : kyrgyz" + "\n" + \
-                       "┃🔰┃ lo : lao" + "\n" + \
-                       "┃🔰┃ la : latin" + "\n" + \
-                       "┃🔰┃ lv : latvian" + "\n" + \
-                       "┃🔰┃ lt : lithuanian" + "\n" + \
-                       "┃🔰┃ lb : luxembourgish" + "\n" + \
-                       "┃🔰┃ mk : macedonian" + "\n" + \
-                       "┃🔰┃ mg : malagasy" + "\n" + \
-                       "┃🔰┃ ms : malay" + "\n" + \
-                       "┃🔰┃ ml : malayalam" + "\n" + \
-                       "┃🔰┃ mt : maltese" + "\n" + \
-                       "┃🔰┃ mi : maori" + "\n" + \
-                       "┃🔰┃ mr : marathi" + "\n" + \
-                       "┃🔰┃ mn : mongolian" + "\n" + \
-                       "┃🔰┃ my : myanmar (burmese)" + "\n" + \
-                       "┃🔰┃ ne : nepali" + "\n" + \
-                       "┃🔰┃ no : norwegian" + "\n" + \
-                       "┃🔰┃ ps : pashto" + "\n" + \
-                       "┃🔰┃ fa : persian" + "\n" + \
-                       "┃🔰┃ pl : polish" + "\n" + \
-                       "┃🔰┃ pt : portuguese" + "\n" + \
-                       "┃🔰┃ pa : punjabi" + "\n" + \
-                       "┃🔰┃ ro : romanian" + "\n" + \
-                       "┃🔰┃ ru : russian" + "\n" + \
-                       "┃🔰┃ sm : samoan" + "\n" + \
-                       "┃🔰┃ gd : scots gaelic" + "\n" + \
-                       "┃🔰┃ sr : serbian" + "\n" + \
-                       "┃🔰┃ st : sesotho" + "\n" + \
-                       "┃🔰┃ sn : shona" + "\n" + \
-                       "┃🔰┃ sd : sindhi" + "\n" + \
-                       "┃🔰┃ si : sinhala" + "\n" + \
-                       "┃🔰┃ sk : slovak" + "\n" + \
-                       "┃🔰┃ sl : slovenian" + "\n" + \
-                       "┃🔰┃ so : somali" + "\n" + \
-                       "┃🔰┃ es : spanish" + "\n" + \
-                       "┃🔰┃ su : sundanese" + "\n" + \
-                       "┃🔰┃ sw : swahili" + "\n" + \
-                       "┃🔰┃ sv : swedish" + "\n" + \
-                       "┃🔰┃ tg : tajik" + "\n" + \
-                       "┃🔰┃ ta : tamil" + "\n" + \
-                       "┃🔰┃ te : telugu" + "\n" + \
-                       "┃🔰┃ th : thai" + "\n" + \
-                       "┃🔰┃ tr : turkish" + "\n" + \
-                       "┃🔰┃ uk : ukrainian" + "\n" + \
-                       "┃🔰┃ ur : urdu" + "\n" + \
-                       "┃🔰┃ uz : uzbek" + "\n" + \
-                       "┃🔰┃ vi : vietnamese" + "\n" + \
-                       "┃🔰┃ cy : welsh" + "\n" + \
-                       "┃🔰┃ xh : xhosa" + "\n" + \
-                       "┃🔰┃ yi : yiddish" + "\n" + \
-                       "┃🔰┃ yo : yoruba" + "\n" + \
-                       "┃🔰┃ zu : zulu" + "\n" + \
-                       "┃🔰┃ fil : Filipino" + "\n" + \
-                       "┃🔰┃ he : Hebrew" + "\n" + \
-                       "╰━━〔 Jangan Typo 〕" + "\n" + "\n\n" + \
+    helpTranslate =     "???? T R A N S L A T E ?" + "\n" + \
+                       "???? af : afrikaans" + "\n" + \
+                       "???? sq : albanian" + "\n" + \
+                       "???? am : amharic" + "\n" + \
+                       "???? ar : arabic" + "\n" + \
+                       "???? hy : armenian" + "\n" + \
+                       "???? az : azerbaijani" + "\n" + \
+                       "???? eu : basque" + "\n" + \
+                       "???? be : belarusian" + "\n" + \
+                       "???? bn : bengali" + "\n" + \
+                       "???? bs : bosnian" + "\n" + \
+                       "???? bg : bulgarian" + "\n" + \
+                       "???? ca : catalan" + "\n" + \
+                       "???? ceb : cebuano" + "\n" + \
+                       "???? ny : chichewa" + "\n" + \
+                       "???? zh-cn : chinese (simplified)" + "\n" + \
+                       "???? zh-tw : chinese (traditional)" + "\n" + \
+                       "???? co : corsican" + "\n" + \
+                       "???? hr : croatian" + "\n" + \
+                       "???? cs : czech" + "\n" + \
+                       "???? da : danish" + "\n" + \
+                       "???? nl : dutch" + "\n" + \
+                       "???? en : english" + "\n" + \
+                       "???? eo : esperanto" + "\n" + \
+                       "???? et : estonian" + "\n" + \
+                       "???? tl : filipino" + "\n" + \
+                       "???? fi : finnish" + "\n" + \
+                       "???? fr : french" + "\n" + \
+                       "???? fy : frisian" + "\n" + \
+                       "???? gl : galician" + "\n" + \
+                       "???? ka : georgian" + "\n" + \
+                       "???? de : german" + "\n" + \
+                       "???? el : greek" + "\n" + \
+                       "???? gu : gujarati" + "\n" + \
+                       "???? ht : haitian creole" + "\n" + \
+                       "???? ha : hausa" + "\n" + \
+                       "???? haw : hawaiian" + "\n" + \
+                       "???? iw : hebrew" + "\n" + \
+                       "???? hi : hindi" + "\n" + \
+                       "???? hmn : hmong" + "\n" + \
+                       "???? hu : hungarian" + "\n" + \
+                       "???? is : icelandic" + "\n" + \
+                       "???? ig : igbo" + "\n" + \
+                       "???? id : indonesian" + "\n" + \
+                       "???? ga : irish" + "\n" + \
+                       "???? it : italian" + "\n" + \
+                       "???? ja : japanese" + "\n" + \
+                       "???? jw : javanese" + "\n" + \
+                       "???? kn : kannada" + "\n" + \
+                       "???? kk : kazakh" + "\n" + \
+                       "???? km : khmer" + "\n" + \
+                       "???? ko : korean" + "\n" + \
+                       "???? ku : kurdish (kurmanji)" + "\n" + \
+                       "???? ky : kyrgyz" + "\n" + \
+                       "???? lo : lao" + "\n" + \
+                       "???? la : latin" + "\n" + \
+                       "???? lv : latvian" + "\n" + \
+                       "???? lt : lithuanian" + "\n" + \
+                       "???? lb : luxembourgish" + "\n" + \
+                       "???? mk : macedonian" + "\n" + \
+                       "???? mg : malagasy" + "\n" + \
+                       "???? ms : malay" + "\n" + \
+                       "???? ml : malayalam" + "\n" + \
+                       "???? mt : maltese" + "\n" + \
+                       "???? mi : maori" + "\n" + \
+                       "???? mr : marathi" + "\n" + \
+                       "???? mn : mongolian" + "\n" + \
+                       "???? my : myanmar (burmese)" + "\n" + \
+                       "???? ne : nepali" + "\n" + \
+                       "???? no : norwegian" + "\n" + \
+                       "???? ps : pashto" + "\n" + \
+                       "???? fa : persian" + "\n" + \
+                       "???? pl : polish" + "\n" + \
+                       "???? pt : portuguese" + "\n" + \
+                       "???? pa : punjabi" + "\n" + \
+                       "???? ro : romanian" + "\n" + \
+                       "???? ru : russian" + "\n" + \
+                       "???? sm : samoan" + "\n" + \
+                       "???? gd : scots gaelic" + "\n" + \
+                       "???? sr : serbian" + "\n" + \
+                       "???? st : sesotho" + "\n" + \
+                       "???? sn : shona" + "\n" + \
+                       "???? sd : sindhi" + "\n" + \
+                       "???? si : sinhala" + "\n" + \
+                       "???? sk : slovak" + "\n" + \
+                       "???? sl : slovenian" + "\n" + \
+                       "???? so : somali" + "\n" + \
+                       "???? es : spanish" + "\n" + \
+                       "???? su : sundanese" + "\n" + \
+                       "???? sw : swahili" + "\n" + \
+                       "???? sv : swedish" + "\n" + \
+                       "???? tg : tajik" + "\n" + \
+                       "???? ta : tamil" + "\n" + \
+                       "???? te : telugu" + "\n" + \
+                       "???? th : thai" + "\n" + \
+                       "???? tr : turkish" + "\n" + \
+                       "???? uk : ukrainian" + "\n" + \
+                       "???? ur : urdu" + "\n" + \
+                       "???? uz : uzbek" + "\n" + \
+                       "???? vi : vietnamese" + "\n" + \
+                       "???? cy : welsh" + "\n" + \
+                       "???? xh : xhosa" + "\n" + \
+                       "???? yi : yiddish" + "\n" + \
+                       "???? yo : yoruba" + "\n" + \
+                       "???? zu : zulu" + "\n" + \
+                       "???? fil : Filipino" + "\n" + \
+                       "???? he : Hebrew" + "\n" + \
+                       "???? Jangan Typo ?" + "\n" + "\n\n" + \
                          "Contoh : tr-en "
     return helpTranslate
 groupParam = ""
@@ -679,11 +680,11 @@ def bot(op):
                     if op.param2 not in Bots and op.param2 not in admin:
                         aditmadzs.acceptGroupInvitation(op.param1)
                         ginfo = aditmadzs.getGroup(op.param1)
-                        aditmadzs.sendMessage(op.param1,"☆Ketik ☞Help☜ Untuk Bantuan☆\n☆Harap Gunakan Dengan Bijak ^_^ ☆ Terimakasih telah mengundang saya ke group  " +str(ginfo.name))
+                        aditmadzs.sendMessage(op.param1,"?Ketik ?Help? Untuk Bantuan?\n?Harap Gunakan Dengan Bijak ^_^ ? Terimakasih telah mengundang saya ke group  " +str(ginfo.name))
                     else:
                         aditmadzs.acceptGroupInvitation(op.param1)
                         ginfo = aditmadzs.getGroup(op.param1)
-                        aditmadzs.sendMessage(op.param1,"☆Ketik ☞Help☜ Untuk Bantuan☆\n☆Harap Gunakan Dengan Bijak ^_^ ☆ Terimakasih telah mengundang saya ke group  " + str(ginfo.name))
+                        aditmadzs.sendMessage(op.param1,"?Ketik ?Help? Untuk Bantuan?\n?Harap Gunakan Dengan Bijak ^_^ ? Terimakasih telah mengundang saya ke group  " + str(ginfo.name))
 
         if op.type == 15:
             if op.param1 in welcome:
@@ -759,7 +760,7 @@ def bot(op):
                                 zx = ""
                                 zxc = ""
                                 zx2 = []
-                                xpesan =  "「 Gambar Dihapus 」\n• Pengirim : "
+                                xpesan =  "? Gambar Dihapus ?\n• Pengirim : "
                                 ret_ = "• Nama Grup : {}".format(str(ginfo.name))
                                 ret_ += "\n• Waktu Ngirim : {}".format(dt_to_str(cTime_to_datetime(msg_dict[msg_id]["createdTime"])))
                                 ry = str(ariftj.displayName)
@@ -776,7 +777,7 @@ def bot(op):
                            else:
                                 ginfo = aditmadzs.getGroup(at)
                                 ariftj = aditmadzs.getContact(msg_dict[msg_id]["from"])
-                                ret_ =  "「 Pesan Dihapus 」\n"
+                                ret_ =  "? Pesan Dihapus ?\n"
                                 ret_ += "• Pengirim : {}".format(str(ariftj.displayName))
                                 ret_ += "\n• Nama Grup : {}".format(str(ginfo.name))
                                 ret_ += "\n• Waktu Ngirim : {}".format(dt_to_str(cTime_to_datetime(msg_dict[msg_id]["createdTime"])))
@@ -795,7 +796,7 @@ def bot(op):
                         if msg_dict1[msg_id]["from"]:
                                 ginfo = aditmadzs.getGroup(at)
                                 ariftj = aditmadzs.getContact(msg_dict1[msg_id]["from"])
-                                ret_ =  "「 Sticker Dihapus 」\n"
+                                ret_ =  "? Sticker Dihapus ?\n"
                                 ret_ += "• Pengirim : {}".format(str(ariftj.displayName))
                                 ret_ += "\n• Nama Grup : {}".format(str(ginfo.name))
                                 ret_ += "\n• Waktu Ngirim : {}".format(dt_to_str(cTime_to_datetime(msg_dict1[msg_id]["createdTime"])))
@@ -937,7 +938,7 @@ def bot(op):
                if msg.contentType == 7:
                  if wait["sticker"] == True:
                     msg.contentType = 0
-                    aditmadzs.sendMessage(msg.to,"「Cek ID Sticker」\n STKID : " + msg.contentMetadata["STKID"] + "\n STKPKGID : " + msg.contentMetadata["STKPKGID"] + "\n STKVER : " + msg.contentMetadata["STKVER"]+ "\n\n「Link Sticker」" + "\nline://shop/detail/" + msg.contentMetadata["STKPKGID"])
+                    aditmadzs.sendMessage(msg.to,"?Cek ID Sticker?\n STKID : " + msg.contentMetadata["STKID"] + "\n STKPKGID : " + msg.contentMetadata["STKPKGID"] + "\n STKVER : " + msg.contentMetadata["STKVER"]+ "\n\n?Link Sticker?" + "\nline://shop/detail/" + msg.contentMetadata["STKPKGID"])
                if msg.contentType == 13:
                  if wait["contact"] == True:
                     msg.contentType = 0
@@ -946,7 +947,7 @@ def bot(op):
                         contact = aditmadzs.getContact(msg.contentMetadata["mid"])
                         path = aditmadzs.getContact(msg.contentMetadata["mid"]).picturePath
                         image = 'http://dl.profile.line.naver.jp'+path
-                        aditmadzs.sendMessage(msg.to,"☬ Nama : " + msg.contentMetadata["displayName"] + "\n🔰 MID : " + msg.contentMetadata["mid"] + "\n🔰 Status Msg : \n🔰" + contact.statusMessage + "\n🔰 Picture URL : http://dl.profile.line-cdn.net/" + contact.pictureStatus)
+                        aditmadzs.sendMessage(msg.to,"? Nama : " + msg.contentMetadata["displayName"] + "\n?? MID : " + msg.contentMetadata["mid"] + "\n?? Status Msg : \n??" + contact.statusMessage + "\n?? Picture URL : http://dl.profile.line-cdn.net/" + contact.pictureStatus)
                         aditmadzs.sendImageWithURL(msg.to, image)
 
         if op.type == 25 or op.type == 26:
@@ -965,7 +966,7 @@ def bot(op):
                    stk_id = msg.contentMetadata["STKID"]
                    stk_ver = msg.contentMetadata["STKVER"]
                    pkg_id = msg.contentMetadata["STKPKGID"]
-                   ret_ = "\n\n「 Sticker Info 」"
+                   ret_ = "\n\n? Sticker Info ?"
                    ret_ += "\n• Sticker ID : {}".format(stk_id)
                    ret_ += "\n• Sticker Version : {}".format(stk_ver)
                    ret_ += "\n• Sticker Package : {}".format(pkg_id)
@@ -983,7 +984,7 @@ def bot(op):
                if msg.contentType == 7:
                  if wait["sticker"] == True:
                     msg.contentType = 0
-                    aditmadzs.sendMessage(msg.to,"STKID : " + msg.contentMetadata["STKID"] + "\nSTKPKGID : " + msg.contentMetadata["STKPKGID"] + "\nSTKVER : " + msg.contentMetadata["STKVER"]+ "\n\n「Link Sticker」" + "\nline://shop/detail/" + msg.contentMetadata["STKPKGID"])
+                    aditmadzs.sendMessage(msg.to,"STKID : " + msg.contentMetadata["STKID"] + "\nSTKPKGID : " + msg.contentMetadata["STKPKGID"] + "\nSTKVER : " + msg.contentMetadata["STKVER"]+ "\n\n?Link Sticker?" + "\nline://shop/detail/" + msg.contentMetadata["STKPKGID"])
                if msg.contentType == 13:
                  if wait["contact"] == True:
                     msg.contentType = 0
@@ -992,7 +993,7 @@ def bot(op):
                         contact = aditmadzs.getContact(msg.contentMetadata["mid"])
                         path = aditmadzs.getContact(msg.contentMetadata["mid"]).picturePath
                         image = 'http://dl.profile.line.naver.jp'+path
-                        aditmadzs.sendMessage(msg.to,"☬ Nama : " + msg.contentMetadata["displayName"] + "\n🔰 MID : " + msg.contentMetadata["mid"] + "\n🔰 Status Msg : " + contact.statusMessage + "\n🔰 Picture URL : http://dl.profile.line-cdn.net/" + contact.pictureStatus)
+                        aditmadzs.sendMessage(msg.to,"? Nama : " + msg.contentMetadata["displayName"] + "\n?? MID : " + msg.contentMetadata["mid"] + "\n?? Status Msg : " + contact.statusMessage + "\n?? Picture URL : http://dl.profile.line-cdn.net/" + contact.pictureStatus)
                         aditmadzs.sendImageWithURL(msg.to, image)
 #ADD ADMIN
                  if msg._from in admin:
@@ -1099,52 +1100,52 @@ def bot(op):
                             if msg._from in admin:
                                 tz = pytz.timezone("Asia/Jakarta")
                                 timeNow = datetime.now(tz=tz)
-                                md = "╭━━━━━━━━━━━━━━━━━━━━━━━\n┃          🔰 S T A T U S 🔰\n┃━━━━━━━━━━━━━━━━━━━━━━━\n"
-                                if wait["unsend"] == True: md+="┃🔰┃ ✔️ Unsend「ON」\n"
-                                else: md+="┃🔰┃ ✖ Unsend「OFF」\n"
-                                if wait["sticker"] == True: md+="┃🔰┃ ✔️ Sticker「ON」\n"
-                                else: md+="┃🔰┃ ✖ Sticker「OFF」\n"
-                                if wait["contact"] == True: md+="┃🔰┃ ✔️ Contact「ON」\n"
-                                else: md+="┃🔰┃ ✖ Contact「OFF」\n"
-                                if wait["Mentionkick"] == True: md+="┃🔰┃ ✔️ Notag「ON」\n"
-                                else: md+="┃🔰┃ ✖ Notag「OFF」\n"
-                                if wait["detectMention"] == True: md+="┃🔰┃ ✔️ Respon「ON」\n"
-                                else: md+="┃🔰┃ ✖ Respon「OFF」\n"
-                                if wait["Mentiongift"] == True: md+="┃🔰┃ ✔️ Respongift「ON」\n"
-                                else: md+="┃🔰┃ ✖ Respongift「OFF」\n"
-                                if wait["autoJoin"] == True: md+="┃🔰┃ ✔️ Autojoin「ON」\n"
-                                else: md+="┃🔰┃ ✖ Autojoin「OFF」\n"
-                                if settings["autoJoinTicket"] == True: md+="┃🔰┃ ✔️ Join Ticket「ON」\n"
-                                else: md+="┃🔰┃ ✖ Join Ticket「OFF」\n"
-                                if msg.to in simisimi: md+="┃🔰┃ ✔️ Simisimi「ON」\n"
-                                else: md+="┃🔰┃ ✖ Simisimi「OFF」\n"
-                                if wait["autoAdd"] == True: md+="┃🔰┃ ✔️ Autoadd「ON」\n"
-                                else: md+="┃🔰┃ ✖ Autoadd「OFF」\n"
-                                if msg.to in welcome: md+="┃🔰┃ ✔️ Welcome「ON」\n"
-                                else: md+="┃🔰┃ ✖ Welcome「OFF」\n"
-                                if wait["autoLeave"] == True: md+="┃🔰┃ ✔️ Autoleave「ON」\n"
-                                else: md+="┃🔰┃ ✖ Autoleave「OFF」\n"
-                                aditmadzs.sendMessage(msg.to, md+"┃━━━━━━━━━━━━━━━━━━━━━━━\n┃☬ Tanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n┃☬ Jam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]\n╰━━━━━━━━━━━━━━━━━━━━━━━")
+                                md = "????????????????????????\n?          ?? S T A T U S ??\n????????????????????????\n"
+                                if wait["unsend"] == True: md+="???? ?? Unsend?ON?\n"
+                                else: md+="???? ? Unsend?OFF?\n"
+                                if wait["sticker"] == True: md+="???? ?? Sticker?ON?\n"
+                                else: md+="???? ? Sticker?OFF?\n"
+                                if wait["contact"] == True: md+="???? ?? Contact?ON?\n"
+                                else: md+="???? ? Contact?OFF?\n"
+                                if wait["Mentionkick"] == True: md+="???? ?? Notag?ON?\n"
+                                else: md+="???? ? Notag?OFF?\n"
+                                if wait["detectMention"] == True: md+="???? ?? Respon?ON?\n"
+                                else: md+="???? ? Respon?OFF?\n"
+                                if wait["Mentiongift"] == True: md+="???? ?? Respongift?ON?\n"
+                                else: md+="???? ? Respongift?OFF?\n"
+                                if wait["autoJoin"] == True: md+="???? ?? Autojoin?ON?\n"
+                                else: md+="???? ? Autojoin?OFF?\n"
+                                if settings["autoJoinTicket"] == True: md+="???? ?? Join Ticket?ON?\n"
+                                else: md+="???? ? Join Ticket?OFF?\n"
+                                if msg.to in simisimi: md+="???? ?? Simisimi?ON?\n"
+                                else: md+="???? ? Simisimi?OFF?\n"
+                                if wait["autoAdd"] == True: md+="???? ?? Autoadd?ON?\n"
+                                else: md+="???? ? Autoadd?OFF?\n"
+                                if msg.to in welcome: md+="???? ?? Welcome?ON?\n"
+                                else: md+="???? ? Welcome?OFF?\n"
+                                if wait["autoLeave"] == True: md+="???? ?? Autoleave?ON?\n"
+                                else: md+="???? ? Autoleave?OFF?\n"
+                                aditmadzs.sendMessage(msg.to, md+"????????????????????????\n?? Tanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n?? Jam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]\n????????????????????????")
 
                         elif cmd == "status translate":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 tz = pytz.timezone("Asia/Jakarta")
                                 timeNow = datetime.now(tz=tz)
-                                md = "╭━━━━━━━━━━━━━━━━━━━━━━━\n┃ 🔰 STATUS TRANSLATE 🔰\n┃━━━━━━━━━━━━━━━━━━━━━━━\n"
-                                if msg.to in translatetr: md+="┃🔰┃ ✔️ Turkish「ON」\n"
-                                else: md+="┃🔰┃ ✖ Turkish 「OFF」\n"
-                                if msg.to in translateen: md+="┃🔰┃ ✔️ English「ON」\n"
-                                else: md+="┃🔰┃ ✖ English「OFF」\n"
-                                if msg.to in translateid: md+="┃🔰┃ ✔️ Indonesia「ON」\n"
-                                else: md+="┃🔰┃ ✖ Indonesia「OFF」\n"
-                                if msg.to in translateth: md+="┃🔰┃ ✔️ Thailand「ON」\n"
-                                else: md+="┃🔰┃ ✖ Thailand「OFF」\n"
-                                if msg.to in translatetw: md+="┃🔰┃ ✔️ Taiwan「ON」\n"
-                                else: md+="┃🔰┃ ✖ Taiwan「OFF」\n"
-                                if msg.to in translatear: md+="┃🔰┃ ✔️ Arab「ON」\n"
-                                else: md+="┃🔰┃ ✖ Arab「OFF」\n"
-                                aditmadzs.sendMessage(msg.to, md+"┃━━━━━━━━━━━━━━━━━━━━━━━\n┃☬ Tanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n┃☬ Jam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]\n╰━━━━━━━━━━━━━━━━━━━━━━━")
+                                md = "????????????????????????\n? ?? STATUS TRANSLATE ??\n????????????????????????\n"
+                                if msg.to in translatetr: md+="???? ?? Turkish?ON?\n"
+                                else: md+="???? ? Turkish ?OFF?\n"
+                                if msg.to in translateen: md+="???? ?? English?ON?\n"
+                                else: md+="???? ? English?OFF?\n"
+                                if msg.to in translateid: md+="???? ?? Indonesia?ON?\n"
+                                else: md+="???? ? Indonesia?OFF?\n"
+                                if msg.to in translateth: md+="???? ?? Thailand?ON?\n"
+                                else: md+="???? ? Thailand?OFF?\n"
+                                if msg.to in translatetw: md+="???? ?? Taiwan?ON?\n"
+                                else: md+="???? ? Taiwan?OFF?\n"
+                                if msg.to in translatear: md+="???? ?? Arab?ON?\n"
+                                else: md+="???? ? Arab?OFF?\n"
+                                aditmadzs.sendMessage(msg.to, md+"????????????????????????\n?? Tanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n?? Jam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]\n????????????????????????")
 
                         elif cmd == "creator" or text.lower() == 'creator':
                             if msg._from in admin:
@@ -1157,7 +1158,7 @@ def bot(op):
                         elif cmd == "about" or cmd == "informasi":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
-                               sendMention(msg.to, sender, "「 Kırmızı Montlu 」\n")
+                               sendMention(msg.to, sender, "? Kirmizi Montlu ?\n")
                                aditmadzs.sendMessage(msg.to, None, contentMetadata={'mid': mid}, contentType=13)
 
                         elif cmd == "me" or text.lower() == 'me':
@@ -1185,7 +1186,7 @@ def bot(op):
                                key = eval(msg.contentMetadata["MENTION"])
                                key1 = key["MENTIONEES"][0]["M"]
                                mi = aditmadzs.getContact(key1)
-                               aditmadzs.sendMessage(msg.to, "☬ Nama : "+str(mi.displayName)+"\n🔰 Mid : " +key1+"\n🔰 Status Msg"+str(mi.statusMessage))
+                               aditmadzs.sendMessage(msg.to, "? Nama : "+str(mi.displayName)+"\n?? Mid : " +key1+"\n?? Status Msg"+str(mi.statusMessage))
                                aditmadzs.sendMessage(msg.to, None, contentMetadata={'mid': key1}, contentType=13)
                                if "videoProfile='{" in str(aditmadzs.getContact(key1)):
                                    aditmadzs.sendVideoWithURL(msg.to, 'http://dl.profile.line.naver.jp'+str(mi.picturePath)+'/vp.small')
@@ -1310,7 +1311,7 @@ def bot(op):
                         elif text.lower() == "mykey":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
-                               aditmadzs.sendMessage(msg.to, "「Mykey」\nSetkey bot mu「 " + str(Setmain["keyCommand"]) + " 」")
+                               aditmadzs.sendMessage(msg.to, "?Mykey?\nSetkey bot mu? " + str(Setmain["keyCommand"]) + " ?")
 
                         elif cmd.startswith("setkey "):
                           if wait["selfbot"] == True:
@@ -1321,13 +1322,13 @@ def bot(op):
                                    aditmadzs.sendMessage(msg.to, "Gagal mengganti key")
                                else:
                                    Setmain["keyCommand"] = str(key).lower()
-                                   aditmadzs.sendMessage(msg.to, "「Setkey」\nSetkey diganti jadi「{}」".format(str(key).lower()))
+                                   aditmadzs.sendMessage(msg.to, "?Setkey?\nSetkey diganti jadi?{}?".format(str(key).lower()))
 
                         elif text.lower() == "resetkey":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                Setmain["keyCommand"] = ""
-                               aditmadzs.sendMessage(msg.to, "「Setkey」\nSetkey mu kembali ke awal")
+                               aditmadzs.sendMessage(msg.to, "?Setkey?\nSetkey mu kembali ke awal")
 
                         elif cmd.startswith("changenamecreator: "):
                           if wait["selfbot"] == True:
@@ -1338,13 +1339,13 @@ def bot(op):
                                    aditmadzs.sendMessage(msg.to, "Gagal mengganti nama creator")
                                else:
                                    Setmain["namecreator"] = str(key).lower()
-                                   aditmadzs.sendMessage(msg.to, "「Change name creator」\nNama creator diganti jadi「{}」".format(str(key).lower()))
+                                   aditmadzs.sendMessage(msg.to, "?Change name creator?\nNama creator diganti jadi?{}?".format(str(key).lower()))
 
                         elif text.lower() == "resetnamecreator":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                Setmain["namecreator"] = "NADYA_AR"
-                               aditmadzs.sendMessage(msg.to, "「Change name creator」\nNama creator kembali ke awal")
+                               aditmadzs.sendMessage(msg.to, "?Change name creator?\nNama creator kembali ke awal")
 
                         elif cmd == "restart":
                           if wait["selfbot"] == True:
@@ -1384,7 +1385,7 @@ def bot(op):
                                     gTicket = "https://line.me/R/ti/g/{}".format(str(aditmadzs.reissueGroupTicket(G.id)))
                                 timeCreated = []
                                 timeCreated.append(time.strftime("%d-%m-%Y [ %H:%M:%S ]", time.localtime(int(G.createdTime) / 1000)))
-                                aditmadzs.sendMessage(msg.to, "☬ BOT Grup Info\n\n ☬ Nama Group : {}".format(G.name)+ "\n🔰 ID Group : {}".format(G.id)+ "\n🔰 Pembuat : {}".format(G.creator.displayName)+ "\n🔰 Waktu Dibuat : {}".format(str(timeCreated))+ "\n🔰 Jumlah Member : {}".format(str(len(G.members)))+ "\n🔰 Jumlah Pending : {}".format(gPending)+ "\n🔰 Group Qr : {}".format(gQr)+ "\n🔰 Group Ticket : {}".format(gTicket))
+                                aditmadzs.sendMessage(msg.to, "? BOT Grup Info\n\n ? Nama Group : {}".format(G.name)+ "\n?? ID Group : {}".format(G.id)+ "\n?? Pembuat : {}".format(G.creator.displayName)+ "\n?? Waktu Dibuat : {}".format(str(timeCreated))+ "\n?? Jumlah Member : {}".format(str(len(G.members)))+ "\n?? Jumlah Pending : {}".format(gPending)+ "\n?? Group Qr : {}".format(gQr)+ "\n?? Group Ticket : {}".format(gTicket))
                                 aditmadzs.sendMessage(msg.to, None, contentMetadata={'mid': G.creator.mid}, contentType=13)
                                 aditmadzs.sendImageWithURL(msg.to, 'http://dl.profile.line-cdn.net/'+G.pictureStatus)
                             except Exception as e:
@@ -1415,15 +1416,15 @@ def bot(op):
                                     gTicket = "https://line.me/R/ti/g/{}".format(str(aditmadzs.reissueGroupTicket(G.id)))
                                 timeCreated = []
                                 timeCreated.append(time.strftime("%d-%m-%Y [ %H:%M:%S ]", time.localtime(int(G.createdTime) / 1000)))
-                                ret_ += "☬ BOT Grup Info\n"
-                                ret_ += "\n☬ Nama Group : {}".format(G.name)
-                                ret_ += "\n☬ ID Group : {}".format(G.id)
-                                ret_ += "\n☬ Pembuat : {}".format(gCreator)
-                                ret_ += "\n☬ Waktu Dibuat : {}".format(str(timeCreated))
-                                ret_ += "\n☬ Jumlah Member : {}".format(str(len(G.members)))
-                                ret_ += "\n☬ Jumlah Pending : {}".format(gPending)
-                                ret_ += "\n☬ Group Qr : {}".format(gQr)
-                                ret_ += "\n☬ Group Ticket : {}".format(gTicket)
+                                ret_ += "? BOT Grup Info\n"
+                                ret_ += "\n? Nama Group : {}".format(G.name)
+                                ret_ += "\n? ID Group : {}".format(G.id)
+                                ret_ += "\n? Pembuat : {}".format(gCreator)
+                                ret_ += "\n? Waktu Dibuat : {}".format(str(timeCreated))
+                                ret_ += "\n? Jumlah Member : {}".format(str(len(G.members)))
+                                ret_ += "\n? Jumlah Pending : {}".format(gPending)
+                                ret_ += "\n? Group Qr : {}".format(gQr)
+                                ret_ += "\n? Group Ticket : {}".format(gTicket)
                                 ret_ += ""
                                 aditmadzs.sendMessage(to, str(ret_))
                             except:
@@ -1442,8 +1443,8 @@ def bot(op):
                                 ret_ = ""
                                 for mem in G.members:
                                     no += 1
-                                    ret_ += "\n " "☬ "+ str(no) + ". " + mem.displayName
-                                aditmadzs.sendMessage(to,"☬ Group Name : [ " + str(G.name) + " ]\n\n   [ List Member ]\n" + ret_ + "\n\n「Total %i Members」" % len(G.members))
+                                    ret_ += "\n " "? "+ str(no) + ". " + mem.displayName
+                                aditmadzs.sendMessage(to,"? Group Name : [ " + str(G.name) + " ]\n\n   [ List Member ]\n" + ret_ + "\n\n?Total %i Members?" % len(G.members))
                             except:
                                 pass
 
@@ -1457,8 +1458,8 @@ def bot(op):
                                    G = aditmadzs.getContact(i)
                                    a = a + 1
                                    end = "\n"
-                                   ma += "┃ " + str(a) + ". " +G.displayName+ "\n"
-                               aditmadzs.sendMessage(msg.to,"╭━━[ FRIEND LIST ]\n┃\n"+ma+"┃\n╰━━[ Total「"+str(len(gid))+"」Friends ]")
+                                   ma += "? " + str(a) + ". " +G.displayName+ "\n"
+                               aditmadzs.sendMessage(msg.to,"???[ FRIEND LIST ]\n?\n"+ma+"?\n???[ Total?"+str(len(gid))+"?Friends ]")
 
                         elif cmd == "gruplist":
                           if wait["selfbot"] == True:
@@ -1470,8 +1471,8 @@ def bot(op):
                                    G = aditmadzs.getGroup(i)
                                    a = a + 1
                                    end = "\n"
-                                   ma += "┃ " + str(a) + ". " +G.name+ "\n"
-                               aditmadzs.sendMessage(msg.to,"╭━━[ GROUP LIST ]\n┃\n"+ma+"┃\n╰━━[ Total「"+str(len(gid))+"」Groups ]")
+                                   ma += "? " + str(a) + ". " +G.name+ "\n"
+                               aditmadzs.sendMessage(msg.to,"???[ GROUP LIST ]\n?\n"+ma+"?\n???[ Total?"+str(len(gid))+"?Groups ]")
 
                         elif cmd == "open":
                           if wait["selfbot"] == True:
@@ -1562,7 +1563,7 @@ def bot(op):
                                 aditmadzs.sendMessage(msg.to,"Nama diganti jadi " + string + "")
 
 #===========BOT UPDATE============#
-                        elif cmd == "tagall" or text.lower() == '😆':
+                        elif cmd == "tagall" or text.lower() == '??':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                group = aditmadzs.getGroup(msg.to)
@@ -1630,7 +1631,7 @@ def bot(op):
                                     b = b + 1
                                     end = '\n'
                                     mb += str(b) + ". " +aditmadzs.getContact(m_id).displayName + "\n"
-                                aditmadzs.sendMessage(msg.to,"☬ BOT admin\n\nAdmin:\n"+mb+"\nTotal「%s」Admin" %(str(len(admin))))
+                                aditmadzs.sendMessage(msg.to,"? BOT admin\n\nAdmin:\n"+mb+"\nTotal?%s?Admin" %(str(len(admin))))
 
                         elif cmd == "@bye":
                           if wait["selfbot"] == True:
@@ -1651,7 +1652,7 @@ def bot(op):
                                 get_contact_time_start = time.time()
                                 get_contact = aditmadzs.getContact(mid)
                                 get_contact_time = time.time() - get_contact_time_start
-                                aditmadzs.sendMessage(msg.to, " ☬ BOT Speed respon\n\n - Get Profile\n   %.10f\n - Get Contact\n   %.10f\n - Get Group\n   %.10f" % (get_profile_time/3,get_contact_time/3,get_group_time/3))
+                                aditmadzs.sendMessage(msg.to, " ? BOT Speed respon\n\n - Get Profile\n   %.10f\n - Get Contact\n   %.10f\n - Get Group\n   %.10f" % (get_profile_time/3,get_contact_time/3,get_group_time/3))
 
                         elif cmd == "speed" or cmd == "sp":
                           if wait["selfbot"] == True:
@@ -1770,13 +1771,13 @@ def bot(op):
                                   tz = pytz.timezone("Asia/Jakarta")
                                   timeNow = datetime.now(tz=tz)
                                   if data[1] != "Subuh : " and data[2] != "Dzuhur : " and data[3] != "Ashar : " and data[4] != "Maghrib : " and data[5] != "Isha : ":
-                                         ret_ = "「Jadwal Sholat」"
-                                         ret_ += "\n☬ Lokasi : " + data[0]
-                                         ret_ += "\n☬ " + data[1]
-                                         ret_ += "\n☬ " + data[2]
-                                         ret_ += "\n☬ " + data[3]
-                                         ret_ += "\n☬ " + data[4]
-                                         ret_ += "\n☬ " + data[5]
+                                         ret_ = "?Jadwal Sholat?"
+                                         ret_ += "\n? Lokasi : " + data[0]
+                                         ret_ += "\n? " + data[1]
+                                         ret_ += "\n? " + data[2]
+                                         ret_ += "\n? " + data[3]
+                                         ret_ += "\n? " + data[4]
+                                         ret_ += "\n? " + data[5]
                                          ret_ += "\n\nTanggal : " + datetime.strftime(timeNow,'%Y-%m-%d')
                                          ret_ += "\nJam : " + datetime.strftime(timeNow,'%H:%M:%S')
                                   aditmadzs.sendMessage(msg.to, str(ret_))
@@ -1793,12 +1794,12 @@ def bot(op):
                                 tz = pytz.timezone("Asia/Jakarta")
                                 timeNow = datetime.now(tz=tz)
                                 if "result" not in data:
-                                    ret_ = "「Status Cuaca」"
-                                    ret_ += "\n☬ Lokasi : " + data[0].replace("Temperatur di kota ","")
-                                    ret_ += "\n☬ Suhu : " + data[1].replace("Suhu : ","") + " C"
-                                    ret_ += "\n☬ Kelembaban : " + data[2].replace("Kelembaban : ","") + " %"
-                                    ret_ += "\n☬ Tekanan udara : " + data[3].replace("Tekanan udara : ","") + " HPa"
-                                    ret_ += "\n☬ Kecepatan angin : " + data[4].replace("Kecepatan angin : ","") + " m/s"
+                                    ret_ = "?Status Cuaca?"
+                                    ret_ += "\n? Lokasi : " + data[0].replace("Temperatur di kota ","")
+                                    ret_ += "\n? Suhu : " + data[1].replace("Suhu : ","") + " C"
+                                    ret_ += "\n? Kelembaban : " + data[2].replace("Kelembaban : ","") + " %"
+                                    ret_ += "\n? Tekanan udara : " + data[3].replace("Tekanan udara : ","") + " HPa"
+                                    ret_ += "\n? Kecepatan angin : " + data[4].replace("Kecepatan angin : ","") + " m/s"
                                     ret_ += "\n\nTanggal : " + datetime.strftime(timeNow,'%Y-%m-%d')
                                     ret_ += "\nJam : " + datetime.strftime(timeNow,'%H:%M:%S')
                                 aditmadzs.sendMessage(msg.to, str(ret_))
@@ -1814,9 +1815,9 @@ def bot(op):
                                 data = json.loads(data)
                                 if data[0] != "" and data[1] != "" and data[2] != "":
                                     link = "https://www.google.co.id/maps/@{},{},15z".format(str(data[1]), str(data[2]))
-                                    ret_ = "「Info Lokasi」"
-                                    ret_ += "\n☬ Location : " + data[0]
-                                    ret_ += "\n☬ Google Maps : " + link
+                                    ret_ = "?Info Lokasi?"
+                                    ret_ += "\n? Location : " + data[0]
+                                    ret_ += "\n? Google Maps : " + link
                                 else:
                                     ret_ = "[Details Location] Error : Location not found"
                                 aditmadzs.sendMessage(msg.to,str(ret_))
@@ -1830,7 +1831,7 @@ def bot(op):
                                 data = json.loads(data)
                                 info = data["info"]
                                 audio = data["audio"]
-                                hasil = "「 Hasil Musik 」\n"
+                                hasil = "? Hasil Musik ?\n"
                                 hasil += "\nPenyanyi : {}".format(str(info["penyanyi"]))
                                 hasil += "\nJudul : {}".format(str(info["judul"]))
                                 hasil += "\nAlbum : {}".format(str(info["album"]))
@@ -1840,14 +1841,14 @@ def bot(op):
                                 aditmadzs.sendImageWithURL(msg.to, str(data["gambar"]))
                                 aditmadzs.sendMessage(msg.to, str(hasil))
                                 aditmadzs.sendMessage(msg.to, "Downloading...")
-                                aditmadzs.sendMessage(msg.to, "「 Result MP3 」")
+                                aditmadzs.sendMessage(msg.to, "? Result MP3 ?")
                                 aditmadzs.sendAudioWithURL(msg.to, str(audio["mp3"]))
-                                aditmadzs.sendMessage(msg.to, "「 Result M4A 」")
+                                aditmadzs.sendMessage(msg.to, "? Result M4A ?")
                                 aditmadzs.sendVideoWithURL(msg.to, str(audio["m4a"]))
                                 aditmadzs.sendMessage(msg.to, str(data["lirik"]))
                                 aditmadzs.sendMessage(msg.to, "Success Download...")
                             except Exception as error:
-                            	aditmadzs.sendMessage(msg.to, "「 Result Error 」\n" + str(error))
+                            	aditmadzs.sendMessage(msg.to, "? Result Error ?\n" + str(error))
 
                         elif cmd.startswith("playlist "):
                           if msg._from in admin:
@@ -1861,13 +1862,13 @@ def bot(op):
                                 data = json.loads(data)
                                 if len(cond) == 1:
                                     num = 0
-                                    ret_ = "━━━━[ List Lagu ]━━━━"
+                                    ret_ = "????[ List Lagu ]????"
                                     for music in data["result"]:
                                         num += 1
                                         ret_ += "\n {}. {}".format(str(num), str(music["single"]))
-                                    ret_ += "\n  ━━[ Total {} Lagu ]━━".format(str(len(data["result"])))
-                                    ret_ += "\n\nUntuk Melihat Details Musik, Silahkan Ketik \n☬「 {}Playlist {}:nomor 」 ".format(str(),str(search))
-                                    ret_ += "\n☬「 {}Lirik {}:nomor 」 ".format(str(),str(search))
+                                    ret_ += "\n  ??[ Total {} Lagu ]??".format(str(len(data["result"])))
+                                    ret_ += "\n\nUntuk Melihat Details Musik, Silahkan Ketik \n?? {}Playlist {}:nomor ? ".format(str(),str(search))
+                                    ret_ += "\n?? {}Lirik {}:nomor ? ".format(str(),str(search))
                                     aditmadzs.sendMessage(msg.to, str(ret_))
                                 elif len(cond) == 2:
                                     num = int(cond[1])
@@ -1877,12 +1878,12 @@ def bot(op):
                                         data = result.text
                                         data = json.loads(data)
                                         if data["result"] != []:
-                                            ret_ = "╭━━━━[ Detail Musik ]━━━━"
-                                            ret_ += "\n┃ Title : {}".format(str(data["result"]["song"]))
-                                            ret_ += "\n┃ Album : {}".format(str(data["result"]["album"]))
-                                            ret_ += "\n┃ Size : {}".format(str(data["result"]["size"]))
-                                            #ret_ += "\n┃ Link : {}".format(str(data["result"]["mp3"][0]))
-                                            ret_ += "\n╰━━[ Tunggu Audionya ]━━━"
+                                            ret_ = "?????[ Detail Musik ]????"
+                                            ret_ += "\n? Title : {}".format(str(data["result"]["song"]))
+                                            ret_ += "\n? Album : {}".format(str(data["result"]["album"]))
+                                            ret_ += "\n? Size : {}".format(str(data["result"]["size"]))
+                                            #ret_ += "\n? Link : {}".format(str(data["result"]["mp3"][0]))
+                                            ret_ += "\n???[ Tunggu Audionya ]???"
                                             aditmadzs.sendMessage(msg.to, str(ret_))
                                             aditmadzs.sendAudioWithURL(msg.to, str(data["result"]["mp3"][0]))
                             except Exception as error:
@@ -1900,13 +1901,13 @@ def bot(op):
                                 data = json.loads(data)
                                 if len(cond) == 1:
                                     num = 0
-                                    ret_ = "━━━━[ List Lirik ]━━━━"
+                                    ret_ = "????[ List Lirik ]????"
                                     for lyric in data["results"]:
                                         num += 1
                                         ret_ += "\n {}. {}".format(str(num), str(lyric["single"]))
-                                    ret_ += "\n  ━━[ Total {} Lagu ]━━".format(str(len(data["results"])))
-                                    ret_ += "\n\nUntuk Melihat Details Musik, Silahkan Ketik \n☬「 {}Lirik {}:nomor 」".format(str(),str(search))
-                                    ret_ += "\n☬「 {}Playlist {}:nomor 」 ".format(str(),str(search))
+                                    ret_ += "\n  ??[ Total {} Lagu ]??".format(str(len(data["results"])))
+                                    ret_ += "\n\nUntuk Melihat Details Musik, Silahkan Ketik \n?? {}Lirik {}:nomor ?".format(str(),str(search))
+                                    ret_ += "\n?? {}Playlist {}:nomor ? ".format(str(),str(search))
                                     aditmadzs.sendMessage(msg.to, str(ret_))
                                 elif len(cond) == 2:
                                     num = int(cond[1])
@@ -2052,7 +2053,7 @@ def bot(op):
                                 separate = msg.text.split(" ")
                                 nohp = msg.text.replace(separate[0] + " ","")
                                 r = requests.get("http://apisora.herokuapp.com/prank/call/?no={}")
-                                aditmadzs.sendMessage(msg.to, "「 cl Telepon 」\n☬ Status : Success!!!\n☬ No Tujuan : "+nohp)
+                                aditmadzs.sendMessage(msg.to, "? cl Telepon ?\n? Status : Success!!!\n? No Tujuan : "+nohp)
                             except Exception as error:
                                 pass
 
@@ -2062,7 +2063,7 @@ def bot(op):
                                 separate = msg.text.split(" ")
                                 nohp = msg.text.replace(separate[0] + " ","")
                                 r = requests.get("https://farzain.xyz/api/cl.php?id="+nohp+"&type=1")
-                                aditmadzs.sendMessage(msg.to, "「 cl Sms 」\n☬ Status : Success!!!\n☬ No Tujuan : "+nohp)
+                                aditmadzs.sendMessage(msg.to, "? cl Sms ?\n? Status : Success!!!\n? No Tujuan : "+nohp)
                             except Exception as error:
                                 pass
 
@@ -2075,7 +2076,7 @@ def bot(op):
                                 num2 = tgb[1]
                                 r = requests.get("https://corrykalam.gq/sms.php?no="+num1+"&text="+num2)
                                 data = r.json()
-                                aditmadzs.sendMessage(msg.to, "「 Sms Gratis 」\n☬ Status : "+str(data["status"])+"!!!\n☬ No Tujuan : "+num1+"\n☬ Pesannya : "+num2+"\n☬ Detail : "+str(data["detail"]))
+                                aditmadzs.sendMessage(msg.to, "? Sms Gratis ?\n? Status : "+str(data["status"])+"!!!\n? No Tujuan : "+num1+"\n? Pesannya : "+num2+"\n? Detail : "+str(data["detail"]))
 
                         elif cmd.startswith("cl call: "):
                           if msg._from in admin:
@@ -2084,7 +2085,7 @@ def bot(op):
                             r = requests.get("http://apisora2.herokuapp.com/cl/call/?no={}".format(urllib.parse.quote(nomor)))
                             data = r.text
                             data = json.loads(data)
-                            ret_ = "「 Prangked Telpon 」"
+                            ret_ = "? Prangked Telpon ?"
                             ret_ += "\n• Status : {}".format(str(data["status"]))
                             ret_ += "\n• Tujuan "+str(data["result"])
                             aditmadzs.sendMessage(msg.to, str(ret_))
@@ -2138,11 +2139,11 @@ def bot(op):
                                     me = best.url
                                     hasil = ""
                                     title = "Judul [ " + vid.title + " ]"
-                                    author = '\n\n☬ Author : ' + str(vid.author)
-                                    durasi = '\n☬ Duration : ' + str(vid.duration)
-                                    suka = '\n☬ Likes : ' + str(vid.likes)
-                                    rating = '\n☬ Rating : ' + str(vid.rating)
-                                    deskripsi = '\n☬ Deskripsi : ' + str(vid.description)
+                                    author = '\n\n? Author : ' + str(vid.author)
+                                    durasi = '\n? Duration : ' + str(vid.duration)
+                                    suka = '\n? Likes : ' + str(vid.likes)
+                                    rating = '\n? Rating : ' + str(vid.rating)
+                                    deskripsi = '\n? Deskripsi : ' + str(vid.description)
                                 aditmadzs.sendVideoWithURL(msg.to, me)
                                 aditmadzs.sendMessage(msg.to,title+ author+ durasi+ suka+ rating+ deskripsi)
                             except Exception as e:
@@ -2176,11 +2177,11 @@ def bot(op):
                                     vin = s.url
                                     hasil = ""
                                     title = "Judul [ " + vid.title + " ]"
-                                    author = '\n\n☬ Author : ' + str(vid.author)
-                                    durasi = '\n☬ Duration : ' + str(vid.duration)
-                                    suka = '\n☬ Likes : ' + str(vid.likes)
-                                    rating = '\n☬ Rating : ' + str(vid.rating)
-                                    deskripsi = '\n☬ Deskripsi : ' + str(vid.description)
+                                    author = '\n\n? Author : ' + str(vid.author)
+                                    durasi = '\n? Duration : ' + str(vid.duration)
+                                    suka = '\n? Likes : ' + str(vid.likes)
+                                    rating = '\n? Rating : ' + str(vid.rating)
+                                    deskripsi = '\n? Deskripsi : ' + str(vid.description)
                                 aditmadzs.sendImageWithURL(msg.to, me)
                                 aditmadzs.sendAudioWithURL(msg.to, shi)
                                 aditmadzs.sendMessage(msg.to,title+ author+ durasi+ suka+ rating+ deskripsi)
@@ -2221,15 +2222,15 @@ def bot(op):
                                     data = r.text
                                     data = json.loads(data)
                                     if data != []:
-                                        ret_ = "╭━━[ Profile Instagram ]"
-                                        ret_ += "\n┃ Nama : {}".format(str(data["info"]["full_name"]))
-                                        ret_ += "\n┃ Username : {}".format(str(data["info"]["username"]))
-                                        ret_ += "\n┃ Bio : {}".format(str(data["info"]["bio"]))
-                                        ret_ += "\n┃ URL Bio : {}".format(str(data["info"]["url_bio"]))
-                                        ret_ += "\n┃ Pengikut : {}".format(str(data["count"]["followers"]))
-                                        ret_ += "\n┃ Diikuti : {}".format(str(data["count"]["followers"]))
-                                        ret_ += "\n┃ Total Post : {}".format(str(data["count"]["post"]))
-                                        ret_ += "\n╰━━[ https://www.instagram.com/{} ]".format(search)
+                                        ret_ = "???[ Profile Instagram ]"
+                                        ret_ += "\n? Nama : {}".format(str(data["info"]["full_name"]))
+                                        ret_ += "\n? Username : {}".format(str(data["info"]["username"]))
+                                        ret_ += "\n? Bio : {}".format(str(data["info"]["bio"]))
+                                        ret_ += "\n? URL Bio : {}".format(str(data["info"]["url_bio"]))
+                                        ret_ += "\n? Pengikut : {}".format(str(data["count"]["followers"]))
+                                        ret_ += "\n? Diikuti : {}".format(str(data["count"]["followers"]))
+                                        ret_ += "\n? Total Post : {}".format(str(data["count"]["post"]))
+                                        ret_ += "\n???[ https://www.instagram.com/{} ]".format(search)
                                         path = data["info"]["profile_pict"]
                                         aditmadzs.sendMessage(to, str(ret_))
                                         aditmadzs.sendImageWithURL(to, str(path))
@@ -2247,7 +2248,7 @@ def bot(op):
                             usia = data["data"]["usia"]
                             ultah = data["data"]["ultah"]
                             zodiak = data["data"]["zodiak"]
-                            aditmadzs.sendMessage(msg.to,"🔰 I N F O R M A S I ����\n\n"+"🔰 Date Of Birth : "+lahir+"\n🔰 Age : "+usia+"\n🔰 Ultah : "+ultah+"\n🔰 Zodiak : "+zodiak)
+                            aditmadzs.sendMessage(msg.to,"?? I N F O R M A S I ????\n\n"+"?? Date Of Birth : "+lahir+"\n?? Age : "+usia+"\n?? Ultah : "+ultah+"\n?? Zodiak : "+zodiak)
 
                         elif cmd.startswith("spamtag: "):
                           if wait["selfbot"] == True:
@@ -3294,7 +3295,7 @@ def bot(op):
                                        simisimi.append(msg.to)
                                        ginfo = aditmadzs.getGroup(msg.to)
                                        msgs = "Simi-simi Diaktifkan\nDi Group : " +str(ginfo.name)
-                                  aditmadzs.sendMessage(msg.to, "「Diaktifkan」\n" + msgs)
+                                  aditmadzs.sendMessage(msg.to, "?Diaktifkan?\n" + msgs)
                               elif spl == 'off':
                                     if msg.to in simisimi:
                                          simisimi.remove(msg.to)
@@ -3302,7 +3303,7 @@ def bot(op):
                                          msgs = "Simi-simi Dinonaktifkan\nDi Group : " +str(ginfo.name)
                                     else:
                                          msgs = "Simi-simi Sudah Tidak Aktif"
-                                    aditmadzs.sendMessage(msg.to, "「Dinonaktifkan」\n" + msgs)
+                                    aditmadzs.sendMessage(msg.to, "?Dinonaktifkan?\n" + msgs)
 
                         elif 'Autotrans tr-' in msg.text:
                            if msg._from in admin:
@@ -3314,7 +3315,7 @@ def bot(op):
                                        translateth.append(msg.to)
                                        ginfo = aditmadzs.getGroup(msg.to)
                                        msgs = "Auto Translate Diaktifkan\nDi Group : " +str(ginfo.name)
-                                  aditmadzs.sendMessage(msg.to, "「Diaktifkan」\n" + msgs)
+                                  aditmadzs.sendMessage(msg.to, "?Diaktifkan?\n" + msgs)
                               elif spl == 'off':
                                     if msg.to in translateth:
                                          translateth.remove(msg.to)
@@ -3322,7 +3323,7 @@ def bot(op):
                                          msgs = "Auto Translate Dinonaktifkan\nDi Group : " +str(ginfo.name)
                                     else:
                                          msgs = "Auto Translate Sudah Tidak Aktif"
-                                    aditmadzs.sendMessage(msg.to, "「Dinonaktifkan」\n" + msgs)
+                                    aditmadzs.sendMessage(msg.to, "?Dinonaktifkan?\n" + msgs)
 
                         elif 'Autotrans th-' in msg.text:
                            if msg._from in admin:
@@ -3334,7 +3335,7 @@ def bot(op):
                                        translateth.append(msg.to)
                                        ginfo = aditmadzs.getGroup(msg.to)
                                        msgs = "Auto Translate Diaktifkan\nDi Group : " +str(ginfo.name)
-                                  aditmadzs.sendMessage(msg.to, "「Diaktifkan」\n" + msgs)
+                                  aditmadzs.sendMessage(msg.to, "?Diaktifkan?\n" + msgs)
                               elif spl == 'off':
                                     if msg.to in translateth:
                                          translateth.remove(msg.to)
@@ -3342,7 +3343,7 @@ def bot(op):
                                          msgs = "Auto Translate Dinonaktifkan\nDi Group : " +str(ginfo.name)
                                     else:
                                          msgs = "Auto Translate Sudah Tidak Aktif"
-                                    aditmadzs.sendMessage(msg.to, "「Dinonaktifkan」\n" + msgs)
+                                    aditmadzs.sendMessage(msg.to, "?Dinonaktifkan?\n" + msgs)
 
                         elif 'Autotrans en-' in msg.text:
                            if msg._from in admin:
@@ -3354,7 +3355,7 @@ def bot(op):
                                        translateen.append(msg.to)
                                        ginfo = aditmadzs.getGroup(msg.to)
                                        msgs = "Auto Translate Diaktifkan\nDi Group : " +str(ginfo.name)
-                                  aditmadzs.sendMessage(msg.to, "「Diaktifkan」\n" + msgs)
+                                  aditmadzs.sendMessage(msg.to, "?Diaktifkan?\n" + msgs)
                               elif spl == 'off':
                                     if msg.to in translateen:
                                          translateen.remove(msg.to)
@@ -3362,7 +3363,7 @@ def bot(op):
                                          msgs = "Auto Translate Dinonaktifkan\nDi Group : " +str(ginfo.name)
                                     else:
                                          msgs = "Auto Translate Sudah Tidak Aktif"
-                                    aditmadzs.sendMessage(msg.to, "「Dinonaktifkan」\n" + msgs)
+                                    aditmadzs.sendMessage(msg.to, "?Dinonaktifkan?\n" + msgs)
                         elif 'Autotrans id-' in msg.text:
                            if msg._from in admin:
                               spl = msg.text.replace('Autotrans id-','')
@@ -3373,7 +3374,7 @@ def bot(op):
                                        translateid.append(msg.to)
                                        ginfo = aditmadzs.getGroup(msg.to)
                                        msgs = "Auto Translate Diaktifkan\nDi Group : " +str(ginfo.name)
-                                  aditmadzs.sendMessage(msg.to, "「Diaktifkan」\n" + msgs)
+                                  aditmadzs.sendMessage(msg.to, "?Diaktifkan?\n" + msgs)
                               elif spl == 'off':
                                     if msg.to in translateid:
                                          translateid.remove(msg.to)
@@ -3381,7 +3382,7 @@ def bot(op):
                                          msgs = "Auto Translate Dinonaktifkan\nDi Group : " +str(ginfo.name)
                                     else:
                                          msgs = "Auto Translate Sudah Tidak Aktif"
-                                    aditmadzs.sendMessage(msg.to, "「Dinonaktifkan」\n" + msgs)
+                                    aditmadzs.sendMessage(msg.to, "?Dinonaktifkan?\n" + msgs)
 
                         elif 'Autotrans tw-' in msg.text:
                            if msg._from in admin:
@@ -3393,7 +3394,7 @@ def bot(op):
                                        translatetw.append(msg.to)
                                        ginfo = aditmadzs.getGroup(msg.to)
                                        msgs = "Auto Translate Diaktifkan\nDi Group : " +str(ginfo.name)
-                                  aditmadzs.sendMessage(msg.to, "「Diaktifkan」\n" + msgs)
+                                  aditmadzs.sendMessage(msg.to, "?Diaktifkan?\n" + msgs)
                               elif spl == 'off':
                                     if msg.to in translatetw:
                                          translatetw.remove(msg.to)
@@ -3401,7 +3402,7 @@ def bot(op):
                                          msgs = "Auto Translate Dinonaktifkan\nDi Group : " +str(ginfo.name)
                                     else:
                                          msgs = "Auto Translate Sudah Tidak Aktif"
-                                    aditmadzs.sendMessage(msg.to, "「Dinonaktifkan」\n" + msgs)
+                                    aditmadzs.sendMessage(msg.to, "?Dinonaktifkan?\n" + msgs)
 
                         elif 'Autotrans ar-' in msg.text:
                            if msg._from in admin:
@@ -3413,7 +3414,7 @@ def bot(op):
                                        translatear.append(msg.to)
                                        ginfo = aditmadzs.getGroup(msg.to)
                                        msgs = "Auto Translate Diaktifkan\nDi Group : " +str(ginfo.name)
-                                  aditmadzs.sendMessage(msg.to, "「Diaktifkan」\n" + msgs)
+                                  aditmadzs.sendMessage(msg.to, "?Diaktifkan?\n" + msgs)
                               elif spl == 'off':
                                     if msg.to in translatear:
                                          translatear.remove(msg.to)
@@ -3421,7 +3422,7 @@ def bot(op):
                                          msgs = "Auto Translate Dinonaktifkan\nDi Group : " +str(ginfo.name)
                                     else:
                                          msgs = "Auto Translate Sudah Tidak Aktif"
-                                    aditmadzs.sendMessage(msg.to, "「Dinonaktifkan」\n" + msgs)
+                                    aditmadzs.sendMessage(msg.to, "?Dinonaktifkan?\n" + msgs)
 
 #===========Protection============#
                         elif 'Welcome ' in msg.text:
@@ -3434,7 +3435,7 @@ def bot(op):
                                        welcome.append(msg.to)
                                        ginfo = aditmadzs.getGroup(msg.to)
                                        msgs = "Welcome Msg diaktifkan\nDi Group : " +str(ginfo.name)
-                                  aditmadzs.sendMessage(msg.to, "「Diaktifkan」\n" + msgs)
+                                  aditmadzs.sendMessage(msg.to, "?Diaktifkan?\n" + msgs)
                               elif spl == 'off':
                                     if msg.to in welcome:
                                          welcome.remove(msg.to)
@@ -3442,7 +3443,7 @@ def bot(op):
                                          msgs = "Welcome Msg dinonaktifkan\nDi Group : " +str(ginfo.name)
                                     else:
                                          msgs = "Welcome Msg sudah tidak aktif"
-                                    aditmadzs.sendMessage(msg.to, "「Dinonaktifkan」\n" + msgs)
+                                    aditmadzs.sendMessage(msg.to, "?Dinonaktifkan?\n" + msgs)
                         elif ("Kick1 " in msg.text):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
@@ -3458,12 +3459,12 @@ def bot(op):
                                        except:
                                            pass
 
-                        elif ("Selam canım" in msg.text):
+                        elif ("Selam canim" in msg.text):
                             if wait["selfbot"] == True:
                                 if msg.toType == 2:
                                     if msg._from in admin:
                                         #print "ok"
-                                        _name = msg.text.replace("Selam canım","")
+                                        _name = msg.text.replace("Selam canim","")
                                 gs = aditmadzs.getGroup(msg.to)
                                 targets = []
                                 for g in gs.members:
@@ -3483,7 +3484,7 @@ def bot(op):
                                 gs = aditmadzs.getGroup(msg.to)
                             gs = aditmadzs.getGroup(msg.to)
                             gs = aditmadzs.getGroup(msg.to)
-                            sirilist = [i.mid for i in gs.members if any(word in i.displayName for word in ["Doctor.A","Eliza","Parry","Rakko","しりちゃん","0","1","2","3","4","5","6","7","8","9"])]
+                            sirilist = [i.mid for i in gs.members if any(word in i.displayName for word in ["Doctor.A","Eliza","Parry","Rakko","?????","0","1","2","3","4","5","6","7","8","9"])]
                             if sirilist != []:
                                 groupParam = msg.to
                                 try:
@@ -3729,7 +3730,7 @@ def bot(op):
                                   aditmadzs.sendMessage(msg.to, "Gagal mengganti Pesan Msg")
                               else:
                                   wait["message"] = spl
-                                  aditmadzs.sendMessage(msg.to, "「Pesan Msg」\nPesan Msg diganti jadi :\n\n「{}」".format(str(spl)))
+                                  aditmadzs.sendMessage(msg.to, "?Pesan Msg?\nPesan Msg diganti jadi :\n\n?{}?".format(str(spl)))
 
                         elif 'Set welcome: ' in msg.text:
                            if msg._from in admin:
@@ -3738,7 +3739,7 @@ def bot(op):
                                   aditmadzs.sendMessage(msg.to, "Gagal mengganti Welcome Msg")
                               else:
                                   wait["welcome"] = spl
-                                  aditmadzs.sendMessage(msg.to, "「Welcome Msg」\nWelcome Msg diganti jadi :\n\n「{}」".format(str(spl)))
+                                  aditmadzs.sendMessage(msg.to, "?Welcome Msg?\nWelcome Msg diganti jadi :\n\n?{}?".format(str(spl)))
 
                         elif 'Set leave: ' in msg.text:
                            if msg._from in admin:
@@ -3747,7 +3748,7 @@ def bot(op):
                                   aditmadzs.sendMessage(msg.to, "Gagal mengganti Leave Msg")
                               else:
                                   wait["leave"] = spl
-                                  aditmadzs.sendMessage(msg.to, "「Leave Msg」\nLeave Msg diganti jadi :\n\n「{}」".format(str(spl)))
+                                  aditmadzs.sendMessage(msg.to, "?Leave Msg?\nLeave Msg diganti jadi :\n\n?{}?".format(str(spl)))
 
                         elif 'Set respon: ' in msg.text:
                            if msg._from in admin:
@@ -3756,7 +3757,7 @@ def bot(op):
                                   aditmadzs.sendMessage(msg.to, "Gagal mengganti Respon Msg")
                               else:
                                   wait["Respontag"] = spl
-                                  aditmadzs.sendMessage(msg.to, "「Respon Msg」\nRespon Msg diganti jadi :\n\n「{}」".format(str(spl)))
+                                  aditmadzs.sendMessage(msg.to, "?Respon Msg?\nRespon Msg diganti jadi :\n\n?{}?".format(str(spl)))
 
                         elif 'Set spam: ' in msg.text:
                            if msg._from in admin:
@@ -3765,7 +3766,7 @@ def bot(op):
                                   aditmadzs.sendMessage(msg.to, "Gagal mengganti Spam")
                               else:
                                   Setmain["ADITMADZSmessage1"] = spl
-                                  aditmadzs.sendMessage(msg.to, "「Spam Msg」\nSpam Msg diganti jadi :\n\n「{}」".format(str(spl)))
+                                  aditmadzs.sendMessage(msg.to, "?Spam Msg?\nSpam Msg diganti jadi :\n\n?{}?".format(str(spl)))
 
                         elif 'Set sider: ' in msg.text:
                            if msg._from in admin:
@@ -3774,31 +3775,31 @@ def bot(op):
                                   aditmadzs.sendMessage(msg.to, "Gagal mengganti Sider Msg")
                               else:
                                   wait["mention"] = spl
-                                  aditmadzs.sendMessage(msg.to, "「Sider Msg」\nSider Msg diganti jadi :\n\n「{}」".format(str(spl)))
+                                  aditmadzs.sendMessage(msg.to, "?Sider Msg?\nSider Msg diganti jadi :\n\n?{}?".format(str(spl)))
 
                         elif text.lower() == "cek pesan":
                             if msg._from in admin:
-                               aditmadzs.sendMessage(msg.to, "「Pesan Msg」\nPesan Msg mu :\n\n「 " + str(wait["message"]) + " 」")
+                               aditmadzs.sendMessage(msg.to, "?Pesan Msg?\nPesan Msg mu :\n\n? " + str(wait["message"]) + " ?")
 
                         elif text.lower() == "cek welcome":
                             if msg._from in admin:
-                               aditmadzs.sendMessage(msg.to, "「Welcome Msg」\nWelcome Msg mu :\n\n「 " + str(wait["welcome"]) + " 」")
+                               aditmadzs.sendMessage(msg.to, "?Welcome Msg?\nWelcome Msg mu :\n\n? " + str(wait["welcome"]) + " ?")
 
                         elif text.lower() == "cek leave":
                             if msg._from in admin:
-                               aditmadzs.sendMessage(msg.to, "「Leave Msg」\nLeave Msg mu :\n\n「 " + str(wait["leave"]) + " 」")
+                               aditmadzs.sendMessage(msg.to, "?Leave Msg?\nLeave Msg mu :\n\n? " + str(wait["leave"]) + " ?")
 
                         elif text.lower() == "cek respon":
                             if msg._from in admin:
-                               aditmadzs.sendMessage(msg.to, "「Respon Msg」\nRespon Msg mu :\n\n「 " + str(wait["Respontag"]) + " 」")
+                               aditmadzs.sendMessage(msg.to, "?Respon Msg?\nRespon Msg mu :\n\n? " + str(wait["Respontag"]) + " ?")
 
                         elif text.lower() == "cek spam":
                             if msg._from in admin:
-                               aditmadzs.sendMessage(msg.to, "「Spam Msg」\nSpam Msg mu :\n\n「 " + str(Setmain["ADITMADZSmessage1"]) + " 」")
+                               aditmadzs.sendMessage(msg.to, "?Spam Msg?\nSpam Msg mu :\n\n? " + str(Setmain["ADITMADZSmessage1"]) + " ?")
 
                         elif text.lower() == "cek sider":
                             if msg._from in admin:
-                               aditmadzs.sendMessage(msg.to, "「Sider Msg」\nSider Msg mu :\n\n「 " + str(wait["mention"]) + " 」")
+                               aditmadzs.sendMessage(msg.to, "?Sider Msg?\nSider Msg mu :\n\n? " + str(wait["mention"]) + " ?")
 
 #===========JOIN TICKET============#
                         elif "/ti/g/" in msg.text.lower():
