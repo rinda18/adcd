@@ -394,7 +394,7 @@ def help():
                   "    // Proceed To Auto Translate //     " + "\n\n" + \
                   " " "          // AUTO TERJEMAH //      " + "\n" + \
                   " " "1) " + key + "Terjemah arab*on/off\n" + \
-                  " " "2) " + key + "Terjemah eng*on/off\n" + \
+                  " " "2) " + key + "Terjemah english*on/off\n" + \
                   " " "3) " + key + "Terjemah indo*on/off\n" + \
                   "    // Proceed To Public Command //     " + "\n\n" + \
                   " " "          // ALL CAN USED [ MEDIA ] //      " + "\n" + \
@@ -437,19 +437,6 @@ def helpgroup():
                   " " + "\n" + \
                   "        Help Bot " + "\n" + \
                   "          Menu " + "\n" + \
-                  " " + key + "Rinda look sidermsg\n" + \
-                  " " + key + "Rinda look spammsg\n" + \
-                  " " + key + "Rinda look autoreplymsg\n" + \
-                  " " + key + "Rinda look responmsg\n" + \
-                  " " + key + "Rinda look welcomemsg\n" + \
-                  " " + key + "Rinda look leavemsg\n" + \
-                  " " + key + "Rinda setsidermsg:\n" + \
-                  " " + key + "Rinda Setspammsg:\n" + \
-                  " " + key + "Rinda Setpesanmsg:\n" + \
-                  " " + key + "Rinda Setresponmsg:\n" + \
-                  " " + key + "Rinda Setwelcomemsg:\n" + \
-                  " " + key + "Rinda Setleavemsg:\n" + \
-                  " " + key + "Myname:\n" + \
                   " " + key + "Gift: Mid korban Jumlah \n" + \
                   " " + key + "Spam: Mid korban Jumlah \n" + \
                   "   Use < " + key + " > For the Prefix" + "\n" + \
@@ -467,19 +454,13 @@ def helpgroups():
                   " " "3) " + key + "Ginfo\n" + \
                   " " "4) " + key + "Bukaqr\n" + \
                   " " "5) " + key + "tutupqr\n" + \
-                  " " "6) " + key + "Url grup\n" + \
-                  " " "7) " + key + "Rejecting\n" + \
+                  " " "6) " + key + "Url grup\n" + \                  
                   " " "8) " + key + "Rinda grouplist\n" + \
-                  " " "9) " + key + "Infogrup [numb]\n" + \
-                  " " "10) " + key + "Infomem [numb]\n" + \
+                  " " "9) " + key + "Rinda groupinfo [numb]\n" + \
+                  " " "10) " + key + "Rinda get memberlist to [numb]\n" + \
                   " " "11) " + key + "Rinda get reader on/off\n" + \
-                  " " "12) " + key + "Rinda get readers\n" + \
-                  " " "13) " + key + "Changedp\n" + \
+                  " " "12) " + key + "Rinda get readers\n" + \                  
                   " " "14) " + key + "Changegp\n" + \
-                  " " "15) " + key + "Rindabc:\n" + \
-                  " " "16) " + key + "Setprefix [query]\n" + \
-                  " " "17) " + key + "Myprefix\n" + \
-                  " " "18) " + key + "Resetprefix\n\n" + \
                   "  Use < " + key + " > For the Prefix" + "\n" + \
                   "  <Creator : @!>"
     return helpGroups
@@ -502,7 +483,29 @@ def helpstaff():
                   " " "10) " + key + "Rinda-admin @\n" + \
                   " " "11) " + key + "Rinda+admin @\n" + \
                   " " "12) " + key + "Rinda refresh admin\n" + \
-                  " " "13) " + key + "Rinda adminlist\n\n" + \
+                  " " "13) " + key + "Rinda adminlist\n" + \
+                  " " "14) " + key + "Rinda setspamtag:\n" + \
+                  " " "15) " + key + "Rinda setspamcall:\n" + \
+                  " " "16) " + key + "Rinda spamtag @\n" + \
+                  " " "17) " + key + "Rinda spamcall\n" + \
+                  " " "18) " + key + "Rinda look sidermsg\n" + \
+                  " " "19) " + key + "Rinda look spammsg\n" + \
+                  " " "20) " + key + "Rinda look autoreplymsg\n" + \
+                  " " "21) " + key + "Rinda look responmsg\n" + \
+                  " " "22) " + key + "Rinda look welcomemsg\n" + \
+                  " " "23) " + key + "Rinda look leavemsg\n" + \
+                  " " "24) " + key + "Rinda Set sidermsg:\n" + \
+                  " " "25) " + key + "Rinda Set spammsg:\n" + \
+                  " " "26) " + key + "Rinda Set pesanmsg:\n" + \
+                  " " "27) " + key + "Rinda Set responmsg:\n" + \
+                  " " "28) " + key + "Rinda Set welcomemsg:\n" + \
+                  " " "29) " + key + "Rinda Set leavemsg:\n" + \
+                  " " "30) " + key + "Rindabc:\n" + \
+                  " " "31) " + key + "Setprefix [query]\n" + \
+                  " " "32) " + key + "Myprefix\n" + \
+                  " " "33) " + key + "Resetprefix\n" + \
+                  " " "34) " + key + "Changedp\n" + \
+                  " " "35) " + key + "Rejecting\n\n" + \
                   "  Use < " + key + " > For the Prefix" + "\n" + \
                   "  <Creator : @!>"
     return helpStaff
@@ -1761,6 +1764,35 @@ def bot(op):
                             except: 
                                 pass                               
                                
+                        elif cmd.startswith("rinda mention to"):
+                            #if msg._from in Owner:
+                            number = cmd.replace("rinda mention to","")
+                            groups = aditmadzs.getGroupIdsJoined()
+                            try:
+                                group = groups[int(number)-1]
+                                G = aditmadzs.getGroup(group)
+                                try:
+                                    contact = [mem.mid for mem in G.members]
+                                    text = "Mentioning To %i Members\n" %len(contact)
+                                    no = 1
+                                    for mid in contact:
+                                        text += "\n{}. @!           ".format(str(no))
+                                        no = (no+1)
+                                    text += "\n\nInGroup : {}".format(str(G.name))
+                                    sendMention(group, text, contact)
+                                except:
+                                    contact = [mem.mid for mem in G.members]
+                                    text = "Mentioning To %i Members\n" %len(contact)
+                                    no = 1
+                                    for mid in contact:
+                                        text += "\n{}. @!           ".format(str(no))
+                                        no = (no+1)
+                                    text += "\n\nInGroup : {}".format(str(G.name))
+                                    sendMention(group, text, contact)
+                                aditmadzs.sendMessage(to, "Send Mention To Group : " + G.name)
+                            except Exception as error:
+                                aditmadzs.sendMessage(to, str(error))                               
+                               
                         elif cmd.startswith("twitter "):
                             query = cmd.replace("twitter ","")
                             b = urllib.parse.quote(query)
@@ -2003,8 +2035,8 @@ def bot(op):
                                         num += 1
                                         ret_ += "\n {}. {}".format(str(num), str(music["single"]))
                                     ret_ += "\n  [ {} Music ]".format(str(len(data["result"])))
-                                    ret_ += "\n\nFor Details Ketik \n{}Rinda get playlist{}*nomor".format(str(),str(search))
-                                    ret_ += "\n {}Rinda get lirik {}*nomor ".format(str(),str(search))
+                                    ret_ += "\n\nFor Details Ketik \n{}*nomor".format(str(),str(search))
+                                    ret_ += "\n{}*nomor ".format(str(),str(search))
                                     aditmadzs.sendMessage(msg.to, str(ret_))
                                 elif len(cond) == 2:
                                     num = int(cond[1])
@@ -2069,7 +2101,7 @@ def bot(op):
                                    ma += " " + str(a) + ". " +G.name+ "\n"
                                aditmadzs.sendMessage(msg.to,"[ GROUP LIST ]\n\n"+ma+"?\n[ Total?"+str(len(gid))+"Groups ]")
 
-                        elif cmd == "open":
+                        elif cmd == "bukaqr":
                           if wait["selfbot"] == True:
                             #if msg._from in admin:
                                 if msg.toType == 2:
@@ -2078,7 +2110,7 @@ def bot(op):
                                    aditmadzs.updateGroup(X)
                                    aditmadzs.sendMessage(msg.to, "Url Opened")
 
-                        elif cmd == "close":
+                        elif cmd == "tutupqr":
                           #if wait["selfbot"] == True:
                             if msg._from in admin:
                                 if msg.toType == 2:
@@ -2120,7 +2152,7 @@ def bot(op):
                                         except Exception as Nigga:
                                             aditmadzs.sendMessage(msg.to, str(Nigga))
                                 else:
-                                    sendMention(msg.to, "@! kebanyakan njer!!", [sender])
+                                    sendMention(msg.to, "@! Whoops", [sender])
 
                         elif cmd == "reject":
                           if wait["selfbot"] == True:
@@ -2129,7 +2161,7 @@ def bot(op):
                               if ginvited != [] and ginvited != None:
                                   for gid in ginvited:
                                       aditmadzs.rejectGroupInvitation(gid)
-                                  aditmadzs.sendMessage(to, "Berhasil tolak sebanyak {} undangan grup".format(str(len(ginvited))))
+                                  aditmadzs.sendMessage(to, "{} undangan grup tertolak".format(str(len(ginvited))))
                               else:
                                   aditmadzs.sendMessage(to, "Tidak ada undangan yang tertunda")
 
@@ -2139,13 +2171,13 @@ def bot(op):
                             if msg._from in admin:
                               if msg.toType == 2:
                                 settings["groupPicture"] = True
-                                aditmadzs.sendMessage(msg.to,"Kirim fotonya.....")
+                                aditmadzs.sendMessage(msg.to,"Sent a Picture")
 
                         elif cmd == "updatefoto":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 Setmain["ADITMADZSfoto"][mid] = True
-                                aditmadzs.sendMessage(msg.to,"Kirim fotonya.....")
+                                aditmadzs.sendMessage(msg.to,"Sent a Picture")
 
                         elif cmd.startswith("myname: "):
                           if msg._from in admin:
@@ -2155,10 +2187,10 @@ def bot(op):
                                 profile = aditmadzs.getProfile()
                                 profile.displayName = string
                                 aditmadzs.updateProfile(profile)
-                                aditmadzs.sendMessage(msg.to,"Nama diganti jadi " + string + "")
+                                aditmadzs.sendMessage(msg.to,"Nama diterapkan menjadi " + string + "")
 
 #===========BOT UPDATE============#
-                        elif cmd == "tagall" or text.lower() == 'bbb':
+                        elif cmd == "mentioning" or text.lower() == 'bbb':
                           if wait["selfbot"] == True:
                             #if msg._from in admin:
                                group = aditmadzs.getGroup(msg.to)
