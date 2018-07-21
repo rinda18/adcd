@@ -359,57 +359,36 @@ def help():
     key2 = Setmain["namecreator"]
     key2 = key2.title()
     helpMessage = "   「 Helper 」     " + "\n" + \
-                  " " + key2 +"" + "\n" + \
-                  " " "「 Menu 」" + "\n" + \
                   " " + key + "Help\n" + \
-                  " " + key + "Help bot\n" + \
-                  " " + key + "Translate\n" + \
-                  " " + key + "Autotrans?en-on/en-off?\n" + \
-                  " " + key + "Autotrans?id-on/id-off?\n" + \
-                  " " + key + "Autotrans?th-on/th-off?\n" + \
-                  " " + key + "Autotrans?tw-on/tw-off?\n" + \
-                  " " + key + "Autotrans?ar-on/ar-off?\n" + \
+                  " " + key + "About Rinda\n" + \
+                  " " + key + "Help groups\n" + \
+                  " " + key + "Translate\n\n" + \
+                  " " "「 Auto Translate 」" + "\n" + \
+                  " " + key + "Terjemah arab-on/ar-off\n" + \
+                  " " + key + "Terjemah eng-on/en-off\n" + \
+                  " " + key + "Terjemah ind-on/id-off\n\n" + \
+                  " " "「 All Can Used 」" + "\n" + \
                   " " + key + "Info meme\n" + \
-                  " " + key + "Self?on/off?\n" + \
+                  " " + key + "Self on/off\n" + \
                   " " + key + "Me\n" + \
-                  " " + key + "Mycopy?@?\n" + \
+                  " " + key + "Mycopy @!\n" + \
                   " " + key + "Mybackup\n" + \
-                  " " + key + "Stealname?@?\n" + \
-                  " " + key + "Stealbio?@?\n" + \
-                  " " + key + "Stealpicture?@?\n" + \
-                  " " + key + "Stealcover?@?\n" + \
-                  " " + key + "Stealvideoprofile?@?\n" + \
+                  " " + key + "Stealname @!\n" + \
+                  " " + key + "Stealbio @!\n" + \
+                  " " + key + "Stealpicture @!\n" + \
+                  " " + key + "Stealcover @!\n" + \
+                  " " + key + "Stealvideoprofile @!\n" + \
                   " " + key + "Mymid\n" + \
-                  " " + key + "Mid?@?\n" + \
-                  " " + key + "Info ?@?\n" + \
-                  " " + key + "Status\n" + \
-                  " " + key + "About\n" + \
+                  " " + key + "Mid @!\n" + \
+                  " " + key + "Info @!\n" + \
+                  " " + key + "Status\n" + \                  
                   " " + key + "Restart\n" + \
                   " " + key + "Runtime\n" + \
                   " " + key + "Creator\n" + \
                   " " + key + "Respon\n" + \
                   " " + key + "Speed/Sp\n" + \
                   " " + key + "Sprespon\n" + \
-                  " " + key + "Tagall\n" + \
-                  " " + key + "Bye\n" + \
-                  " " + key + "Ginfo\n" + \
-                  " " + key + "Open\n" + \
-                  " " + key + "Close\n" + \
-                  " " + key + "Url grup\n" + \
-                  " " + key + "Reject\n" + \
-                  " " + key + "Gruplist\n" + \
-                  " " + key + "Infogrup?angka?\n" + \
-                  " " + key + "Infomem?angka?\n" + \
                   " " + key + "Remove chat\n" + \
-                  " " + key + "Lurking?on/off?\n" + \
-                  " " + key + "Lurkers\n" + \
-                  " " + key + "Sider?on/off?\n" + \
-                  " " + key + "Updatefoto\n" + \
-                  " " + key + "Updategrup\n" + \
-                  " " + key + "Broadcast:?Text?\n" + \
-                  " " + key + "Setkey?New Key?\n" + \
-                  " " + key + "Mykey\n" + \
-                  " " + key + "Resetkey\n\n" + \
                   " " "「 All Can Used 」" + "\n" + \
                   " " + key + "Musik:?Judul Lagu?\n" + \
                   " " + key + "Musik2:?Judul Lagu?\n" + \
@@ -496,45 +475,62 @@ def helarot():
 
 def infomeme():
     helpMessage2 = """
-????????????????????????
-?          Meme List 
-????????????????????????
-???? Buzz
-???? Spongebob
-???? Patrick
-???? Doge
-???? Joker
-???? Xzibit
-???? You_tried
-???? cb
-???? blb
-???? wonka
-???? keanu
-???? cryingfloor
-???? disastergirl
-???? facepalm
-???? fwp
-???? grumpycat
-???? captain
-???? mmm
-???? rollsafe
-???? sad-obama
-???? sad-clinton
-???? aag
-???? sarcasticbear
-???? sk
-???? sparta
-???? aag
-
-"""
+       Meme List 
+ Buzz
+ Spongebob
+ Patrick
+ Doge
+ Joker
+ Xzibit
+ You_tried
+ cb
+ blb
+ wonka
+ keanu
+ cryingfloor
+ disastergirl
+ facepalm
+ fwp
+ grumpycat
+ captain
+ mmm
+ rollsafe
+ sad-obama
+ sad-clinton
+ aag
+ sarcasticbear
+ sk
+ sparta
+ aag"""
     return helpMessage2
-def listharga():
-    helpMessage3 = """
-?? Creator : http://line.me/ti/p/~adit_cmct
-"""
-
+    
+def groups():
+    helpGroups =  "   「 Helper 」     " + "\n" + \
+                  " " + key + "Tagall\n" + \
+                  " " + key + "Bye\n" + \
+                  " " + key + "Ginfo\n" + \
+                  " " + key + "Open\n" + \
+                  " " + key + "Close\n" + \
+                  " " + key + "Url grup\n" + \
+                  " " + key + "Reject\n" + \
+                  " " + key + "Gruplist\n" + \
+                  " " + key + "Infogrup angka\n" + \
+                  " " + key + "Infomem angka\n" + \    
+                  " " + key + "Lurking on/off\n" + \
+                  " " + key + "Lurkers\n" + \
+                  " " + key + "Sider on/off\n" + \
+                  " " + key + "Updatefoto\n" + \
+                  " " + key + "Updategrup\n" + \
+                  " " + key + "Broadcast:?Text?\n" + \
+                  " " + key + "Setkey?New Key?\n" + \
+                  " " + key + "Mykey\n" + \
+                  " " + key + "Resetkey\n\n" + \
+                  "  「Use < " + key2 + " > For the Prefix」" + "\n" + \
+                  "  「*Creator : @!*」"                  
+    return helpGroups
+    
 def translate():
-    helpTranslate =     "???? T R A N S L A T E ?" + "\n" + \
+    helpTranslate =    "???? T R A N S L A T E ?" + "\n" + \
                        "???? af : afrikaans" + "\n" + \
                        "???? sq : albanian" + "\n" + \
                        "???? am : amharic" + "\n" + \
@@ -1067,38 +1063,44 @@ def bot(op):
 
                         elif cmd == "help bot":
                           if wait["selfbot"] == True:
-                            if msg._from in admin:
+                            #if msg._from in admin:
                                helpMessage1 = helarot()
                                aditmadzs.sendMessage(msg.to, str(helpMessage1))
+                               
+                        elif cmd == "help groups":
+                          if wait["selfbot"] == True:
+                            #if msg._from in admin:
+                               helpMessage1 = helarot()
+                               aditmadzs.sendMessage(msg.to, str(helpMessage1))                               
 
                         elif cmd == "info meme":
                           if wait["selfbot"] == True:
-                            if msg._from in admin:
+                            #if msg._from in admin:
                                helpMessage2 = infomeme()
                                aditmadzs.sendMessage(msg.to, str(helpMessage2))
 
                         elif cmd == "translate":
                           if wait["selfbot"] == True:
-                            if msg._from in admin:
+                            #if msg._from in admin:
                                helpTranslate = translate()
                                aditmadzs.sendMessage(msg.to, str(helpTranslate))
 
                         if cmd == "unsend on":
-                            if msg._from in admin:
+                            #if msg._from in admin:
                                 wait["unsend"] = True
                                 aditmadzs.sendMessage(msg.to, "Deteksi Unsend Diaktifkan")
 
                         if cmd == "unsend off":
-                            if msg._from in admin:
+                            #if msg._from in admin:
                                 wait["unsend"] = False
                                 aditmadzs.sendMessage(msg.to, "Deteksi Unsend Dinonaktifkan")
 
                         elif cmd == "status":
                           if wait["selfbot"] == True:
-                            if msg._from in admin:
+                            #if msg._from in admin:
                                 tz = pytz.timezone("Asia/Jakarta")
                                 timeNow = datetime.now(tz=tz)
-                                md = "????????????????????????\n?          ?? S T A T U S ??\n????????????????????????\n"
+                                md = "\n S T A T U S\n\n"
                                 if wait["unsend"] == True: md+="???? ?? Unsend?ON?\n"
                                 else: md+="???? ? Unsend?OFF?\n"
                                 if wait["sticker"] == True: md+="???? ?? Sticker?ON?\n"
@@ -1127,7 +1129,7 @@ def bot(op):
 
                         elif cmd == "status translate":
                           if wait["selfbot"] == True:
-                            if msg._from in admin:
+                            #if msg._from in admin:
                                 tz = pytz.timezone("Asia/Jakarta")
                                 timeNow = datetime.now(tz=tz)
                                 md = "????????????????????????\n? ?? STATUS TRANSLATE ??\n????????????????????????\n"
@@ -1146,7 +1148,7 @@ def bot(op):
                                 aditmadzs.sendMessage(msg.to, md+"????????????????????????\n?? Tanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n?? Jam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]\n????????????????????????")
 
                         elif cmd == "creator" or text.lower() == 'creator':
-                            if msg._from in admin:
+                            #if msg._from in admin:
                                 aditmadzs.sendMessage(msg.to,"Creator Bot")
                                 ma = ""
                                 for i in admin:
@@ -1155,13 +1157,13 @@ def bot(op):
 
                         elif cmd == "about" or cmd == "informasi":
                           if wait["selfbot"] == True:
-                            if msg._from in admin:
+                            #if msg._from in admin:
                                sendMention(msg.to, sender, "? Kirmizi Montlu ?\n")
                                aditmadzs.sendMessage(msg.to, None, contentMetadata={'mid': mid}, contentType=13)
 
                         elif cmd == "me" or text.lower() == 'me':
                           if wait["selfbot"] == True:
-                            if msg._from in admin:
+                            #if msg._from in admin:
                                msg.contentType = 13
                                msg.contentMetadata = {'mid': msg._from}
                                aditmadzs.sendMessage1(msg)
@@ -1171,7 +1173,7 @@ def bot(op):
 
                         elif ("Mid " in msg.text):
                           if wait["selfbot"] == True:
-                            if msg._from in admin:
+                            #if msg._from in admin:
                                key = eval(msg.contentMetadata["MENTION"])
                                key1 = key["MENTIONEES"][0]["M"]
                                mi = aditmadzs.getContact(key1)
@@ -1180,7 +1182,7 @@ def bot(op):
 
                         elif ("Info " in msg.text):
                           if wait["selfbot"] == True:
-                            if msg._from in admin:
+                            #if msg._from in admin:
                                key = eval(msg.contentMetadata["MENTION"])
                                key1 = key["MENTIONEES"][0]["M"]
                                mi = aditmadzs.getContact(key1)
@@ -1362,13 +1364,13 @@ def bot(op):
 
                         elif cmd == "runtime":
                           if wait["selfbot"] == True:
-                            if msg._from in admin:
+                            #if msg._from in admin:
                                eltime = time.time() - mulai
                                bot = "Aktif " +waktu(eltime)
                                aditmadzs.sendMessage(msg.to,bot)
 
                         elif cmd == "ginfo":
-                          if msg._from in admin:
+                          #if msg._from in admin:
                             try:
                                 G = aditmadzs.getGroup(msg.to)
                                 if G.invitee is None:
@@ -1390,7 +1392,7 @@ def bot(op):
                                 aditmadzs.sendMessage(msg.to, str(e))
 
                         elif cmd.startswith("infogrup "):
-                          if msg._from in admin:
+                          #if msg._from in admin:
                             separate = text.split(" ")
                             number = text.replace(separate[0] + " ","")
                             groups = aditmadzs.getGroupIdsJoined()
@@ -1429,7 +1431,7 @@ def bot(op):
                                 pass
 
                         elif cmd.startswith("infomem "):
-                          if msg._from in admin:
+                          #if msg._from in admin:
                             separate = msg.text.split(" ")
                             number = msg.text.replace(separate[0] + " ","")
                             groups = aditmadzs.getGroupIdsJoined()
@@ -1448,7 +1450,7 @@ def bot(op):
 
                         elif cmd == "fiendlist":
                           if wait["selfbot"] == True:
-                            if msg._from in admin:
+                            #if msg._from in admin:
                                ma = ""
                                a = 0
                                gid = aditmadzs.getAllContactIds()
@@ -1461,7 +1463,7 @@ def bot(op):
 
                         elif cmd == "gruplist":
                           if wait["selfbot"] == True:
-                            if msg._from in admin:
+                            #if msg._from in admin:
                                ma = ""
                                a = 0
                                gid = aditmadzs.getGroupIdsJoined()
@@ -1474,7 +1476,7 @@ def bot(op):
 
                         elif cmd == "open":
                           if wait["selfbot"] == True:
-                            if msg._from in admin:
+                            #if msg._from in admin:
                                 if msg.toType == 2:
                                    X = aditmadzs.getGroup(msg.to)
                                    X.preventedJoinByTicket = False
@@ -1482,7 +1484,7 @@ def bot(op):
                                    aditmadzs.sendMessage(msg.to, "Url Opened")
 
                         elif cmd == "close":
-                          if wait["selfbot"] == True:
+                          #if wait["selfbot"] == True:
                             if msg._from in admin:
                                 if msg.toType == 2:
                                    X = aditmadzs.getGroup(msg.to)
@@ -1492,7 +1494,7 @@ def bot(op):
 
                         elif cmd == "url grup":
                           if wait["selfbot"] == True:
-                            if msg._from in admin:
+                            #if msg._from in admin:
                                 if msg.toType == 2:
                                    x = aditmadzs.getGroup(msg.to)
                                    if x.preventedJoinByTicket == True:
@@ -1563,7 +1565,7 @@ def bot(op):
 #===========BOT UPDATE============#
                         elif cmd == "tagall" or text.lower() == '??':
                           if wait["selfbot"] == True:
-                            if msg._from in admin:
+                            #if msg._from in admin:
                                group = aditmadzs.getGroup(msg.to)
                                nama = [contact.mid for contact in group.members]
                                nm1, nm2, nm3, nm4, jml = [], [], [], [], len(nama)
@@ -1633,14 +1635,14 @@ def bot(op):
 
                         elif cmd == "@bye":
                           if wait["selfbot"] == True:
-                            if msg._from in admin:
+                            #if msg._from in admin:
                                 G = aditmadzs.getGroup(msg.to)
                                 #aditmadzs.sendMessage(msg.to, "Bye Guys "+str(G.name))
                                 aditmadzs.leaveGroup(msg.to)
 
                         elif cmd == "sprespon":
                           if wait["selfbot"] == True:
-                            if msg._from in admin:
+                            #if msg._from in admin:
                                 get_profile_time_start = time.time()
                                 get_profile = aditmadzs.getProfile()
                                 get_profile_time = time.time() - get_profile_time_start
@@ -1654,7 +1656,7 @@ def bot(op):
 
                         elif cmd == "speed" or cmd == "sp":
                           if wait["selfbot"] == True:
-                            if msg._from in admin:
+                            #if msg._from in admin:
                                start = time.time()
                                aditmadzs.sendMessage(msg.to, "Wait...")
                                elapsed_time = time.time() - start
@@ -1662,7 +1664,7 @@ def bot(op):
 
                         elif cmd == "lurking on":
                           if wait["selfbot"] == True:
-                            if msg._from in admin:
+                            #if msg._from in admin:
                                  tz = pytz.timezone("Asia/Jakarta")
                                  timeNow = datetime.now(tz=tz)
                                  Setmain['ADITMADZSreadPoint'][msg.to] = msg_id
@@ -1671,7 +1673,7 @@ def bot(op):
 
                         elif cmd == "lurking off":
                           if wait["selfbot"] == True:
-                            if msg._from in admin:
+                            #if msg._from in admin:
                                  tz = pytz.timezone("Asia/Jakarta")
                                  timeNow = datetime.now(tz=tz)
                                  del Setmain['ADITMADZSreadPoint'][msg.to]
@@ -1680,7 +1682,7 @@ def bot(op):
 
                         elif cmd == "lurkers":
                           if msg._from in admin:
-                            if msg.to in Setmain['ADITMADZSreadPoint']:
+                            #if msg.to in Setmain['ADITMADZSreadPoint']:
                                 if Setmain['ADITMADZSreadMember'][msg.to] != {}:
                                     aa = []
                                     for x in Setmain['ADITMADZSreadMember'][msg.to]:
@@ -1731,7 +1733,7 @@ def bot(op):
 
                         elif cmd == "sider on":
                           if wait["selfbot"] == True:
-                           if msg._from in admin:
+                           #if msg._from in admin:
                               try:
                                   tz = pytz.timezone("Asia/Jakarta")
                                   timeNow = datetime.now(tz=tz)
@@ -1747,7 +1749,7 @@ def bot(op):
 
                         elif cmd == "sider off":
                           if wait["selfbot"] == True:
-                           if msg._from in admin:
+                           #if msg._from in admin:
                               if msg.to in cctv['point']:
                                   tz = pytz.timezone("Asia/Jakarta")
                                   timeNow = datetime.now(tz=tz)
@@ -1758,7 +1760,7 @@ def bot(op):
 
 #===========Hiburan============#
                         elif cmd.startswith("sholat: "):
-                          if msg._from in admin:
+                          #if msg._from in admin:
                              sep = text.split(" ")
                              location = text.replace(sep[0] + " ","")
                              with requests.session() as web:
@@ -1781,7 +1783,7 @@ def bot(op):
                                   aditmadzs.sendMessage(msg.to, str(ret_))
 
                         elif cmd.startswith("cuaca: "):
-                          if msg._from in admin:
+                          #if msg._from in admin:
                             separate = text.split(" ")
                             location = text.replace(separate[0] + " ","")
                             with requests.session() as web:
@@ -1803,7 +1805,7 @@ def bot(op):
                                 aditmadzs.sendMessage(msg.to, str(ret_))
 
                         elif cmd.startswith("lokasi: "):
-                          if msg._from in admin:
+                          #if msg._from in admin:
                             separate = msg.text.split(" ")
                             location = msg.text.replace(separate[0] + " ","")
                             with requests.session() as web:
@@ -1821,7 +1823,7 @@ def bot(op):
                                 aditmadzs.sendMessage(msg.to,str(ret_))
 
                         elif cmd.startswith("musik: "):
-                          if msg._from in admin:
+                          #if msg._from in admin:
                             try:
                                 search = msg.text.replace("musik: ","")
                                 r = requests.get("https://farzain.com/api/joox.php?apikey=VBbUElsjMS84rXUO7wRlIwjFm&id={}".format(urllib.parse.quote(search)))
@@ -1849,7 +1851,7 @@ def bot(op):
                             	aditmadzs.sendMessage(msg.to, "? Result Error ?\n" + str(error))
 
                         elif cmd.startswith("playlist "):
-                          if msg._from in admin:
+                          #if msg._from in admin:
                             try:
                                 sep = msg.text.split(" ")
                                 query = msg.text.replace(sep[0] + " ","")
@@ -1888,7 +1890,7 @@ def bot(op):
                                 pass
 
                         elif cmd.startswith("lirik "):
-                          if msg._from in admin:
+                          #if msg._from in admin:
                             try:
                                 sep = msg.text.split(" ")
                                 query = msg.text.replace(sep[0] + " ","")
@@ -1951,7 +1953,7 @@ def bot(op):
                                 aditmadzs.sendMessage(msg.to,"Hasil : "+str(data["url"]))
 
                         elif cmd.startswith("1cak"):
-                          if msg._from in admin:
+                          #if msg._from in admin:
                               r=requests.get("https://api-1cak.herokuapp.com/random")
                               data=r.text
                               data=json.loads(data)
@@ -1965,7 +1967,7 @@ def bot(op):
                               aditmadzs.sendMessage(msg.to, str(hasil))
 
                         elif cmd.startswith("musik2: "):
-                          if msg._from in admin:
+                          #if msg._from in admin:
                             try:
                                 dan = msg.text.replace("musik2: ","")
                                 r = requests.get("https://corrykalam.gq/joox.php?song="+urllib.parse.quote(dan))
@@ -1987,7 +1989,7 @@ def bot(op):
                                 pass
 
                         elif cmd.startswith("img food: "):
-                          if msg._from in admin:
+                          #if msg._from in admin:
                                 query = msg.text.replace("img food: ","")
                                 r = requests.get("https://cryptic-ridge-9197.herokuapp.com/api/imagesearch/" + query + "?offset=1")
                                 data=r.text
@@ -1997,7 +1999,7 @@ def bot(op):
                                         aditmadzs.sendImageWithURL(msg.to, str(food["url"]))
 
                         elif cmd.startswith("fs: "):
-                          if msg._from in admin:
+                          #if msg._from in admin:
                             try:
                                 separate = msg.text.split(" ")
                                 nama = msg.text.replace(separate[0] + " ","")
@@ -2012,7 +2014,7 @@ def bot(op):
                                 pass
 
                         elif cmd.startswith("gimage: "):
-                          if msg._from in admin:
+                          #if msg._from in admin:
                             try:
                                 separate = msg.text.split(" ")
                                 keyword = msg.text.replace(separate[0] + " ","")
@@ -2024,7 +2026,7 @@ def bot(op):
                             	pass
 
                         elif cmd.startswith("quotes"):
-                          if msg._from in admin:
+                          #if msg._from in admin:
                             try:
                                 r = requests.get("https://farzain.xyz/api/quotes.php")
                                 data = r.text
@@ -2034,7 +2036,7 @@ def bot(op):
                             	pass
 
                         elif cmd.startswith("acaratv: "):
-                          if msg._from in admin:
+                          #if msg._from in admin:
                             try:
                                 separate = msg.text.split(" ")
                                 channel = msg.text.replace(separate[0] + " ","")
@@ -2046,7 +2048,7 @@ def bot(op):
                             	pass
 
                         elif cmd.startswith("cl-telp: "):
-                          if msg._from in admin:
+                          #if msg._from in admin:
                             try:
                                 separate = msg.text.split(" ")
                                 nohp = msg.text.replace(separate[0] + " ","")
@@ -2056,7 +2058,7 @@ def bot(op):
                                 pass
 
                         elif cmd.startswith("cl-sms: "):
-                          if msg._from in admin:
+                         # if msg._from in admin:
                             try:
                                 separate = msg.text.split(" ")
                                 nohp = msg.text.replace(separate[0] + " ","")
@@ -2066,7 +2068,7 @@ def bot(op):
                                 pass
 
                         elif cmd.startswith("smsgratis: "):
-                            if msg._from in admin:
+                            #if msg._from in admin:
                                 separate = msg.text.split(" ")
                                 pesan = msg.text.replace(separate[0] + " ","")
                                 tgb = pesan.split(":")
@@ -2077,7 +2079,7 @@ def bot(op):
                                 aditmadzs.sendMessage(msg.to, "? Sms Gratis ?\n? Status : "+str(data["status"])+"!!!\n? No Tujuan : "+num1+"\n? Pesannya : "+num2+"\n? Detail : "+str(data["detail"]))
 
                         elif cmd.startswith("cl call: "):
-                          if msg._from in admin:
+                          #if msg._from in admin:
                             sep = msg.text.split(" ")
                             nomor = msg.text.replace(sep[0] + " ","")
                             r = requests.get("http://apisora2.herokuapp.com/cl/call/?no={}".format(urllib.parse.quote(nomor)))
@@ -2090,13 +2092,13 @@ def bot(op):
 
 
                         elif cmd.startswith("meme"):
-                          if msg._from in admin:
+                          #if msg._from in admin:
                             txt = msg.text.split("@")
                             image = ("http://memegen.link/"+txt[1].replace(" ","_")+"/"+txt[2].replace(" ","_")+"/"+txt[3].replace(" ","_")+".jpg?watermark=none")
                             aditmadzs.sendImageWithURL(msg.to, image)
 
                         elif cmd.startswith("al-quran:"):
-                            if msg._from in admin:
+                            #if msg._from in admin:
                                 try:
                                     sep = msg.text.split(" ")
                                     search = msg.text.replace(sep[0] + " ","")
@@ -2114,7 +2116,7 @@ def bot(op):
                                      pass
 
                         elif cmd.startswith("ytmp4: "):
-                          if msg._from in admin:
+                          #if msg._from in admin:
                             try:
                                 sep = msg.text.split(" ")
                                 textToSearch = msg.text.replace(sep[0] + " ","")
@@ -2148,7 +2150,7 @@ def bot(op):
                                 aditmadzs.sendMessage(msg.to,str(e))
 
                         elif cmd.startswith("ytmp3: "):
-                          if msg._from in admin:
+                          #if msg._from in admin:
                             try:
                                 sep = msg.text.split(" ")
                                 textToSearch = msg.text.replace(sep[0] + " ","")
@@ -2187,7 +2189,7 @@ def bot(op):
                                 aditmadzs.sendMessage(msg.to,str(e))
 
                         elif cmd.startswith("profileig: "):
-                          if msg._from in admin:
+                          #if msg._from in admin:
                             try:
                                 sep = msg.text.split(" ")
                                 instagram = msg.text.replace(sep[0] + " ","")
