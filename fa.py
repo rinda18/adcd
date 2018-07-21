@@ -26,7 +26,7 @@ mid = aditmadzs.getProfile().mid
 admin = ["uac8e3eaf1eb2a55770bf10c3b2357c33","u33ba9a93d30c1be155df24f5d4e3f583"]
 
 KAC = [aditmadzs]
-Bots = ["u33ba9a93d30c1be155df24f5d4e3f583"]
+#Bots = ["ude1ff58ba36c0f45a0eddb0562a7521e"]
 Aditmadzs = admin
 
 welcome = []
@@ -103,12 +103,12 @@ wait = {
     "sticker":False,
     "selfbot":True,
     "unsend":True,
-    "mention":"Hayoo ngapain lau read doang -_-",
-    "Respontag":"Tag gua pasti kesel ye khaaan...????",
+    "mention":"Di baca doang ish :(",
+    "Respontag":"Im buzzze",
     "welcome":"Selamat Datang",
-    "leave":"lah cabut doi, baper x yak ??",
-    "comment":"Like like & like by Aditmadzs\n\n??Creator : http://line.me/ti/p/~adit_cmct",
-    "message":"Thanks For Add Me (^_^)\nAuto Add Chat\n\n??Creator : http://line.me/ti/p/~adit_cmct",
+    "leave":"Selamat Jalan",
+    "comment":"Auto like by PUY\nhttps://line.me/ti/p/~yapuy",
+    "message":"Thx For Added Rinda",
     }
 
 read = {
@@ -358,112 +358,110 @@ def help():
     key = key.title()
     key2 = Setmain["namecreator"]
     key2 = key2.title()
-    helpMessage = "????????????????????" + "\n" + \
-                  "? " + key2 +"" + "\n" + \
-                  "?            " + "\n" + \
-                  "?          ? Help Message ?" + "\n" + \
-                  "?              ? Menu ?" + "\n" + \
-                  "? " + key + "Help\n" + \
-                  "? " + key + "Help bot\n" + \
-                  "? " + key + "Translate\n" + \
-                  "? " + key + "Autotrans?en-on/en-off?\n" + \
-                  "? " + key + "Autotrans?id-on/id-off?\n" + \
-                  "? " + key + "Autotrans?th-on/th-off?\n" + \
-                  "? " + key + "Autotrans?tw-on/tw-off?\n" + \
-                  "? " + key + "Autotrans?ar-on/ar-off?\n" + \
-                  "? " + key + "Info meme\n" + \
-                  "? " + key + "Self?on/off?\n" + \
-                  "? " + key + "Me\n" + \
-                  "? " + key + "Mycopy?@?\n" + \
-                  "? " + key + "Mybackup\n" + \
-                  "? " + key + "Stealname?@?\n" + \
-                  "? " + key + "Stealbio?@?\n" + \
-                  "? " + key + "Stealpicture?@?\n" + \
-                  "? " + key + "Stealcover?@?\n" + \
-                  "? " + key + "Stealvideoprofile?@?\n" + \
-                  "? " + key + "Mymid\n" + \
-                  "? " + key + "Mid?@?\n" + \
-                  "? " + key + "Info ?@?\n" + \
-                  "? " + key + "Status\n" + \
-                  "? " + key + "About\n" + \
-                  "? " + key + "Restart\n" + \
-                  "? " + key + "Runtime\n" + \
-                  "? " + key + "Creator\n" + \
-                  "? " + key + "Respon\n" + \
-                  "? " + key + "Speed/Sp\n" + \
-                  "? " + key + "Sprespon\n" + \
-                  "? " + key + "Tagall\n" + \
-                  "? " + key + "Bye\n" + \
-                  "? " + key + "Ginfo\n" + \
-                  "? " + key + "Open\n" + \
-                  "? " + key + "Close\n" + \
-                  "? " + key + "Url grup\n" + \
-                  "? " + key + "Reject\n" + \
-                  "? " + key + "Gruplist\n" + \
-                  "? " + key + "Infogrup?angka?\n" + \
-                  "? " + key + "Infomem?angka?\n" + \
-                  "? " + key + "Remove chat\n" + \
-                  "? " + key + "Lurking?on/off?\n" + \
-                  "? " + key + "Lurkers\n" + \
-                  "? " + key + "Sider?on/off?\n" + \
-                  "? " + key + "Updatefoto\n" + \
-                  "? " + key + "Updategrup\n" + \
-                  "? " + key + "Broadcast:?Text?\n" + \
-                  "? " + key + "Setkey?New Key?\n" + \
-                  "? " + key + "Mykey\n" + \
-                  "? " + key + "Resetkey\n" + \
-                  "?          ? Hiburan ?" + "\n" + \
-                  "? " + key + "Musik:?Judul Lagu?\n" + \
-                  "? " + key + "Musik2:?Judul Lagu?\n" + \
-                  "? " + key + "Playlist?Nama Penyanyi?\n" + \
-                  "? " + key + "Ytmp3:?Judul Lagu?\n" + \
-                  "? " + key + "Ytmp4:?Judul Video\n" + \
-                  "? " + key + "Fs:?Nama?\n" + \
-                  "? " + key + "cl-telp:?No HP?\n" + \
-                  "? " + key + "cl-sms:?No HP?\n" + \
-                  "? " + key + "Smsgratis:?Nohp:Pesannya?\n" + \
-                  "? " + key + "Meme@Nama@Teks1@Teks2\n" + \
-                  "? " + key + "Quotes\n" + \
-                  "? " + key + "1cak\n" + \
-                  "? " + key + "Profilesmule:?ID Smule?\n" + \
-                  "? " + key + "Randomnumber:?Nmor-Nmor?\n" + \
-                  "? " + key + "Acaratv:?Nama Channel?\n" + \
-                  "? " + key + "Gimage:?Keyword?\n" + \
-                  "? " + key + "Img food:?Nama Makanan?\n" + \
-                  "? " + key + "Al-quran:?Surah?\n" + \
-                  "? " + key + "Sholat:?Nama Kota?\n" + \
-                  "? " + key + "Cuaca:?Nama Kota?\n" + \
-                  "? " + key + "Lokasi:?Nama Kota?\n" + \
-                  "? " + key + "Profileig:?Nama IG?\n" + \
-                  "? " + key + "Cekig:?Nama IG?\n" + \
-                  "? " + key + "Cekdate:?tgl-bln-thn?\n" + \
-                  "? " + key + "Spamtag:?jumlahnya?\n" + \
-                  "? " + key + "Spamtag?@?\n" + \
-                  "? " + key + "Spamcall:?jumlahnya?\n" + \
-                  "? " + key + "Spamcall\n" + \
-                  "? " + key + "ID line:?Id Line nya?\n" + \
-                  "?          ? Settings ?" + "\n" + \
-                  "? " + key + "Unsend?on/off?\n" + \
-                  "? " + key + "Jointicket?on/off?\n" + \
-                  "? " + key + "Sticker?on/off?\n" + \
-                  "? " + key + "Respon?on/off?\n" + \
-                  "? " + key + "Respongift?on/off?\n" + \
-                  "? " + key + "Contact?on/off?\n" + \
-                  "? " + key + "Autojoin?on/off?\n" + \
-                  "? " + key + "Autoadd?on/off?\n" + \
-                  "? " + key + "Welcome?on/off?\n" + \
-                  "? " + key + "Simi?on/off?\n" + \
-                  "? " + key + "Autoleave?on/off?\n" + \
-                  "?          ? Admin ?" + "\n" + \
-                  "? " + key + "Changenamecreator:?Nama?\n" + \
-                  "? " + key + "Resetnamecreator\n" + \
-                  "? " + key + "Admin:on\n" + \
-                  "? " + key + "Admin:repeat\n" + \
-                  "? " + key + "Adminadd?@?\n" + \
-                  "? " + key + "Admindell?@?\n" + \
-                  "? " + key + "Refresh\n" + \
-                  "? " + key + "Listadmin\n" + \
-                  "????? By"+ key2 + "  ?"
+    helpMessage = "   「 Helper 」     " + "\n" + \
+                  " " + key2 +"" + "\n" + \
+                  " " "「 Menu 」" + "\n" + \
+                  " " + key + "Help\n" + \
+                  " " + key + "Help bot\n" + \
+                  " " + key + "Translate\n" + \
+                  " " + key + "Autotrans?en-on/en-off?\n" + \
+                  " " + key + "Autotrans?id-on/id-off?\n" + \
+                  " " + key + "Autotrans?th-on/th-off?\n" + \
+                  " " + key + "Autotrans?tw-on/tw-off?\n" + \
+                  " " + key + "Autotrans?ar-on/ar-off?\n" + \
+                  " " + key + "Info meme\n" + \
+                  " " + key + "Self?on/off?\n" + \
+                  " " + key + "Me\n" + \
+                  " " + key + "Mycopy?@?\n" + \
+                  " " + key + "Mybackup\n" + \
+                  " " + key + "Stealname?@?\n" + \
+                  " " + key + "Stealbio?@?\n" + \
+                  " " + key + "Stealpicture?@?\n" + \
+                  " " + key + "Stealcover?@?\n" + \
+                  " " + key + "Stealvideoprofile?@?\n" + \
+                  " " + key + "Mymid\n" + \
+                  " " + key + "Mid?@?\n" + \
+                  " " + key + "Info ?@?\n" + \
+                  " " + key + "Status\n" + \
+                  " " + key + "About\n" + \
+                  " " + key + "Restart\n" + \
+                  " " + key + "Runtime\n" + \
+                  " " + key + "Creator\n" + \
+                  " " + key + "Respon\n" + \
+                  " " + key + "Speed/Sp\n" + \
+                  " " + key + "Sprespon\n" + \
+                  " " + key + "Tagall\n" + \
+                  " " + key + "Bye\n" + \
+                  " " + key + "Ginfo\n" + \
+                  " " + key + "Open\n" + \
+                  " " + key + "Close\n" + \
+                  " " + key + "Url grup\n" + \
+                  " " + key + "Reject\n" + \
+                  " " + key + "Gruplist\n" + \
+                  " " + key + "Infogrup?angka?\n" + \
+                  " " + key + "Infomem?angka?\n" + \
+                  " " + key + "Remove chat\n" + \
+                  " " + key + "Lurking?on/off?\n" + \
+                  " " + key + "Lurkers\n" + \
+                  " " + key + "Sider?on/off?\n" + \
+                  " " + key + "Updatefoto\n" + \
+                  " " + key + "Updategrup\n" + \
+                  " " + key + "Broadcast:?Text?\n" + \
+                  " " + key + "Setkey?New Key?\n" + \
+                  " " + key + "Mykey\n" + \
+                  " " + key + "Resetkey\n\n" + \
+                  " " "「 All Can Used 」" + "\n" + \
+                  " " + key + "Musik:?Judul Lagu?\n" + \
+                  " " + key + "Musik2:?Judul Lagu?\n" + \
+                  " " + key + "Playlist?Nama Penyanyi?\n" + \
+                  " " + key + "Ytmp3:?Judul Lagu?\n" + \
+                  " " + key + "Ytmp4:?Judul Video\n" + \
+                  " " + key + "Fs:?Nama?\n" + \
+                  " " + key + "cl-telp:?No HP?\n" + \
+                  " " + key + "cl-sms:?No HP?\n" + \
+                  " " + key + "Meme@Nama@Teks1@Teks2\n" + \
+                  " " + key + "Quotes\n" + \
+                  " " + key + "1cak\n" + \
+                  " " + key + "Profilesmule:?ID Smule?\n" + \
+                  " " + key + "Randomnumber:?Nmor-Nmor?\n" + \
+                  " " + key + "Acaratv:?Nama Channel?\n" + \
+                  " " + key + "Gimage:?Keyword?\n" + \
+                  " " + key + "Img food:?Nama Makanan?\n" + \
+                  " " + key + "Al-quran:?Surah?\n" + \
+                  " " + key + "Sholat:?Nama Kota?\n" + \
+                  " " + key + "Cuaca:?Nama Kota?\n" + \
+                  " " + key + "Lokasi:?Nama Kota?\n" + \
+                  " " + key + "Profileig:?Nama IG?\n" + \
+                  " " + key + "Cekig:?Nama IG?\n" + \
+                  " " + key + "Cekdate:?tgl-bln-thn?\n" + \
+                  " " + key + "Spamtag:?jumlahnya?\n" + \
+                  " " + key + "Spamtag?@?\n" + \
+                  " " + key + "Spamcall:?jumlahnya?\n" + \
+                  " " + key + "Spamcall\n" + \
+                  " " + key + "ID line:?Id Line nya?\n\n" + \
+                  " " "「 Settings 」" + "\n" + \
+                  " " + key + "Unsend on/off\n" + \
+                  " " + key + "Jointicket on/off?\n" + \
+                  " " + key + "Sticker on/off\n" + \
+                  " " + key + "Respon on/off\n" + \
+                  " " + key + "Respongift on/off\n" + \
+                  " " + key + "Contact on/off?\n" + \
+                  " " + key + "Autojoin on/off?\n" + \
+                  " " + key + "Autoadd on/off?\n" + \
+                  " " + key + "Welcome on/off?\n" + \
+                  " " + key + "Simi on/off?\n" + \
+                  " " + key + "Autoleave on/off?\n\n" + \
+                  " " "「 Only Owner Can Used 」" + "\n" + \
+                  " " + key + "Changenamecreator:Nama\n" + \
+                  " " + key + "Resetnamecreator\n" + \
+                  " " + key + "Admin:on\n" + \
+                  " " + key + "Admin:repeat\n" + \
+                  " " + key + "Adminadd @!\n" + \
+                  " " + key + "Admindell @!\n" + \
+                  " " + key + "Refresh\n" + \
+                  " " + key + "Listadmin\n" + \
+                  "  「Use < " + key2 + " > For the Prefix」" + "\n" + \
+                  "  「*Creator : @!*」"
     return helpMessage
 
 
