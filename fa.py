@@ -26,7 +26,7 @@ mid = aditmadzs.getProfile().mid
 admin = ["uac8e3eaf1eb2a55770bf10c3b2357c33","u33ba9a93d30c1be155df24f5d4e3f583"]
 
 KAC = [aditmadzs]
-#Bots = ["ude1ff58ba36c0f45a0eddb0562a7521e"]
+Bots = ["u33ba9a93d30c1be155df24f5d4e3f583"]
 Aditmadzs = admin
 
 welcome = []
@@ -471,7 +471,7 @@ def helarot():
     key = key.title()
     key2 = Setmain["namecreator"]
     key2 = key2.title()
-    helpMessage1 = "????????????????????" + "\n" + \
+    helpMessage1 ="  " 「 Helper 」" + "\n" + \" + "\n" + \
                   "? " + key2 +" " + "\n" + \
                   "? " + "\n" + \
                   "?       ? Help Bot ?" + "\n" + \
