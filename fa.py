@@ -1552,7 +1552,7 @@ def bot(op):
                             except:
                                 members = [mem.mid for mem in group.members]
                             message = random.choice(members)
-                            sendMention(to, "< RandomLoseMem >\n\n• The Loser is :", [sender])
+                            sendMentions(to, "< RandomLoseMem >\n\n• The Loser is :", [sender])
                             aditmadzs.sendContact(to, message)                                
                                 
                         elif cmd.startswith("rinda getmeme "):
@@ -1779,7 +1779,7 @@ def bot(op):
                                         text += "\n{}. @!           ".format(str(no))
                                         no = (no+1)
                                     text += "\n\nInGroup : {}".format(str(G.name))
-                                    sendMention(group, text, contact)
+                                    sendMentions(group, text, contact)
                                 except:
                                     contact = [mem.mid for mem in G.members]
                                     text = "Mentioning To %i Members\n" %len(contact)
@@ -1788,7 +1788,7 @@ def bot(op):
                                         text += "\n{}. @!           ".format(str(no))
                                         no = (no+1)
                                     text += "\n\nInGroup : {}".format(str(G.name))
-                                    sendMention(group, text, contact)
+                                    sendMentions(group, text, contact)
                                 aditmadzs.sendMessage(to, "Send Mention To Group : " + G.name)
                             except Exception as error:
                                 aditmadzs.sendMessage(to, str(error))                               
@@ -2148,11 +2148,11 @@ def bot(op):
                                                 if grup.name == namagrup:
                                                     aditmadzs.inviteIntoGroup(grup.id, [tgb.mid])
                                                     aditmadzs.leaveGroup(grup.id)
-                                                    sendMention(msg.to, "@! sukses spam grup!\n\nkorban: @!\njumlah: {}\nnama grup: {}".format(jumlah, str(namagrup)), [sender, tgb.mid])
+                                                    sendMentions(msg.to, "@! sukses spam grup!\n\nkorban: @!\njumlah: {}\nnama grup: {}".format(jumlah, str(namagrup)), [sender, tgb.mid])
                                         except Exception as Nigga:
                                             aditmadzs.sendMessage(msg.to, str(Nigga))
                                 else:
-                                    sendMention(msg.to, "@! Whoops", [sender])
+                                    sendMentions(msg.to, "@! Whoops", [sender])
 
                         elif cmd == "reject":
                           if wait["selfbot"] == True:
