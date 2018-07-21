@@ -471,7 +471,7 @@ def helarot():
     key = key.title()
     key2 = Setmain["namecreator"]
     key2 = key2.title()
-    helpMessage1 ="  " 「 Helper 」" + "\n" + \" + "\n" + \
+    helpMessage1 ="   「 Helper 」     " + "\n" + \
                   "? " + key2 +" " + "\n" + \
                   "? " + "\n" + \
                   "?       ? Help Bot ?" + "\n" + \
