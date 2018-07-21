@@ -454,12 +454,12 @@ def helpgroups():
                   " " "3) " + key + "Ginfo\n" + \
                   " " "4) " + key + "Bukaqr\n" + \
                   " " "5) " + key + "tutupqr\n" + \
-                  " " "6) " + key + "Url grup\n" + \                  
+                  " " "6) " + key + "Url grup\n" + \
                   " " "8) " + key + "Rinda grouplist\n" + \
                   " " "9) " + key + "Rinda groupinfo [numb]\n" + \
                   " " "10) " + key + "Rinda get memberlist to [numb]\n" + \
                   " " "11) " + key + "Rinda get reader on/off\n" + \
-                  " " "12) " + key + "Rinda get readers\n" + \                  
+                  " " "12) " + key + "Rinda get readers\n" + \
                   " " "14) " + key + "Changegp\n" + \
                   "  Use < " + key + " > For the Prefix" + "\n" + \
                   "  <Creator : @!>"
