@@ -12,7 +12,7 @@ from googletrans import Translator
 import youtube_dl
 #JANGAN APUS MID CREATOR, OWNER, ADMIN, TAMBAHIN AJA MID LU NGENTOD
 #aditmadzs = LineClient()
-aditmadzs = LineClient(authToken='Evs7zeGNnUMfn4sW5fQ8.70v7zHR7SirEocwtM5tika.LzOP6GT9bKoZxTVF/7CWh/BAFR6MQPSbyPj4wJLstVo=T')
+aditmadzs = LineClient(authToken='EvoBbWqUN1lxhN6Bs4t3.m7QAK9mmg/fv3Yt11op1GW.5fLIhx9QFPz1MihDNI/+x7KGz0HqDcswb73TWXrxUmA=')
 aditmadzs.log("Auth Token : " + str(aditmadzs.authToken))
 channel = LineChannel(aditmadzs)
 aditmadzs.log("Channel Access Token : " + str(channel.channelAccessToken))
@@ -22,10 +22,10 @@ call = aditmadzs
 
 mid = aditmadzs.getProfile().mid
 
-admin = ["ude1ff58ba36c0f45a0eddb0562a7521e","MID LU"]
+admin = ["uac8e3eaf1eb2a55770bf10c3b2357c33","u33ba9a93d30c1be155df24f5d4e3f583"]
 
 KAC = [aditmadzs]
-Bots = ["ude1ff58ba36c0f45a0eddb0562a7521e"]
+#Bots = ["ude1ff58ba36c0f45a0eddb0562a7521e"]
 Aditmadzs = admin
 
 welcome = []
