@@ -59,6 +59,61 @@ class LineTalk(object):
     """Message"""
 
     @loggedIn
+    def sendMention(to, text="", mids=[]):
+        arrData = ""
+        arr = []
+        mention = "@Meka Finee "
+        if mids == []:
+            raise Exception("Lost Time")
+        if "@!" in text:
+            if text.count("@!") != len(mids):
+                raise Exception("Lost Time")
+            texts = text.split("@!")
+            textx = ""
+            for mid in mids:
+                textx += str(texts[mids.index(mid)])
+                slen = len(textx)
+                elen = len(textx) + 15
+                arrData = {'S':str(slen), 'E':str(elen - 4), 'M':mid}
+                arr.append(arrData)
+                textx += mention
+            textx += str(texts[len(mids)])
+        else:
+            textx = ""
+            slen = len(textx)
+            elen = len(textx) + 15
+            arrData = {'S':str(slen), 'E':str(elen - 4), 'M':mids[0]}
+            arr.append(arrData)
+            textx += mention + str(text)
+        aditmadzs.sendMessage(to, textx, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
+    
+    @loggedIn
+    def sendMention(to, mid, firstmessage):
+        try:
+            arrData = ""
+            text = "%s " %(str(firstmessage))
+            arr = []
+            mention = "@x \n"
+            slen = str(len(text))
+            elen = str(len(text) + len(mention) - 1)
+            arrData = {'S':slen, 'E':elen, 'M':mid}
+            arr.append(arrData)
+            today = datetime.today()
+            future = datetime(2018,3,1)
+            hari = (str(future - today))
+            comma = hari.find(",")
+            hari = hari[:comma]
+            teman = aditmadzs.getAllContactIds()
+            gid = aditmadzs.getGroupIdsJoined()
+            tz = pytz.timezone("Asia/Jakarta")
+            timeNow = datetime.now(tz=tz)
+            eltime = time.time() - mulai
+            bot = runtime(eltime)
+            text += mention+"Jam : "+datetime.strftime(timeNow,'%H:%M:%S')+" Wib\nGroup : "+str(len(gid))+"\nTeman : "+str(len(teman))+"\nExpired : In "+hari+"\nVersion :  Premium\nTanggal : "+datetime.strftime(timeNow,'%Y-%m-%d')+"\nRuntime : \n"+bot
+            aditmadzs.sendMessage(to, text, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
+        except Exception as error:
+            aditmadzs.sendMessage(to, "[ INFO ] Error :\n" + str(error))
+    @loggedIn
     def sendMessage(self, to, text, contentMetadata={}, contentType=0):
         msg = Message()
         msg.to, msg._from = to, self.profile.mid
