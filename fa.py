@@ -2382,6 +2382,39 @@ def bot(op):
                             else:
                                 aditmadzs.sendMessage(msg.to, "Getreader status is Unactived")
 
+                        elif cmd.startswith("topnews"):
+                            mpui = requests.get("https://newsapi.org/v2/top-headlines?country=id&apiKey=1214d6480f6848e18e01ba6985e2008d")
+                            data = mpui.text
+                            data = json.loads(data)
+                            hasil = "Top News\n\n"
+                            hasil += "(1) " + str(data["articles"][0]["title"])                                                        
+                            hasil += "\n     Sumber : " + str(data["articles"][0]["source"]["name"])
+                            hasil += "\n     Penulis : " + str(data["articles"][0]["author"])
+                            hasil += "\n     Link : " + str(data["articles"][0]["url"])
+                            hasil += "\n\n(2) " + str(data["articles"][1]["title"])                                                        
+                            hasil += "\n     Sumber : " + str(data["articles"][1]["source"]["name"])
+                            hasil += "\n     Penulis : " + str(data["articles"][1]["author"])   
+                            hasil += "\n     Link : " + str(data["articles"][1]["url"])
+                            hasil += "\n\n(3) " + str(data["articles"][2]["title"])                                                        
+                            hasil += "\n     Sumber : " + str(data["articles"][2]["source"]["name"])
+                            hasil += "\n     Penulis : " + str(data["articles"][2]["author"])
+                            hasil += "\n     Link : " + str(data["articles"][2]["url"])
+                            hasil += "\n\n(4) " + str(data["articles"][3]["title"])                                                        
+                            hasil += "\n     Sumber : " + str(data["articles"][3]["source"]["name"])
+                            hasil += "\n     Penulis : " + str(data["articles"][3]["author"])
+                            hasil += "\n     Link : " + str(data["articles"][3]["url"])
+                            hasil += "\n\n(5) " + str(data["articles"][4]["title"])                                                        
+                            hasil += "\n     Sumber : " + str(data["articles"][4]["source"]["name"])
+                            hasil += "\n     Penulis : " + str(data["articles"][4]["author"])
+                            hasil += "\n     Link : " + str(data["articles"][4]["url"])
+                            hasil += "\n\n(6) " + str(data["articles"][5]["title"])                                                        
+                            hasil += "\n     Sumber : " + str(data["articles"][5]["source"]["name"])
+                            hasil += "\n     Penulis : " + str(data["articles"][5]["author"])
+                            hasil += "\n     Link : " + str(data["articles"][5]["url"])
+                            path = data["articles"][3]["urlToImage"]
+                            aditmadzs.sendMessage(kirim, str(hasil))
+                            aditmadzs.sendImageWithURL(kirim, str(path))                                
+                                
                         elif cmd == "rinda get sider on":
                           if wait["selfbot"] == True:
                            #if msg._from in admin:
