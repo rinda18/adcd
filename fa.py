@@ -323,7 +323,7 @@ def leaveMembers(to, mid):
 def sendMentions(to, text="", mids=[]):
     arrData = ""
     arr = []
-    mention = "@puy "
+    mention = "@zeroxyuuki "
     if mids == []:
         raise Exception("Lost Time")
     if "@!" in text:
@@ -2296,7 +2296,7 @@ def bot(op):
                                 get_contact_time_start = time.time()
                                 get_contact = aditmadzs.getContact(Ownerz)
                                 get_contact_time = time.time() - get_contact_time_start
-                                aditmadzs.sendMessage(msg.to, "Get Group speed is <%.10f>\n Get Info Profile speed is <%.10f>\n Get Contact speed is <%.10f>" % (get_profile_time/3,get_contact_time/3,get_group_time/3))
+                                aditmadzs.sendMessage(msg.to, "About Group speed is <%.10f>\nAbout Info Profile speed is <%.10f>\nAbout Contact speed is <%.10f>" % (get_profile_time/3,get_contact_time/3,get_group_time/3))
 
                         elif cmd == ".speed":
                             start = time.time()
