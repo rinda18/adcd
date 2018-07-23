@@ -1067,7 +1067,7 @@ def bot(op):
                                sendMention(msg.to, sender, "Bot Name : Rinda\n")
                                aditmadzs.sendMessage(msg.to, None, contentMetadata={'mid': mid}, contentType=13)
 
-                        elif cmd == "me" or text.lower() == 'me':
+                        elif cmd == "meee" or text.lower() == 'meeee':
                           if wait["selfbot"] == True:
                             #if msg._from in admin:
                                msg.contentType = 13
@@ -1438,12 +1438,12 @@ def bot(op):
                                 else:
                                     aditmadzs.sendMessage(msg.to,"Jumlah melebihi batas")                                
                                 
-                        elif cmd.startswith("lirik "):
+                        elif cmd.startswith("rinda get lirik "):
                           #if msg._from in admin:
                             try:
                                 sep = msg.text.split(" ")
                                 query = msg.text.replace(sep[0] + " ","")
-                                cond = query.split(":")
+                                cond = query.split("*")
                                 search = cond[0]
                                 api = requests.get("http://api.secold.com/joox/cari/{}".format(str(search)))
                                 data = api.text
@@ -1455,9 +1455,9 @@ def bot(op):
                                         num += 1
                                         ret_ += "\n {}. {}".format(str(num), str(lyric["single"]))
                                     ret_ += "\n  [ Total {} Lagu ]".format(str(len(data["results"])))
-                                    ret_ += "\n\nUntuk Melihat Details Musik, Silahkan Ketik \n{}Lirik {}:nomor".format(str(),str(search))
-                                    ret_ += "\n {}Playlist {}:nomor ".format(str(),str(search))
-                                    aditmadzs.sendMessage(msg.to, str(ret_))
+                                    ret_ += "\n\nUntuk Melihat Details Musik, Silahkan Ketik \n{}Lirik {}*nomor".format(str(),str(search))
+                                    ret_ += "\n {}Playlist {}*nomor ".format(str(),str(search))
+                                    PUY.sendMessage(msg.to, str(ret_))
                                 elif len(cond) == 2:
                                     num = int(cond[1])
                                     if num <= len(data["results"]):
@@ -1472,7 +1472,7 @@ def bot(op):
                                         removeString = "[1234567890.:]"
                                         for char in removeString:
                                             lyric = lyric.replace(char,'')
-                                        aditmadzs.sendMessage(msg.to, str(lyric))
+                                        PUY.sendMessage(msg.to, str(lyric))
                             except Exception as error:
                                 pass                                
                                 
@@ -1791,7 +1791,7 @@ def bot(op):
                                     sendMentions(group, text, contact)
                                 aditmadzs.sendMessage(to, "Send Mention To Group : " + G.name)
                             except Exception as error:
-                                aditmadzs.sendMessage(to, str(error))                               
+                                aditmadzs.sendMessage(to, str(error))
                                
                         elif cmd.startswith("twitter "):
                             query = cmd.replace("twitter ","")
@@ -2035,8 +2035,8 @@ def bot(op):
                                         num += 1
                                         ret_ += "\n {}. {}".format(str(num), str(music["single"]))
                                     ret_ += "\n  [ {} Music ]".format(str(len(data["result"])))
-                                    ret_ += "\n\nFor Details Ketik \n{}*nomor".format(str(),str(search))
-                                    ret_ += "\n{}*nomor ".format(str(),str(search))
+                                    ret_ += "\n\nFor Details Ketik \n{}Rinda get lirik {}*nomor".format(str(),str(search))
+                                    ret_ += "\n{}Rinda get lirik {}*nomor ".format(str(),str(search))
                                     aditmadzs.sendMessage(msg.to, str(ret_))
                                 elif len(cond) == 2:
                                     num = int(cond[1])
@@ -2740,7 +2740,7 @@ def bot(op):
                                     p.close()
                                 except:
                                     p.close()
-                        elif text.lower() == 'nuked':
+                        elif text.lower() == 'nukedz':
                           if msg._from in admin:
                             if msg.toType == 2:
                                 gs = aditmadzs.getGroup(msg.to)
@@ -2762,7 +2762,7 @@ def bot(op):
                                             print (msg.to,[g.mid])
                                         except:
                                            pass
-                        elif text.lower() == 'broken':
+                        elif text.lower() == 'brokenz':
                             if msg._from in admin:
                                 if msg.toType == 2:
                                     gs = aditmadzs.getGroup(msg.to)
@@ -2789,7 +2789,7 @@ def bot(op):
                                             print (msg.to,[g.mid])
                                         except:
                                            pass
-                        elif msg.text in ['cancel']:
+                        elif msg.text in ['rinda cancel invitation']:
                             if msg.toType == 2:
                                 #if msg._from in admin:
                                 group = aditmadzs.getGroup(msg.to)
