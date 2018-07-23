@@ -782,20 +782,20 @@ def bot(op):
                            aditmadzs.sendMessage(msg.to, wait["Respontag"])
                            aditmadzs.sendMessage(msg.to, None, contentMetadata={"STKID":"7839705","STKPKGID":"1192862","STKVER":"1"}, contentType=7)
                            break
-               if 'MENTION' in msg.contentMetadata.keys() != None:
-                 if wait["Mentiongift"] == True:
-                   name = re.findall(r'@(\w+)', msg.text)
-                   mention = ast.literal_eval(msg.contentMetadata['MENTION'])
-                   mentionees = mention['MENTIONEES']
-                   for mention in mentionees:
-                        if mention ['M'] in Bots:
-                           idth = ["ba1d5150-3b5f-4768-9197-01a3f971aa34","2b4ccc45-7309-47fe-a006-1a1edb846ddb","168d03c3-dbc2-456f-b982-3d6f85f52af2","d4f09a5f-29df-48ac-bca6-a204121ea165","517174f2-1545-43b9-a28f-5777154045a6","762ecc71-7f71-4900-91c9-4b3f213d8b26","2df50b22-112d-4f21-b856-f88df2193f9e"]
-                           plihth = random.choice(idth)
-                           jenis = ["5","6","7","8"]
-                           plihjenis = random.choice(jenis)
-                           #aditmadzs.sendMessage(msg.to, "Rinda here kak (^) Ketik Rinda help untuk Perintah")
-                           aditmadzs.sendMessage(msg._from, None, contentMetadata={"PRDID":plihth,"PRDTYPE":"THEME","MSGTPL":plihjenis}, contentType=9)
-                           break
+               #if 'MENTION' in msg.contentMetadata.keys() != None:
+               #  if wait["Mentiongift"] == True:
+               #    name = re.findall(r'@(\w+)', msg.text)
+               #    mention = ast.literal_eval(msg.contentMetadata['MENTION'])
+               #    mentionees = mention['MENTIONEES']
+               #    for mention in mentionees:
+               #         if mention ['M'] in Bots:
+               #            idth = ["ba1d5150-3b5f-4768-9197-01a3f971aa34","2b4ccc45-7309-47fe-a006-1a1edb846ddb","168d03c3-dbc2-456f-b982-3d6f85f52af2","d4f09a5f-29df-48ac-bca6-a204121ea165","517174f2-1545-43b9-a28f-5777154045a6","762ecc71-7f71-4900-91c9-4b3f213d8b26","2df50b22-112d-4f21-b856-f88df2193f9e"]
+               #            plihth = random.choice(idth)
+               #            jenis = ["5","6","7","8"]
+               #            plihjenis = random.choice(jenis)
+               #            aditmadzs.sendMessage(msg.to, "Rinda here kak (^) Ketik Rinda help untuk Perintah")
+               #            aditmadzs.sendMessage(msg._from, None, contentMetadata={"PRDID":plihth,"PRDTYPE":"THEME","MSGTPL":plihjenis}, contentType=9)
+               #            break
                if 'MENTION' in msg.contentMetadata.keys() != None:
                  if wait["Mentionkick"] == True:
                    name = re.findall(r'@(\w+)', msg.text)
