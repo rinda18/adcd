@@ -91,6 +91,7 @@ wait = {
     "Talkwblacklist":False,
     "Talkdblacklist":False,
     "talkban":True,
+    "protectionkick": [],
     "contact":False,
     'autoJoin':True,
     'autoAdd':True,
@@ -2899,13 +2900,13 @@ def bot(op):
                         elif cmd == "rinda pro on" or text.lower() == 'rindapro':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
-                                setting["protectionkick"] = True
+                                wait["protectionkick"] = True
                                 aditmadzs.sendMessage(msg.to,"Rinda protect admin already on")
                                 
                         elif cmd == "rinda pro off" or text.lower() == 'rindaproff':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
-                                setting["protectionkick"] = False
+                                wait["protectionkick"] = False
                                 aditmadzs.sendMessage(msg.to,"Rinda protect admin already off")
                                 
                         elif cmd == "rinda getinfo off" or text.lower() == 'contactt off':
