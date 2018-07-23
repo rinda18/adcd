@@ -479,9 +479,9 @@ def helpstaff():
                   " " "6) " + key + "Rinda Remove chat" + "\n" + \
                   " " "7) " + key + "Changenamecreator:Nama\n" + \
                   " " "8) " + key + "Resetnamecreator\n" + \
-                  " " "9) " + key + "Rinda+admin:on\n" + \
-                  " " "10) " + key + "Rinda-admin @\n" + \
-                  " " "11) " + key + "Rinda+admin @\n" + \
+                  " " "9) " + key + "Rinda + admin:on\n" + \
+                  " " "10) " + key + "Rinda - admin @\n" + \
+                  " " "11) " + key + "Rinda + admin @\n" + \
                   " " "12) " + key + "Rinda refresh admin\n" + \
                   " " "13) " + key + "Rinda adminlist\n" + \
                   " " "14) " + key + "Rinda setspamtag:\n" + \
@@ -610,6 +610,21 @@ def bot(op):
                 welcomeMembers(op.param1, [op.param2])
                 aditmadzs.sendImageWithURL(op.param1, image)
 
+        if op.type == 19:
+            if op.param1 in setting["protectionkick"]:
+                if op.param2 not in settings["admin"]:
+                    try:
+                        aditmadzs.kickoutFromGroup(op.param1,[op.param2])
+                        aditmadzs.inviteIntoGroup(op.param1,[op.param3])
+                    except:
+                        aditmadzs.findAndAddContactsByMid(op.param3)
+                        aditmadzs.kickoutFromGroup(op.param1,[op.param2])
+                        aditmadzs.inviteIntoGroup(op.param1,[op.param3])
+                    if op.param2 not in wait["blacklist"]:
+                        wait["blacklist"].append(op.param2)
+                    else:
+                        pass
+                
         if op.type == 0:
             return
         if op.type == 5:
@@ -2881,6 +2896,18 @@ def bot(op):
                                 wait["contact"] = True
                                 aditmadzs.sendMessage(msg.to,"Getinfo has been Actived")
 
+                        elif cmd == "rinda pro on" or text.lower() == 'rindapro':
+                          if wait["selfbot"] == True:
+                            if msg._from in admin:
+                                setting["protectionkick"] = True
+                                aditmadzs.sendMessage(msg.to,"Rinda protect admin already on")
+                                
+                        elif cmd == "rinda pro off" or text.lower() == 'rindaproff':
+                          if wait["selfbot"] == True:
+                            if msg._from in admin:
+                                setting["protectionkick"] = False
+                                aditmadzs.sendMessage(msg.to,"Rinda protect admin already off")
+                                
                         elif cmd == "rinda getinfo off" or text.lower() == 'contactt off':
                           if wait["selfbot"] == True:
                             if msg._from in admin:
