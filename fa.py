@@ -793,7 +793,7 @@ def bot(op):
                            plihth = random.choice(idth)
                            jenis = ["5","6","7","8"]
                            plihjenis = random.choice(jenis)
-                           aditmadzs.sendMessage(msg.to, "Rinda here kak (^) Ketik Rinda help untuk Perintah")
+                           #aditmadzs.sendMessage(msg.to, "Rinda here kak (^) Ketik Rinda help untuk Perintah")
                            aditmadzs.sendMessage(msg._from, None, contentMetadata={"PRDID":plihth,"PRDTYPE":"THEME","MSGTPL":plihjenis}, contentType=9)
                            break
                if 'MENTION' in msg.contentMetadata.keys() != None:
