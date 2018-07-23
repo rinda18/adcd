@@ -2283,7 +2283,7 @@ def bot(op):
                                 aditmadzs.sendMessage(msg.to, "Bye"+str(G.name))
                                 aditmadzs.leaveGroup(msg.to)
 
-                        elif cmd == "sprespon":
+                        elif cmd == "rinda speed":
                           if wait["selfbot"] == True:
                             #if msg._from in admin:
                                 Ownerz = "uac8e3eaf1eb2a55770bf10c3b2357c33"
@@ -2296,16 +2296,16 @@ def bot(op):
                                 get_contact_time_start = time.time()
                                 get_contact = aditmadzs.getContact(Ownerz)
                                 get_contact_time = time.time() - get_contact_time_start
-                                aditmadzs.sendMessage(msg.to, "BOT Speed respon\n\n - Get Profile\n   %.10f\n - Get Contact\n   %.10f\n - Get Group\n   %.10f" % (get_profile_time/3,get_contact_time/3,get_group_time/3))
+                                aditmadzs.sendMessage(msg.to, "Get Group speed is <%.10f>\n Get Info Profile speed is <%.10f>\n Get Contact speed is <%.10f>" % (get_profile_time/3,get_contact_time/3,get_group_time/3))
 
-                        elif cmd == "sp":
+                        elif cmd == ".speed":
                             start = time.time()
                             aditmadzs.sendMessage(to, "Counting...")
                             speed = time.time() - start
                             ping = speed * 1000
-                            aditmadzs.sendMessage(to, "The result is {} ms".format(str(speedtest(ping))))                                
+                            aditmadzs.sendMessage(to, "The result is {} ms".format(str(speed(ping))))                                
                                 
-                        elif cmd == "speed" or cmd == "sps":
+                        elif cmd == "..rinda speed" or cmd == "..sps":
                           if wait["selfbot"] == True:
                             #if msg._from in admin:
                                start = time.time()
