@@ -2382,38 +2382,80 @@ def bot(op):
                             else:
                                 aditmadzs.sendMessage(msg.to, "Getreader status is Unactived")
 
-                        elif cmd.startswith("topnews"):
+                        elif cmd.startswith("rinda get topnews"):
                             mpui = requests.get("https://newsapi.org/v2/top-headlines?country=id&apiKey=1214d6480f6848e18e01ba6985e2008d")
                             data = mpui.text
                             data = json.loads(data)
                             hasil = "Top News\n\n"
-                            hasil += "(1) " + str(data["articles"][0]["title"])                                                        
+                            hasil += "1) \n<" + str(data["articles"][0]["title"] + ">")
                             hasil += "\n     Sumber : " + str(data["articles"][0]["source"]["name"])
                             hasil += "\n     Penulis : " + str(data["articles"][0]["author"])
                             hasil += "\n     Link : " + str(data["articles"][0]["url"])
-                            hasil += "\n\n(2) " + str(data["articles"][1]["title"])                                                        
+                            hasil += "\n\n2) \n<" + str(data["articles"][0]["title"] + ">")
                             hasil += "\n     Sumber : " + str(data["articles"][1]["source"]["name"])
                             hasil += "\n     Penulis : " + str(data["articles"][1]["author"])   
                             hasil += "\n     Link : " + str(data["articles"][1]["url"])
-                            hasil += "\n\n(3) " + str(data["articles"][2]["title"])                                                        
+                            hasil += "\n\n3) \n<" + str(data["articles"][0]["title"] + ">")
                             hasil += "\n     Sumber : " + str(data["articles"][2]["source"]["name"])
                             hasil += "\n     Penulis : " + str(data["articles"][2]["author"])
                             hasil += "\n     Link : " + str(data["articles"][2]["url"])
-                            hasil += "\n\n(4) " + str(data["articles"][3]["title"])                                                        
-                            hasil += "\n     Sumber : " + str(data["articles"][3]["source"]["name"])
-                            hasil += "\n     Penulis : " + str(data["articles"][3]["author"])
-                            hasil += "\n     Link : " + str(data["articles"][3]["url"])
-                            hasil += "\n\n(5) " + str(data["articles"][4]["title"])                                                        
-                            hasil += "\n     Sumber : " + str(data["articles"][4]["source"]["name"])
-                            hasil += "\n     Penulis : " + str(data["articles"][4]["author"])
-                            hasil += "\n     Link : " + str(data["articles"][4]["url"])
-                            hasil += "\n\n(6) " + str(data["articles"][5]["title"])                                                        
-                            hasil += "\n     Sumber : " + str(data["articles"][5]["source"]["name"])
-                            hasil += "\n     Penulis : " + str(data["articles"][5]["author"])
-                            hasil += "\n     Link : " + str(data["articles"][5]["url"])
+                            #hasil += "\n\n4) \n<" + str(data["articles"][0]["title"] + ">")
+                            #hasil += "\n     Sumber : " + str(data["articles"][3]["source"]["name"])
+                            #hasil += "\n     Penulis : " + str(data["articles"][3]["author"])
+                            #hasil += "\n     Link : " + str(data["articles"][3]["url"])
+                            #hasil += "\n\n5) \n<" + str(data["articles"][0]["title"] + ">")
+                            #hasil += "\n     Sumber : " + str(data["articles"][4]["source"]["name"])
+                            #hasil += "\n     Penulis : " + str(data["articles"][4]["author"])
+                            #hasil += "\n     Link : " + str(data["articles"][4]["url"])
+                            #hasil += "\n\n6) \n<" + str(data["articles"][0]["title"] + ">")
+                            #hasil += "\n     Sumber : " + str(data["articles"][5]["source"]["name"])
+                            #hasil += "\n     Penulis : " + str(data["articles"][5]["author"])
+                            #hasil += "\n     Link : " + str(data["articles"][5]["url"])
                             path = data["articles"][3]["urlToImage"]
                             aditmadzs.sendMessage(msg.to, str(hasil))
-                            aditmadzs.sendImageWithURL(msg.to, str(path))                                
+                            aditmadzs.sendImageWithURL(msg.to, str(path))
+                                
+                        elif cmd.startswith("urban: "):
+                            sep = msg.text.split(" ")
+                            judul = msg.text.replace(sep[0] + " ","")
+                            url = "http://api.urbandictionary.com/v0/define?term="+str(judul)
+                            with requests.session() as s:
+                                s.headers["User-Agent"] = random.choice(Mozilla["userAgent"])
+                                r = s.get(url)
+                                data = r.text
+                                data = json.loads(data)
+                                cu = "Urban Result\n\n"
+                                cu += "\nText: "+ data["tags"][0]
+                                cu += ","+ data["tags"][1]
+                                cu += ","+ data["tags"][2]
+                                cu += ","+ data["tags"][3]
+                                cu += ","+ data["tags"][4]
+                                cu += ","+ data["tags"][5]
+                                cu += ","+ data["tags"][6]
+                                cu += ","+ data["tags"][7]
+                                cu += "\n[1]\n Author: "+str(data["list"][0]["author"])+"\n"
+                                cu += "\n Word: "+str(data["list"][0]["word"])+"\n"
+                                cu += "\n Link: "+str(data["list"][0]["permalink"])+"\n"
+                                cu += "\n Definition: "+str(data["list"][0]["definition"])+"\n"
+                                cu += "\n Sample: "+str(data["list"][0]["example"])+"\n"
+                                aditmadzs.sendMessage(msg.to, str(cu))                                
+
+                        elif cmd.startswith("rinda getmaps "):
+                            location = msg.text.replace("rinda getmaps ","")
+                            with requests.session() as web:
+                                web.headers["user-agent"] = "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36"
+                                kris = web.get("http://api.corrykalam.net/apiloc.php?lokasi={}".format(urllib.parse.quote(location)))
+                                data = kris.text
+                                data = json.loads(data)
+                                if data[0] != "" and data[1] != "" and data[2] != "":
+                                    link = "https://www.google.co.id/maps/@{},{},15z".format(str(data[1]), str(data[2]))
+                                    ret_ = "Check Location\n"
+                                    ret_ += "\n Lokasi : " + data[0]
+                                    ret_ += "\n Google Maps : " + link
+                                    #ret_ += "\n\nSearch Location Success"
+                                else:
+                                    ret_ = "Lokasi tidak ditemukan"
+                                aditmadzs.sendMessage(msg.to, str(ret_))
                                 
                         elif cmd == "rinda get sider on":
                           if wait["selfbot"] == True:
