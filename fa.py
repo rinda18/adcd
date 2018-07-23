@@ -218,7 +218,7 @@ def mentionMembers(to, mid):
         no = 1
         num = 2
         for i in mid:
-            mention = "@x\n"
+            mention = "@puy\n"
             slen = str(len(textx))
             elen = str(len(textx) + len(mention) - 1)
             arrData = {'S':slen, 'E':elen, 'M':i}
@@ -240,12 +240,12 @@ def mentionMembers(to, mid):
 def siderMembers(to, mid):
     try:
         arrData = ""
-        textx = "{} Sider".format(str(len(mid)))
+        textx = " ".format(str(len(mid)))
         arr = []
         no = 1
         num = 2
         for i in mid:
-            mention = "@x\n"
+            mention = "@puy\n"
             slen = str(len(textx))
             elen = str(len(textx) + len(mention) - 1)
             arrData = {'S':slen, 'E':elen, 'M':i}
@@ -301,7 +301,7 @@ def leaveMembers(to, mid):
         num = 2
         for i in mid:
             ginfo = aditmadzs.getGroup(to)
-            mention = "@x\n"
+            mention = "@puy\n"
             slen = str(len(textx))
             elen = str(len(textx) + len(mention) - 1)
             arrData = {'S':slen, 'E':elen, 'M':i}
@@ -323,7 +323,7 @@ def leaveMembers(to, mid):
 def sendMentions(to, text="", mids=[]):
     arrData = ""
     arr = []
-    mention = "@zeroxyuuki "
+    mention = "@puy "
     if mids == []:
         raise Exception("Lost Time")
     if "@!" in text:
@@ -2286,6 +2286,7 @@ def bot(op):
                         elif cmd == "sprespon":
                           if wait["selfbot"] == True:
                             #if msg._from in admin:
+                                Ownerz = "uac8e3eaf1eb2a55770bf10c3b2357c33"
                                 get_profile_time_start = time.time()
                                 get_profile = aditmadzs.getProfile()
                                 get_profile_time = time.time() - get_profile_time_start
@@ -2293,11 +2294,18 @@ def bot(op):
                                 get_group = aditmadzs.getGroupIdsJoined()
                                 get_group_time = time.time() - get_group_time_start
                                 get_contact_time_start = time.time()
-                                get_contact = aditmadzs.getContact(mid)
+                                get_contact = aditmadzs.getContact(Ownerz)
                                 get_contact_time = time.time() - get_contact_time_start
                                 aditmadzs.sendMessage(msg.to, "BOT Speed respon\n\n - Get Profile\n   %.10f\n - Get Contact\n   %.10f\n - Get Group\n   %.10f" % (get_profile_time/3,get_contact_time/3,get_group_time/3))
 
-                        elif cmd == "speed" or cmd == "sp":
+                        elif cmd == "sp":
+                            start = time.time()
+                            aditmadzs.sendMessage(to, "Counting...")
+                            speed = time.time() - start
+                            ping = speed * 1000
+                            aditmadzs.sendMessage(to, "The result is {} ms".format(str(speedtest(ping))))                                
+                                
+                        elif cmd == "speed" or cmd == "sps":
                           if wait["selfbot"] == True:
                             #if msg._from in admin:
                                start = time.time()
