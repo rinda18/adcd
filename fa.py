@@ -2412,8 +2412,8 @@ def bot(op):
                             hasil += "\n     Penulis : " + str(data["articles"][5]["author"])
                             hasil += "\n     Link : " + str(data["articles"][5]["url"])
                             path = data["articles"][3]["urlToImage"]
-                            aditmadzs.sendMessage(kirim, str(hasil))
-                            aditmadzs.sendImageWithURL(kirim, str(path))                                
+                            aditmadzs.sendMessage(msg.to, str(hasil))
+                            aditmadzs.sendImageWithURL(msg.to, str(path))                                
                                 
                         elif cmd == "rinda get sider on":
                           if wait["selfbot"] == True:
