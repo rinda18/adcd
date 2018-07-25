@@ -12,7 +12,7 @@ from googletrans import Translator
 import youtube_dl
 #JANGAN APUS MID CREATOR, OWNER, ADMIN, TAMBAHIN AJA MID LU NGENTOD
 #aditmadzs = LineClient()
-aditmadzs = LineClient(authToken='Evs7zeGNnUMfn4sW5fQ8.70v7zHR7SirEocwtM5tika.LzOP6GT9bKoZxTVF/7CWh/BAFR6MQPSbyPj4wJLstVo=T')
+aditmadzs = LineClient(authToken='Ev7NsZpbtAStY3iwZXT3.m7QAK9mmg/fv3Yt11op1GW.ndlfVGqRprpqG64XDjtVS8Go/7Xa+eWUzobUAWvthyk=')
 aditmadzs.log("Auth Token : " + str(aditmadzs.authToken))
 channel = LineChannel(aditmadzs)
 aditmadzs.log("Channel Access Token : " + str(channel.channelAccessToken))
