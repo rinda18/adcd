@@ -1260,7 +1260,7 @@ def bot(op):
                                aditmadzs.sendMessage(msg.to, "Restart Sukses...")
                                restartBot()
 
-                        elif cmd == "runtime":
+                        elif cmd == "rinda runtime":
                           if wait["selfbot"] == True:
                             #if msg._from in admin:
                                eltime = time.time() - mulai
