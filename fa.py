@@ -388,41 +388,17 @@ def help():
     key2 = Setmain["namecreator"]
     key2 = key2.title()
     helpMessage = " " "          // HELPER //      " + "\n" + \
-                  " " "1) " + key + " Rinda Help\n" + \
-                  " " "2) " + key + " Rinda Help group\n" + \
-                  " " "3) " + key + " Rinda bye\n" + \
-                  " " "4) " + key + " About Rinda\n" + \
+                  " " "1) " + key + " Rinda gr on [to actived]\n" + \
+                  " " "2) " + key + " Rinda grs [for check reads]\n" + \
+                  " " "3) " + key + " Rinda gr off [to actived]\n" + \
+                  " " "4) " + key + " Mentioning\n" + \
+                  " " "5) " + key + " Rinda bye\n" + \
+                  " " "6) " + key + " About Rinda\n" + \
                   "    // Proceed To Auto Translate //     " + "\n\n" + \
                   " " "          // AUTO TERJEMAH //      " + "\n" + \
                   " " "1) " + key + "Terjemah arab*on/off\n" + \
-                  " " "2) " + key + "Terjemah english*on/off\n" + \
+                  " " "2) " + key + "Terjemah eng*on/off\n" + \
                   " " "3) " + key + "Terjemah indo*on/off\n" + \
-                  "    // Proceed To Public Command //     " + "\n\n" + \
-                  " " "          // ALL CAN USED [ MEDIA ] //      " + "\n" + \
-                    " " "1) " + key + " Asking [query]" + "\n" + \
-                    " " "2) " + key + " Hasil Dari [query]/[contoh : Hasil dari 22x22]" + "\n" + \
-                    " " "3) " + key + " Timezone [query]" + "\n" + \
-                    " " "4) " + key + " Smule [query]" + "\n" + \
-                    " " "5) " + key + " Bitcoin" + "\n" + \
-                    " " "6) " + key + " Twitter [query]" + "\n" + \
-                    " " "6) " + key + " alquran: [surah]" + "\n" + \
-                    " " "7) " + key + " Memelist" + "\n" + \
-                    " " "7) " + key + " Playlist [artist]" + "\n" + \
-                    " " "8) " + key + " Randomlose" + "\n" + \
-                    " " "9) " + key + " Playstore [query]" + "\n" + \
-                    " " "10) " + key + " Rinda get Motivation" + "\n" + \
-                    " " "11) " + key + " Rinda get Suggestion to [query]" + "\n" + \
-                    " " "12) " + key + " Rinda get devianart [query]" + "\n" + \
-                    " " "13) " + key + " Rinda get Image [query]" + "\n" + \
-                    " " "14) " + key + " Rinda get Quotes" + "\n" + \
-                    " " "15) " + key + " Rinda get 1Cak" + "\n" + \
-                    " " "16) " + key + " Rinda get video [query]" + "\n" + \
-                    " " "17) " + key + " Rinda get Wikipedia [query]" + "\n" + \
-                    " " "18) " + key + " Rinda memelist" + "\n" + \
-                    " " "19) " + key + " Rinda getmeme dwight*Hei*Rin" + "\n" + \
-                    " " "20) " + key + " Rinda get lockscreen [query]" + "\n" + \
-                    " " "21) " + key + " Rinda get creepypasta" + "\n" + \
-                    " " "22) " + key + " Rinda get gif [query]" + "\n" + \
                   "    // Ended Command //     " + "\n\n" + \
                   "   Use < " + key + " > For the Prefix" + "\n" + \
                   "    <Creator : @!>"
@@ -2313,7 +2289,7 @@ def bot(op):
                                elapsed_time = time.time() - start
                                aditmadzs.sendMessage(msg.to, "{} detik".format(str(elapsed_time)))
 
-                        elif cmd == "rinda get reader on":
+                        elif cmd == "rinda gr on":
                           if wait["selfbot"] == True:
                             #if msg._from in admin:
                                  tz = pytz.timezone("Asia/Jakarta")
@@ -2322,7 +2298,7 @@ def bot(op):
                                  Setmain['ADITMADZSreadMember'][msg.to] = {}
                                  aditmadzs.sendMessage(msg.to, "Lurking berhasil dinyalakan\n\nPada : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n[ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
 
-                        elif cmd == "rinda get reader off":
+                        elif cmd == "rinda gr off":
                           if wait["selfbot"] == True:
                             #if msg._from in admin:
                                  tz = pytz.timezone("Asia/Jakarta")
@@ -2331,7 +2307,7 @@ def bot(op):
                                  del Setmain['ADITMADZSreadMember'][msg.to]
                                  aditmadzs.sendMessage(msg.to, "Getreader berhasil dimatikan\n\nPada : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n[ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
 
-                        elif cmd == "rinda get readers":
+                        elif cmd == "rinda grs":
                           #if msg._from in admin:
                             if msg.to in Setmain['ADITMADZSreadPoint']:
                                 if Setmain['ADITMADZSreadMember'][msg.to] != {}:
@@ -2711,7 +2687,7 @@ def bot(op):
                                          msgs = "Simi-simi Sudah Tidak Aktif"
                                     aditmadzs.sendMessage(msg.to, "Dinonaktifkan\n" + msgs)
 
-                        elif 'Terjemah english*' in msg.text:
+                        elif 'Terjemah eng*' in msg.text:
                            #if msg._from in admin:
                               spl = msg.text.replace('Terjemah english*','')
                               if spl == 'on':
