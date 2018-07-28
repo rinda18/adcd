@@ -555,17 +555,28 @@ def bot(op):
                         ginfo = aditmadzs.getGroup(op.param1)
                         aditmadzs.sendMessage(op.param1,"Hai " + str(ginfo.name))
 
+        #if op.type == 13:
+        #    if mid in op.param3:
+        #        if wait["autoJoin"] == True:
+        #            #if op.param2 not in Bots and op.param2 not in admin:
+        #                aditmadzs.acceptGroupInvitation(op.param1)
+        #                ginfo = aditmadzs.getGroup(op.param1)
+        #                aditmadzs.sendMessage(op.param1,"Thx for Invited Rinda to Group!\nPerintah < Rinda help >\nInGroup <" +str(ginfo.name) + ">")
+        #            else:
+        #                aditmadzs.acceptGroupInvitation(op.param1)
+        #                ginfo = aditmadzs.getGroup(op.param1)
+        #                aditmadzs.sendMessage(op.param1,"Thx for Invited Rinda to Group!\nPerintah < Rinda help >\nInGroup <" +str(ginfo.name) + ">")
+
         if op.type == 13:
-            if mid in op.param3:
+            print ("[ 13 ] NOTIFIED INVITE INTO GROUP")
+            if aditmadzsMid in op.param3:
                 if wait["autoJoin"] == True:
-                    if op.param2 not in Bots and op.param2 not in admin:
-                        aditmadzs.acceptGroupInvitation(op.param1)
-                        ginfo = aditmadzs.getGroup(op.param1)
-                        aditmadzs.sendMessage(op.param1,"Thx for Invited Rinda to Group!\nPerintah < Rinda help >\nInGroup <" +str(ginfo.name) + ">")
-                    else:
-                        aditmadzs.acceptGroupInvitation(op.param1)
-                        ginfo = aditmadzs.getGroup(op.param1)
-                        aditmadzs.sendMessage(op.param1,"Thx for Invited Rinda to Group!\nPerintah < Rinda help >\nInGroup <" +str(ginfo.name) + ">")
+                    aditmadzs.acceptGroupInvitation(op.param1)
+                dan = aditmadzs.getContact(op.param2)
+                tgb = aditmadzs.getGroup(op.param1)
+                sendMentions(op.param1, "Thx For Invited Me@!\nketik Help untuk Perintah".format(str(tgb.name)),[op.param2])
+                #aditmadzs.sendImageWithURL(op.param1, "http://dl.profile.line-cdn.net{}".format(dan.picturePath))
+                aditmadzs.sendContact(op.param1, op.param2)
 
         if op.type == 15:
             if op.param1 in welcome:
@@ -1491,7 +1502,7 @@ def bot(op):
                             #G = aditmadzs.getGroup(heij)
                             ginfo = aditmadzs.getGroup(msg.to)
                             #msgs = "Auto Translate To Arab has been Actived\nInGroup < " +str(ginfo.name) + " >"                            
-                            aditmadzs.sendMessage(to, "Gbye" +str(ginfo.name))
+                            aditmadzs.sendMessage(to, "Gbye " +str(ginfo.name))
                             #aditmadzs.getGroupIdsJoined()
                             aditmadzs.leaveGroup(to)
 
@@ -2308,7 +2319,7 @@ def bot(op):
                                  Setmain['ADITMADZSreadPoint'][msg.to] = msg_id
                                  Setmain['ADITMADZSreadMember'][msg.to] = {}
                                  #aditmadzs.sendMessage(msg.to, "Lurking berhasil dinyalakan\n\nPada : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n[ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
-                                 aditmadzs.sendMessage(msg.to, "Getreader berhasil dinyalakan di < " +str(ginfo.name) + " >")
+                                 aditmadzs.sendMessage(msg.to, "Getreader dinyalakan di < " +str(ginfo.name) + " >")
 
                         elif cmd == "rinda gr off":
                           if wait["selfbot"] == True:
@@ -2319,7 +2330,7 @@ def bot(op):
                                  del Setmain['ADITMADZSreadPoint'][msg.to]
                                  del Setmain['ADITMADZSreadMember'][msg.to]
                                  #aditmadzs.sendMessage(msg.to, "Getreader berhasil dimatikan\n\nPada : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n[ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
-                                 aditmadzs.sendMessage(msg.to, "Getreader berhasil dimatikan di < " +str(ginfo.name) + " >")
+                                 aditmadzs.sendMessage(msg.to, "Getreader dimatikan di < " +str(ginfo.name) + " >")
 
                         elif cmd == "rinda grs":
                           #if msg._from in admin:
@@ -2354,7 +2365,7 @@ def bot(op):
                                                 except:
                                                     no = "  "
                                         msg.to = msg.to
-                                        msg.text = textx+""+ datetime.strftime(timeNow,'%H:%M:%S')+"* "
+                                        msg.text = textx+""
                                         msg.contentMetadata = {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}
                                         msg.contentType = 0
                                         aditmadzs.sendMessage1(msg)
