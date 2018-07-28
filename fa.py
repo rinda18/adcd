@@ -390,7 +390,7 @@ def help():
     helpMessage = " " "          // HELPER //      " + "\n" + \
                   " " "1) " + key + " Rinda gr on [to actived]\n" + \
                   " " "2) " + key + " Rinda grs [for check reads]\n" + \
-                  " " "3) " + key + " Rinda gr off [to actived]\n" + \
+                  " " "3) " + key + " Rinda gr off [to unactived]\n" + \
                   " " "4) " + key + " Mentioning\n" + \
                   " " "5) " + key + " Rinda bye\n" + \
                   " " "6) " + key + " About Rinda\n" + \
@@ -2248,7 +2248,7 @@ def bot(op):
                                 for i in group.members[a*20 : (a+1)*20]:
                                     b.append({"S":str(s), "E" :str(s+6), "M":i.mid})
                                     s += 7
-                                    txt += u'@x \n'
+                                    txt += u'@! \n'
                                 aditmadzs.sendMessage(to, text=txt, contentMetadata={u'MENTION': json.dumps({'MENTIONEES':b})}, contentType=0)
                                 aditmadzs.sendMessage(to, "Total {} Mention".format(str(len(nama))))
                                 
