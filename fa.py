@@ -1489,11 +1489,12 @@ def bot(op):
                         elif cmd.startswith("rinda bye"):
                             heij = aditmadzs.getGroupIdsJoined()
                             #G = aditmadzs.getGroup(heij)
-                            #aditmadzs.sendMessage(to, "Gbye {}".format(str(G.name)))
-                            aditmadzs.sendMessage(to, "Gbye")
+                            ginfo = aditmadzs.getGroup(msg.to)
+                            #msgs = "Auto Translate To Arab has been Actived\nInGroup < " +str(ginfo.name) + " >"                            
+                            aditmadzs.sendMessage(to, "Gbye" +str(ginfo.name)
                             #aditmadzs.getGroupIdsJoined()
                             aditmadzs.leaveGroup(to)
-                                
+
                         elif cmd.startswith("rinda get wikipedia "):
                             query = cmd.replace("rinda get wikipedia ","")
                             try:
