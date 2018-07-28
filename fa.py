@@ -1491,7 +1491,7 @@ def bot(op):
                             #G = aditmadzs.getGroup(heij)
                             ginfo = aditmadzs.getGroup(msg.to)
                             #msgs = "Auto Translate To Arab has been Actived\nInGroup < " +str(ginfo.name) + " >"                            
-                            aditmadzs.sendMessage(to, "Gbye" +str(ginfo.name)
+                            aditmadzs.sendMessage(to, "Gbye" +str(ginfo.name))
                             #aditmadzs.getGroupIdsJoined()
                             aditmadzs.leaveGroup(to)
 
