@@ -16,12 +16,11 @@ aditmadzs = LineClient(authToken='Ev5JMRiB0M2xrC7MFSt3.m7QAK9mmg/fv3Yt11op1GW.d7
 aditmadzs.log("Auth Token : " + str(aditmadzs.authToken))
 channel = LineChannel(aditmadzs)
 aditmadzsMid = aditmadzs.profile.mid
+aditmadzsMid = aditmadzs.getProfile().mid
 aditmadzs.log("Channel Access Token : " + str(channel.channelAccessToken))
 
 poll = LinePoll(aditmadzs)
 call = aditmadzs
-
-mid = aditmadzs.getProfile().mid
 
 admin = ["uac8e3eaf1eb2a55770bf10c3b2357c33","u33ba9a93d30c1be155df24f5d4e3f583"]
 
@@ -574,7 +573,7 @@ def bot(op):
                     aditmadzs.acceptGroupInvitation(op.param1)
                 dan = aditmadzs.getContact(op.param2)
                 tgb = aditmadzs.getGroup(op.param1)
-                sendMentions(op.param1, "Thx For Invited Me@!\nketik Help untuk Perintah".format(str(tgb.name)),[op.param2])
+                sendMentions(op.param1, "Thx For Invited Me @!\nketik Help untuk Perintah".format(str(tgb.name)),[op.param2])
                 #aditmadzs.sendImageWithURL(op.param1, "http://dl.profile.line-cdn.net{}".format(dan.picturePath))
                 aditmadzs.sendContact(op.param1, op.param2)
 
