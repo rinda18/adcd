@@ -2237,6 +2237,21 @@ def bot(op):
                                        nm5 += [nama[m]]
                                    mentionMembers(msg.to, nm5)
 
+                        elif cmd == 'mentioningg':
+                            group = aditmadzs.getGroup(msg.to)
+                            nama = [contact.mid for contact in group.members]
+                            k = len(nama)//20
+                            for a in range(k+1):
+                                txt = u''
+                                s=0
+                                b=[]
+                                for i in group.members[a*20 : (a+1)*20]:
+                                    b.append({"S":str(s), "E" :str(s+6), "M":i.mid})
+                                    s += 7
+                                    txt += u'@x \n'
+                                aditmadzs.sendMessage(to, text=txt, contentMetadata={u'MENTION': json.dumps({'MENTIONEES':b})}, contentType=0)
+                                aditmadzs.sendMessage(to, "Total {} Mention".format(str(len(nama))))
+                                
                         elif cmd == "listadmin":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
