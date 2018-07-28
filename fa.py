@@ -975,7 +975,7 @@ def bot(op):
                                 contactlist = aditmadzs.getAllContactIds()
                                 blockedlist = aditmadzs.getBlockedContactIds()
                                 ret_ = " "
-                                ret_ += " Bot Name : {}".format(contact.displayName)
+                                #ret_ += " Bot Name : {}".format(contact.displayName)
                                 ret_ += "\n  In Groups : {}".format(str(len(grouplist)))
                                 ret_ += "\n  Friends : {}".format(str(len(contactlist)))
                                 ret_ += "\n  Blocked Account : {}".format(str(len(blockedlist)))                                    
@@ -985,7 +985,7 @@ def bot(op):
                                 #ret_ += "\n  Creator : @x".format(Owner)
                                 aditmadzs.sendMessage(to, str(ret_))
                                 #puy.sendMessage(to, " Read Text Below ")
-                                sendMentions(msg.to, "< About Rinda >\n\nThe Beginning of this Bot Comes from Helloworld, I'm just Reworked This!\n\nOf Course Special Thanks To HelloWorld, And the Friends Around Me!\n\n*Creator : @!", [Ownerz])
+                                sendMentions(msg.to, "< About Rinda >\n\nBot Name : {}".format(contact.displayName) + "The Beginning of this Bot Comes from Helloworld, I'm just Reworked This!\n\nOf Course Special Thanks To HelloWorld, And the Friends Around Me!\n\n*Creator : @!", [Ownerz])
                             except Exception as e:
                                 aditmadzs.sendMessage(msg.to, str(e))                               
                                
@@ -2249,7 +2249,7 @@ def bot(op):
                                     b.append({"S":str(s), "E" :str(s+6), "M":i.mid})
                                     s += 7
                                     txt += u'@puy \n'
-                                sentMention(to, text=txt, contentMetadata={u'MENTION': json.dumps({'MENTIONEES':b})}, contentType=0)
+                                sendMention(to, text=txt, contentMetadata={u'MENTION': json.dumps({'MENTIONEES':b})}, contentType=0)
                                 aditmadzs.sendMessage(to, "Total {} Mention".format(str(len(nama))))
                                 
                         elif cmd == "listadmin":
