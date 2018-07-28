@@ -2311,7 +2311,8 @@ def bot(op):
                                  timeNow = datetime.now(tz=tz)
                                  Setmain['ADITMADZSreadPoint'][msg.to] = msg_id
                                  Setmain['ADITMADZSreadMember'][msg.to] = {}
-                                 aditmadzs.sendMessage(msg.to, "Lurking berhasil dinyalakan\n\nPada : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n[ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
+                                 #aditmadzs.sendMessage(msg.to, "Lurking berhasil dinyalakan\n\nPada : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n[ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
+                                 aditmadzs.sendMessage(msg.to, "Getreader berhasil dinyalakan")
 
                         elif cmd == "rinda gr off":
                           if wait["selfbot"] == True:
@@ -2320,7 +2321,8 @@ def bot(op):
                                  timeNow = datetime.now(tz=tz)
                                  del Setmain['ADITMADZSreadPoint'][msg.to]
                                  del Setmain['ADITMADZSreadMember'][msg.to]
-                                 aditmadzs.sendMessage(msg.to, "Getreader berhasil dimatikan\n\nPada : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n[ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
+                                 #aditmadzs.sendMessage(msg.to, "Getreader berhasil dimatikan\n\nPada : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n[ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
+                                 aditmadzs.sendMessage(msg.to, "Getreader berhasil dimatikan")
 
                         elif cmd == "rinda grs":
                           #if msg._from in admin:
@@ -2355,7 +2357,7 @@ def bot(op):
                                                 except:
                                                     no = "  "
                                         msg.to = msg.to
-                                        msg.text = textx+"\nPada : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n* "+ datetime.strftime(timeNow,'%H:%M:%S')+"* "
+                                        msg.text = textx+""+ datetime.strftime(timeNow,'%H:%M:%S')+"* "
                                         msg.contentMetadata = {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}
                                         msg.contentType = 0
                                         aditmadzs.sendMessage1(msg)
