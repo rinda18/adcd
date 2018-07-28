@@ -2271,7 +2271,7 @@ def bot(op):
                           if wait["selfbot"] == True:
                             #if msg._from in admin:
                                 G = aditmadzs.getGroup(msg.to)
-                                aditmadzs.sendMessage(msg.to, "Bye, str(G.name)) +"
+                                aditmadzs.sendMessage(msg.to, "Bye, str(G.name) +")))
                                 aditmadzs.leaveGroup(msg.to)
 
                         elif cmd == "rinda speed":
