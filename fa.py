@@ -2308,7 +2308,7 @@ def bot(op):
                                  Setmain['ADITMADZSreadPoint'][msg.to] = msg_id
                                  Setmain['ADITMADZSreadMember'][msg.to] = {}
                                  #aditmadzs.sendMessage(msg.to, "Lurking berhasil dinyalakan\n\nPada : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n[ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
-                                 aditmadzs.sendMessage(msg.to, "Getreader berhasil dinyalakan di < " +str(ginfo.name) + " >"
+                                 aditmadzs.sendMessage(msg.to, "Getreader berhasil dinyalakan di < " +str(ginfo.name) + " >")
 
                         elif cmd == "rinda gr off":
                           if wait["selfbot"] == True:
@@ -2319,7 +2319,7 @@ def bot(op):
                                  del Setmain['ADITMADZSreadPoint'][msg.to]
                                  del Setmain['ADITMADZSreadMember'][msg.to]
                                  #aditmadzs.sendMessage(msg.to, "Getreader berhasil dimatikan\n\nPada : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n[ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
-                                 aditmadzs.sendMessage(msg.to, "Getreader berhasil dimatikan di < " +str(ginfo.name) + " >"
+                                 aditmadzs.sendMessage(msg.to, "Getreader berhasil dimatikan di < " +str(ginfo.name) + " >")
 
                         elif cmd == "rinda grs":
                           #if msg._from in admin:
