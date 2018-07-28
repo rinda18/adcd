@@ -2268,13 +2268,6 @@ def bot(op):
                                     mb += str(b) + ". " +aditmadzs.getContact(m_id).displayName + "\n"
                                 aditmadzs.sendMessage(msg.to,"Rinda Admins\n\n"+mb+"\nAda%sAdmin" %(str(len(admin))))
 
-                        elif cmd == "rinda bye":
-                          if wait["selfbot"] == True:
-                            #if msg._from in admin:
-                                G = aditmadzs.getGroup(msg.to)
-                                aditmadzs.sendMessage(msg.to, "Bye, str(G.name) +")))
-                                aditmadzs.leaveGroup(msg.to)
-
                         elif cmd == "rinda speed":
                           if wait["selfbot"] == True:
                             #if msg._from in admin:
