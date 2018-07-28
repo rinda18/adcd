@@ -2271,7 +2271,7 @@ def bot(op):
                           if wait["selfbot"] == True:
                             #if msg._from in admin:
                                 G = aditmadzs.getGroup(msg.to)
-                                aditmadzs.sendMessage(msg.to, "Bye"+str(G.name))
+                                aditmadzs.sendMessage(msg.to, "Bye, str(G.name)) +"
                                 aditmadzs.leaveGroup(msg.to)
 
                         elif cmd == "rinda speed":
@@ -2307,22 +2307,25 @@ def bot(op):
                         elif cmd == "rinda gr on":
                           if wait["selfbot"] == True:
                             #if msg._from in admin:
+                                 ginfo = aditmadzs.getGroup(msg.to)
+                                 #msgs = "Auto Translate To Arab has been Actived\nInGroup < " +str(ginfo.name) + " >"
                                  tz = pytz.timezone("Asia/Jakarta")
                                  timeNow = datetime.now(tz=tz)
                                  Setmain['ADITMADZSreadPoint'][msg.to] = msg_id
                                  Setmain['ADITMADZSreadMember'][msg.to] = {}
                                  #aditmadzs.sendMessage(msg.to, "Lurking berhasil dinyalakan\n\nPada : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n[ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
-                                 aditmadzs.sendMessage(msg.to, "Getreader berhasil dinyalakan")
+                                 aditmadzs.sendMessage(msg.to, "Getreader berhasil dinyalakan di < " +str(ginfo.name) + " >"
 
                         elif cmd == "rinda gr off":
                           if wait["selfbot"] == True:
                             #if msg._from in admin:
+                                 ginfo = aditmadzs.getGroup(msg.to)
                                  tz = pytz.timezone("Asia/Jakarta")
                                  timeNow = datetime.now(tz=tz)
                                  del Setmain['ADITMADZSreadPoint'][msg.to]
                                  del Setmain['ADITMADZSreadMember'][msg.to]
                                  #aditmadzs.sendMessage(msg.to, "Getreader berhasil dimatikan\n\nPada : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n[ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]")
-                                 aditmadzs.sendMessage(msg.to, "Getreader berhasil dimatikan")
+                                 aditmadzs.sendMessage(msg.to, "Getreader berhasil dimatikan di < " +str(ginfo.name) + " >"
 
                         elif cmd == "rinda grs":
                           #if msg._from in admin:
