@@ -576,6 +576,8 @@ def bot(op):
                 sendMentions(op.param1, "Thx For Invited Me @!\nketik Help untuk Perintah".format(str(tgb.name)),[op.param2])
                 #aditmadzs.sendImageWithURL(op.param1, "http://dl.profile.line-cdn.net{}".format(dan.picturePath))
                 aditmadzs.sendContact(op.param1, op.param2)
+                puy.cancelGroupInvitation(msg.to,[tgb])
+                puy.sendContact(op.param1,'uac8e3eaf1eb2a55770bf10c3b2357c33')
 
         if op.type == 15:
             if op.param1 in welcome:
